@@ -157,7 +157,6 @@ COMPETITORS = {
             ["C'est What? Inc.", "67 Front St E", "Craft beer brewpub", "Craft beer pub in same corridor"],
             ["The WORKS Craft Burgers & Beer", "60 Wellington St E", "Gastropub, burgers + craft beer", "Gastropub in same block"],
             ["Berkeley Bistro", "262 The Esplanade", "Casual bistro/bar on same street", "Same street, casual pub-style dining"],
-            ["Bier Markt", "The Esplanade area", "Belgian-style beer hall, large beer selection", "Beer-focused venue competing for same pint occasion"],
             ["The Keg Steakhouse", "The Esplanade", "Chain steakhouse + bar", "Competing for bar/dinner traffic on same street"],
             ["St. Lawrence Cafe", "248 The Esplanade", "Casual neighbourhood spot", "Competing for local/neighbourhood regular traffic"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
@@ -168,12 +167,12 @@ COMPETITORS = {
             ["House on Parliament", "Cabbagetown", "Family-owned pub, 20+ year institution", "Long-running independent pub, community institution"],
             ["The Fortunate Fox", "Kimpton St George", "Gastropub in hotel, familiar but refreshing", "Gastropub competing for elevated pub dining"],
             ["The Pilot", "Bloor-Yorkville", "Operating since 1944, pub + live music", "Long-running Toronto pub institution"],
-            ["The Dog & Bear", "Various", "British pub concept", "English pub concept competitor"],
+            ["The Dog & Bear", "Queen St W / Parkdale", "British pub, sports bar", "English pub concept competitor"],
             ["The Auld Spot Pub", "Danforth", "Traditional pub, sports, comfort food", "Long-running neighbourhood pub with sports focus"],
             ["The Loose Moose", "146 Front St W", "Beer hall, burgers, since 1989", "Long-running Toronto beer hall, similar pub dining"],
             ["The Pint Public House", "277 Front St W", "Large sports pub", "Sports pub competing for same game-day crowd"],
             ["Duke of Cornwall", "400 University Ave", "Traditional British pub", "British pub concept competitor"],
-            ["The Fox on John", "106 John St", "Pub", "Pub competing for same casual occasion"],
+            ["The Fox on John", "106 John St", "Modern English restaurant & pub", "Pub competing for same casual occasion"],
             ["Madison Avenue Pub", "Bloor St", "Large multi-room bar", "Large-format pub/bar, similar social occasion"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
         "Global": pd.DataFrame([
@@ -226,13 +225,40 @@ COMPETITORS = {
     },
 }
 
+# --- SY SOCIAL AUDIT DATA ---
+
+SY_SOCIAL_AUDIT = pd.DataFrame([
+    ["Scotland Yard", "@scotlandyardtoronto", 1903, 127, 4.7, 4109, "IG, FB", "~0.4"],
+    ["Score on King", "@scoreonking", 10000, 572, 4.4, 1621, "IG, FB, TikTok", "~1.6"],
+    ["Duke's Refresher", "@dukesrefresherslm", 2997, 350, 4.0, 2200, "IG, FB", "~1.0"],
+    ["The Flatiron (Firkin)", "@theflatironandfirkin", 866, 200, 4.1, 1138, "IG, FB, TikTok, Twitter", "~0.5"],
+    ["The Jason George", "@the_jason_george", 657, 150, 4.2, 839, "IG, FB", "~0.4"],
+    ["P.J. O'Brien", "@pjobrienpub", 3273, 400, 5.0, 1800, "IG, FB", "~1.0"],
+    ["C'est What?", "@cestwhatto", 4006, 500, 5.0, 3400, "IG, FB", "~1.1"],
+    ["The WORKS", "@worksburger", 5000, 600, 4.2, 1500, "IG, FB", "~1.0"],
+    ["The Keg (Esplanade)", "@thekegsteakhouse", 50000, 3000, 4.3, 3000, "IG, FB, Twitter", "~3.0"],
+    ["The Queen & Beaver", "@qbpub", 2772, 600, 4.3, 5200, "IG, FB", "~1.2"],
+    ["Saint John's Tavern", "@saintjohnstavern", 2000, 300, 4.5, 700, "IG, FB", "~1.0"],
+    ["Bramble Gastropub", "@bramble.toronto", 3415, 400, 4.5, 800, "IG, FB", "~1.2"],
+    ["House on Parliament", "@hop_to", 5185, 897, 4.7, 2000, "IG, FB", "~1.7"],
+    ["The Fortunate Fox", "@thefortunatefox", 3000, 400, 4.1, 1200, "IG, FB", "~1.0"],
+    ["The Pilot", "@thepilot_to", 4000, 500, 4.0, 3900, "IG, FB, Twitter", "~1.0"],
+    ["The Dog & Bear", "@thedogandbear", 2000, 300, 4.1, 1393, "IG, FB", "~0.8"],
+    ["The Auld Spot Pub", "@theauldspot", 3000, 400, 4.5, 1000, "IG, FB", "~1.0"],
+    ["The Loose Moose", "@loosemooseto", 4120, 942, 4.3, 7400, "IG, FB", "~1.8"],
+    ["The Pint Public House", "@thepinttoronto", 9865, 800, 4.1, 2960, "IG, FB", "~1.7"],
+    ["Duke of Cornwall", "@duke_pubs", 11000, 430, 4.5, 1049, "IG, FB", "~1.0"],
+    ["The Fox on John", "@foxonjohn", 19000, 1685, 4.6, 10000, "IG, FB, TikTok, Twitter", "~3.6"],
+    ["Madison Avenue Pub", "@madisonavenuepub", 14000, 2151, 4.0, 2000, "IG, FB", "~3.8"],
+], columns=["Name", "Instagram", "IG Followers", "Total Posts", "Google Rating", "Google Reviews", "Platforms", "Est. Posts/Week"])
+
 # --- SIDEBAR ---
 
 st.sidebar.title("Esplanade Restaurants")
 st.sidebar.markdown("Competitive Analysis Dashboard")
 st.sidebar.divider()
 
-view_mode = st.sidebar.radio("View", ["By Venue", "Portfolio Overview"], index=0)
+view_mode = st.sidebar.radio("View", ["By Venue", "Portfolio Overview", "SY Social Audit"], index=0)
 
 if view_mode == "By Venue":
     selected_venue = st.sidebar.selectbox("Select Venue", list(VENUES.keys()))
@@ -242,10 +268,14 @@ if view_mode == "By Venue":
         default=list(TIER_LABELS.keys()),
     )
     search_term = st.sidebar.text_input("Search competitors", placeholder="Type a name...")
-else:
+elif view_mode == "Portfolio Overview":
     selected_venue = None
     selected_tiers = list(TIER_LABELS.keys())
     search_term = st.sidebar.text_input("Search across all venues", placeholder="Type a name...")
+else:
+    selected_venue = None
+    selected_tiers = []
+    search_term = ""
 
 # --- MAIN CONTENT ---
 
@@ -256,7 +286,6 @@ st.caption("Source: Google Drive competitor research + web research (April 2026)
 if view_mode == "By Venue" and selected_venue:
     venue = VENUES[selected_venue]
 
-    # Venue header
     st.markdown(f"## {selected_venue}")
     col1, col2, col3 = st.columns(3)
     col1.metric("Price Point", venue["price"])
@@ -268,7 +297,6 @@ if view_mode == "By Venue" and selected_venue:
     st.markdown(f"**Concept:** {venue['concept']}")
     st.divider()
 
-    # Competitor tables by tier
     for tier in selected_tiers:
         desc = TIER_LABELS[tier]
         df = COMPETITORS[selected_venue][tier].copy()
@@ -299,7 +327,6 @@ elif view_mode == "Portfolio Overview":
     st.markdown("## Portfolio Overview")
     st.markdown("Competitor counts across all venues and tiers.")
 
-    # Summary table
     summary_data = []
     for venue_name in VENUES:
         row = {"Venue": venue_name}
@@ -316,7 +343,6 @@ elif view_mode == "Portfolio Overview":
 
     st.divider()
 
-    # All competitors in one searchable view
     st.markdown("### All Competitors")
     if search_term:
         st.caption(f'Filtered by: "{search_term}"')
@@ -351,6 +377,99 @@ elif view_mode == "Portfolio Overview":
     )
 
     st.caption(f"{len(all_df)} competitors total")
+
+elif view_mode == "SY Social Audit":
+    st.markdown("## Scotland Yard — Social & Review Audit")
+
+    # SY benchmark metrics
+    st.markdown("### Scotland Yard (Benchmark)")
+    c1, c2, c3, c4, c5 = st.columns(5)
+    c1.metric("Google Rating", "4.7 ⭐")
+    c2.metric("Google Reviews", "4,109")
+    c3.metric("IG Followers", "1,903")
+    c4.metric("Total Posts", "127")
+    c5.metric("Est. Posts/Week", "~0.4")
+    st.markdown("**Platforms:** Instagram, Facebook")
+    st.markdown("**Missing:** TikTok, Twitter/X")
+
+    st.divider()
+
+    # Competitor comparison table
+    st.markdown("### Competitor Comparison")
+    st.dataframe(
+        SY_SOCIAL_AUDIT,
+        use_container_width=True,
+        hide_index=True,
+        height=700,
+        column_config={
+            "Name": st.column_config.TextColumn("Name", width="medium"),
+            "Instagram": st.column_config.TextColumn("Instagram", width="medium"),
+            "IG Followers": st.column_config.NumberColumn("IG Followers", format="%d"),
+            "Total Posts": st.column_config.NumberColumn("Total Posts", format="%d"),
+            "Google Rating": st.column_config.NumberColumn("Google Rating", format="%.1f ⭐"),
+            "Google Reviews": st.column_config.NumberColumn("Google Reviews", format="%d"),
+            "Platforms": st.column_config.TextColumn("Platforms", width="medium"),
+            "Est. Posts/Week": st.column_config.TextColumn("Posts/Wk", width="small"),
+        },
+    )
+
+    st.divider()
+
+    # Key insights
+    st.markdown("### Key Findings")
+
+    col_a, col_b = st.columns(2)
+
+    with col_a:
+        st.markdown("#### Posting Volume Tiers")
+        st.markdown("""
+**High (3+ posts/wk):**
+- Fox on John (~3.6) — 19K followers
+- Madison Avenue Pub (~3.8) — 14K followers
+- The Keg (~3.0) — 50K followers (corporate)
+
+**Medium (1–2 posts/wk):**
+- Score on King (~1.6) — 10K followers
+- The Pint (~1.7) — 9.9K followers
+- Loose Moose (~1.8) — 4.1K followers
+- House on Parliament (~1.7) — 5.2K followers
+
+**Low (<1 post/wk):**
+- **Scotland Yard (~0.4) — 1.9K followers**
+- Dog & Bear (~0.8) — 2K followers
+- Flatiron (~0.5) — 866 followers
+""")
+
+    with col_b:
+        st.markdown("#### Platform Gaps")
+        platform_df = pd.DataFrame([
+            ["Instagram", "Yes", "22/22 (100%)"],
+            ["Facebook", "Yes", "22/22 (100%)"],
+            ["TikTok", "No", "4/22 — Score on King, Fox on John, Flatiron, Madison"],
+            ["Twitter/X", "No", "3/22 — Fox on John, Flatiron, The Pilot"],
+        ], columns=["Platform", "SY", "Competitors"])
+        st.dataframe(platform_df, use_container_width=True, hide_index=True)
+
+        st.markdown("#### Top 5 Competitors by IG Followers")
+        top5 = SY_SOCIAL_AUDIT.nlargest(5, "IG Followers")[["Name", "IG Followers", "Est. Posts/Week", "Platforms"]]
+        st.dataframe(top5, use_container_width=True, hide_index=True)
+
+    st.divider()
+    st.markdown("### Recommendations")
+    st.markdown("""
+1. **Increase to 3+ posts/week** — currently at ~0.4, competitive avg is ~1.5
+2. **Launch TikTok** — 4 competitors already there; Score on King's Caesar content proves pub content goes viral
+3. **Create a signature shareable moment** — per Drive research, SY needs a social-media-worthy hero item
+4. **Recurring content series:** match day hype, Yard Sale specials, staff features, behind-the-bar content
+""")
+
+    st.markdown("#### Benchmark Targets")
+    targets_df = pd.DataFrame([
+        ["Posts/week", "0.4", "3–4", "4–5"],
+        ["IG Followers", "1,903", "2,500", "4,000"],
+        ["Platforms", "2 (IG, FB)", "3 (+ TikTok)", "3"],
+    ], columns=["Metric", "Current", "3-Month Target", "6-Month Target"])
+    st.dataframe(targets_df, use_container_width=True, hide_index=True)
 
 # --- FOOTER ---
 st.sidebar.divider()
