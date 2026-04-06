@@ -3050,7 +3050,7 @@ elif active_page and active_page in VENUES:
         st.markdown("### Old Spaghetti Factory — Core Menu Comparison")
         st.caption(
             "Core-menu benchmark against Scaddabush, East Side Mario's, and Olive Garden using current official brand menus. "
-            "Olive Garden pricing varies by location and was not fully exposed in crawlable official pages."
+            "Olive Garden prices converted from USD at ~1.37 CAD. All prices as of April 2026."
         )
         menu_display_df = build_osf_menu_display_table(OSF_MENU_ANALYSIS)
         show_table(menu_display_df, max_height=620)
