@@ -1,0 +1,314 @@
+{
+  "updated_at": "2026-04-03",
+  "competitor": "Compton Ave.",
+  "tagline": "British-inspired experiential cocktail bar by Frankie Solarik",
+
+  "1_company_overview": {
+    "legal_entity": "Frankie Solarik Holdings",
+    "founder_operator": "Frankie Solarik (co-owner Kurt Tissera)",
+    "sister_venues": [
+      "BarChef (Queen West, Toronto — flagship; NYC 5th Ave opened June 2025)",
+      "PREQUEL & CO. APOTHECARY (Queen West, Toronto — Art Nouveau speakeasy)"
+    ],
+    "address": "1282 Dundas Street West, Toronto, ON M6J 1X7",
+    "neighbourhood": "Dundas West / Little Portugal",
+    "opened": "March 2024",
+    "concept": "London townhouse-inspired cocktail bar with Victorian oil paintings, leather interiors, and British pub food elevated by Solarik's modernist cocktail techniques.",
+    "website": "comptonave.com",
+    "hours": {
+      "monday": "Closed",
+      "tuesday_to_sunday": "6:00 PM - 2:00 AM"
+    },
+    "reservations": "Now accepts reservations for up to 6 guests (originally walk-in only)",
+    "seating": "Intimate; standing area when full; may enforce seating windows during peak",
+    "culinary_director": "Chef Lionel Duke (across all Solarik venues)",
+    "recognition": [
+      "Canada's 100 Best Bars 2025",
+      "blogTO Best Martini in Toronto (readers' choice)"
+    ],
+    "single_location_confirmed": true,
+    "frankie_solarik_profile": "NYT-dubbed 'Legendary Experimentalist'; Netflix Drink Masters judge; author of The Bar Chef (Vol. 2 releasing 2026); pioneer of immersive/experiential cocktail movement."
+  },
+
+  "2_menu_and_product": {
+    "cocktail_programme": {
+      "philosophy": "House-made ingredients (hickory-smoked vermouth, burnt butter rum, pandan syrup, soy reductions), multisensory presentation, British-leaning flavour profiles.",
+      "categories": {
+        "compton_draught_cocktails": [
+          {"name": "Cedar & Coconut Paloma", "price": 23},
+          {"name": "Pandan Americano", "price": 17},
+          {"name": "Nitro Espresso", "price": 21},
+          {"name": "Lady of the House", "price": 21}
+        ],
+        "martini_selection": [
+          {"name": "Smoked Olive", "price": 20},
+          {"name": "Umeboshi", "price": 19},
+          {"name": "Diana", "price": 22},
+          {"name": "Nottinghill", "price": 22}
+        ],
+        "contemporary_cocktails": [
+          {"name": "Montego Bay", "price": 19},
+          {"name": "Mayfair Sour", "price": 21},
+          {"name": "1282 Abbey Road", "price": 22},
+          {"name": "London Fog", "price": 21},
+          {"name": "Umami Old Fashioned", "price": 23},
+          {"name": "Blossom Garden", "price": 21},
+          {"name": "Ferry to Calais", "price": 23},
+          {"name": "The Queen's Gambit", "price": 23}
+        ],
+        "classics": [
+          {"name": "Old Fashioned", "price": 26},
+          {"name": "Margarita", "price": 26},
+          {"name": "Sazerac", "price": 25},
+          {"name": "Negroni", "price": 24}
+        ],
+        "spirit_free": [
+          {"name": "Jasmine Spritz", "price": 16},
+          {"name": "Rose Julep", "price": 16},
+          {"name": "Faux Martini", "price": 16},
+          {"name": "Cucumber Colada", "price": 16}
+        ]
+      },
+      "cocktail_price_range": "$16 - $26",
+      "signature_cocktail_avg": 21.50,
+      "shots_range": "$10 - $120",
+      "beers": "$12"
+    },
+    "food_menu": {
+      "chef": "Lionel Duke",
+      "style": "Elevated British pub food",
+      "items": [
+        {"name": "Hickory Smoked Olives", "price": 8},
+        {"name": "Triple Cooked Chips", "price": 11},
+        {"name": "Scotch Egg", "price": 11, "description": "Sage & onion stuffed pork, black garlic aioli, smoked hay"},
+        {"name": "Fried Brussels Sprouts", "price": 13},
+        {"name": "Cottage Pie Croquettes", "price": 14},
+        {"name": "Roasted Bone Marrow & Crumpets", "price": 14, "description": "House-made crumpets, shallot marmalade, parsley"},
+        {"name": "Fish & Chips", "price": 16},
+        {"name": "Yorkshire Beef Tartare", "price": 16},
+        {"name": "Grilled Steak Diane", "price": 21, "description": "Picanha steak, mushrooms, Worcestershire, brandy, cream, apricot"},
+        {"name": "Charcuterie & Cheese", "price": 24},
+        {"name": "Sticky Toffee Pudding", "price": 10}
+      ],
+      "cheapest_protein_appetizer": {"name": "Scotch Egg", "price": 11}
+    },
+    "specials": {
+      "martini_hour": {
+        "when": "Tuesday - Sunday, open to 8 PM",
+        "offer": "All 4 martini selections for $12 each",
+        "martinis": ["Smoked Olive", "Umeboshi", "Diana", "Nottinghill"]
+      }
+    }
+  },
+
+  "3_pricing_basket_comparison": {
+    "methodology": "1 signature cocktail + 1 cheapest protein appetizer",
+    "compton_ave": {
+      "signature_cocktail": {"name": "Umami Old Fashioned", "price": 23},
+      "cheapest_protein_app": {"name": "Scotch Egg", "price": 11},
+      "basket_total": 34,
+      "basket_with_13pct_hst": 38.42,
+      "basket_with_20pct_tip": 46.10
+    },
+    "bar_cart": {
+      "signature_cocktail": {"name": "Crimson Ember", "price": 20},
+      "cheapest_protein_app": {"name": "Chicken 65", "price": 18},
+      "basket_total": 38,
+      "basket_with_13pct_hst": 42.94,
+      "basket_with_20pct_tip": 51.53
+    },
+    "delta": {
+      "basket_pretax": "Compton Ave is $4 cheaper (-10.5%)",
+      "basket_all_in": "Compton Ave is $5.43 cheaper (-10.5%)",
+      "note": "Compton Ave's food menu starts lower ($8 olives, $11 scotch egg) giving it a more accessible entry point. Bar Cart's food skews higher because items are full entree-adjacent portions."
+    }
+  },
+
+  "4_digital_and_social": {
+    "instagram": {
+      "handle": "@barcomptonave",
+      "followers": "~16K",
+      "posts": "~212",
+      "content_style": "Dark, moody aesthetic; cocktail close-ups; Victorian interior shots; seasonal pop-up promos (holiday Christmas drinks); Martini Hour promotion",
+      "verified_single_account": true
+    },
+    "facebook": {
+      "page": "Compton Ave. (Facebook)",
+      "url": "facebook.com/p/Compton-Ave-61554416907353",
+      "status": "Active"
+    },
+    "tiktok": {
+      "status": "No official brand account found. User-generated content exists under #ComptonAveToronto discovery page.",
+      "note": "TikTok is primarily driven by customer posts, not owned content."
+    },
+    "website": {
+      "url": "comptonave.com",
+      "features": ["Menu page", "Reservations", "About/story page", "Contact"],
+      "reservation_integration": "OpenTable"
+    },
+    "comparison_to_bar_cart": {
+      "bar_cart_ig": "@bar_cart_to",
+      "bar_cart_followers": "Significantly fewer than 16K",
+      "gap_assessment": "Compton Ave has a massive IG follower advantage, largely inherited from Solarik's personal brand and BarChef halo. Bar Cart is building from scratch without a celebrity bartender."
+    }
+  },
+
+  "5_reviews": {
+    "google": {
+      "rating": "~4.7 (estimated from aggregator cross-references)",
+      "review_count": "Not directly confirmed; aggregators cite 42+ reviews",
+      "note": "Google rating could not be directly scraped but cross-platform aggregators consistently cite 4.7"
+    },
+    "yelp": {
+      "rating": "See listing",
+      "review_count": 11,
+      "url": "yelp.ca/biz/compton-ave-toronto",
+      "updated": "February 2026, 57 photos"
+    },
+    "opentable": {
+      "rating": 4.7,
+      "diner_count": 164,
+      "url": "opentable.ca/r/compton-ave-toronto"
+    },
+    "tripadvisor": {
+      "rating": 4.0,
+      "rank": "#4,137 of 5,693 restaurants in Toronto"
+    },
+    "what_people_praise": [
+      "Cocktail quality and creativity ('delicious cocktails', 'insanely good mixology')",
+      "Dark, moody, opulent interior ('Instagrammable', 'romantic ambiance')",
+      "Attentive, knowledgeable bartenders",
+      "Food quality — scotch eggs, sliders, charcuterie highlighted",
+      "Holiday/seasonal pop-ups (Christmas Muffin Man Old Fashioned, Crosby's Hot Cocoa)",
+      "Martini Hour value ($12 martinis)"
+    ],
+    "what_people_complain_about": [
+      "Food execution inconsistent — 'fine but not memorable' for some guests",
+      "Seating management friction — guests report being rushed, given 30-minute windows, or told table not ready at reservation time",
+      "Manager confrontation reported — one reviewer described being 'yelled at' when disputing seating time",
+      "No-reservation era caused long waits (now partially addressed with OpenTable)",
+      "TripAdvisor rank is mediocre (#4,137) suggesting mixed mainstream appeal"
+    ],
+    "comparison_to_bar_cart": {
+      "bar_cart_google": {"rating": 4.7, "reviews": 74},
+      "compton_opentable": {"rating": 4.7, "diners": 164},
+      "assessment": "Similar top-line rating. Compton Ave has more total review volume across platforms but also more documented service complaints. Bar Cart's smaller sample is uniformly positive."
+    }
+  },
+
+  "6_swot_vs_bar_cart": {
+    "compton_ave_strengths": [
+      "Celebrity owner — Frankie Solarik is a nationally recognized figure (Netflix, NYT, published author) giving instant credibility and press coverage",
+      "Multi-venue ecosystem — BarChef + Prequel + BarChef NYC create cross-pollination, media gravity, and supply chain advantages",
+      "Canada's 100 Best Bars 2025 listing — Bar Cart has no comparable ranking yet",
+      "16K Instagram followers vs Bar Cart's much smaller base",
+      "Martini Hour ($12) is a brilliant traffic driver — creates a reason to visit early on slow nights",
+      "Deep cocktail technique — house-made hickory-smoked vermouth, burnt butter rum, pandan syrups are genuinely differentiated",
+      "Full British food programme with acclaimed culinary director (Lionel Duke) across all venues",
+      "Lower entry-price basket ($34 vs $38) despite comparable cocktail quality tier"
+    ],
+    "compton_ave_weaknesses": [
+      "Service inconsistency — seating management and confrontation complaints are a real brand risk",
+      "Food gets 'fine but not memorable' reviews despite strong concept",
+      "TripAdvisor #4,137 suggests mainstream discoverability issues outside cocktail enthusiasts",
+      "Located in Dundas West — saturated cocktail neighbourhood competing with Bar Mordecai, Cocktail Bar, and others",
+      "No-reservation legacy created negative word-of-mouth (now partially fixed)",
+      "Only 11 Yelp reviews after 2 years — North American tourist discovery is weak",
+      "No TikTok strategy — missing the platform where discovery content drives bar visits"
+    ],
+    "compton_ave_opportunities": [
+      "BarChef NYC success could further elevate the Solarik brand halo for all Toronto venues",
+      "Holiday/seasonal pop-ups already proven — could become annual destination events",
+      "Book launch (BarChef Vol. 2 in 2026) creates a natural PR moment",
+      "Expanding reservation system could unlock higher covers and private events"
+    ],
+    "compton_ave_threats": [
+      "Solarik attention split across 4 venues + NYC expansion could dilute quality",
+      "Dundas West gentrification and saturation — too many cocktail bars in the same corridor",
+      "If food execution doesn't improve, the full-menu positioning becomes a liability vs cocktail-only peers",
+      "Negative service reviews can spiral quickly on Google/Yelp in the AI-recommendation era"
+    ],
+    "bar_cart_strengths_vs_compton": [
+      "Speakeasy concept (hidden behind Eloise) creates genuine discovery mystique that Compton Ave lacks",
+      "Service reviews are uniformly positive — no confrontation or rushing complaints",
+      "The Esplanade location has zero direct cocktail bar competition in the immediate area",
+      "Smaller, tighter operation = more consistent quality control per visit",
+      "Dual-concept (Eloise front + Bar Cart back) creates a funnel and a story",
+      "South Asian-influenced food (Chicken 65) is a distinctive flavour lane vs the crowded British-pub space"
+    ],
+    "bar_cart_weaknesses_vs_compton": [
+      "No industry awards or best-of list placement yet",
+      "Tiny social media footprint compared to 16K followers",
+      "No celebrity operator or press-ready personal brand",
+      "No equivalent of Martini Hour to drive off-peak traffic",
+      "Higher basket price ($38 vs $34) without the awards halo to justify premium",
+      "Limited programming visibility — Thursday jazz is the only known recurring event"
+    ]
+  },
+
+  "7_what_bar_cart_can_learn": {
+    "tactical_moves": [
+      {
+        "lesson": "Create a named happy hour ritual like Martini Hour",
+        "detail": "Compton Ave's $12 Martini Hour (Tue-Sun, open to 8 PM) is a masterclass in early-evening traffic generation. Bar Cart could create a '5-7 PM Speakeasy Hour' with a signature serve at a gateway price ($12-14) to fill the pre-dinner window and convert Eloise diners.",
+        "priority": "High"
+      },
+      {
+        "lesson": "Build a food item that becomes iconic",
+        "detail": "Compton Ave's Scotch Egg ($11) is mentioned in nearly every review. Bar Cart should identify and promote one signature bar snack at a low price point ($10-12) that becomes the 'must-order' — a smaller, shareable Chicken 65 portion or a unique South Asian bar bite.",
+        "priority": "High"
+      },
+      {
+        "lesson": "Pursue a Canada's 100 Best or blogTO list placement",
+        "detail": "Compton Ave earned its 2025 listing within its first year. Bar Cart should actively pitch to editors at Canada's 100 Best, blogTO, Toronto Life, and NOW Magazine. The speakeasy concept + Andrew Whibley's story is a ready-made editorial pitch.",
+        "priority": "High"
+      },
+      {
+        "lesson": "Name and market signature cocktails with stories",
+        "detail": "Compton Ave's 'Umami Old Fashioned' and '1282 Abbey Road' have names that travel on social media. Bar Cart's 'Crimson Ember' is a strong start — build 3-4 more named signatures with backstories tied to the speakeasy theme.",
+        "priority": "Medium"
+      },
+      {
+        "lesson": "Leverage the Eloise front-of-house as a content funnel",
+        "detail": "Compton Ave benefits from BarChef's halo. Bar Cart should explicitly market the Eloise-to-Bar-Cart journey as an experience — 'Start with dinner, discover the hidden bar' — which Compton Ave cannot replicate.",
+        "priority": "Medium"
+      },
+      {
+        "lesson": "Invest in Instagram growth to close the 16K gap",
+        "detail": "Compton Ave proves that moody-aesthetic cocktail content performs well. Bar Cart should post 3-4x/week with consistent dark/speakeasy visual branding, Reels of cocktail builds, and collaborate with Toronto food/drink influencers.",
+        "priority": "Medium"
+      },
+      {
+        "lesson": "Own TikTok before Compton Ave does",
+        "detail": "Neither bar has a TikTok presence. Bar Cart's hidden-door speakeasy concept is tailor-made for TikTok discovery content ('I found a hidden bar behind a restaurant on The Esplanade'). First-mover advantage is available.",
+        "priority": "Medium"
+      }
+    ],
+    "bar_cart_structural_advantages": [
+      "No direct cocktail competition on The Esplanade — Compton Ave fights for attention on Dundas West alongside 5+ top-tier bars",
+      "Hidden-door concept is inherently viral and TikTok-ready — Compton Ave is a conventional storefront",
+      "South Asian-inspired food is a unique lane — British pub food is crowded (Auld Spot, Queen & Beaver, etc.)",
+      "Uniformly positive reviews with no service red flags — Compton Ave has documented friction",
+      "Dual-concept Eloise/Bar Cart is an automatic referral engine — Compton Ave relies on walk-ins and social discovery",
+      "Andrew Whibley can build a personal brand without the multi-venue attention split Solarik faces"
+    ]
+  },
+
+  "sources": [
+    "https://www.comptonave.com/",
+    "https://www.comptonave.com/menu",
+    "https://canadas100best.com/list/2025/compton-ave-2025/",
+    "https://torontolife.com/food/whats-on-the-menu-at-compton-ave-british-cocktail-bar-chef/",
+    "https://www.blogto.com/bars/compton-ave-toronto/",
+    "https://www.opentable.ca/r/compton-ave-toronto",
+    "https://www.yelp.ca/biz/compton-ave-toronto",
+    "https://www.tripadvisor.com/Restaurant_Review-g155019-d32886820-Reviews-Compton_Ave-Toronto_Ontario.html",
+    "https://www.instagram.com/barcomptonave/",
+    "https://restaurantguru.com/COMPTON-AVE-Toronto/menu",
+    "https://www.bestcocktailsguide.com/places-to-drink/cocktail-bar/toronto/compton-ave",
+    "https://www.frankiesolarik.com/profile",
+    "https://www.frankiesolarikholdings.com/about",
+    "https://streetsoftoronto.com/the-owner-of-barchef-just-opened-a-uk-inspired-bar-with-upscale-house-party-vibes/",
+    "https://curiocity.com/martinis-toronto-12-dollars-or-less/"
+  ]
+}

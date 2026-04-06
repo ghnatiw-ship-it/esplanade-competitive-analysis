@@ -1,0 +1,537 @@
+{
+  "updated_at": "2026-04-04",
+  "snapshot": {
+    "rating": 4.7,
+    "reviews": 74,
+    "socials": "Instagram",
+    "cadence": "Low to Medium",
+    "top_list_status": "Not found in major 2025 Toronto / Canada / North America bar rankings reviewed.",
+    "notes": [
+      "Bar Cart's current review figure was updated to 4.7 with 74 reviews based on a live Google Maps check by the user.",
+      "The citywide competitor universe now auto-includes Toronto cocktail bars recognized on Canada's 100 Best Bars 2025, plus user-requested additions like Powder Room and verified cocktail-bar operators older than 2 years.",
+      "An OpenTable reviewer-orbit cross-check added PREQUEL & CO. APOTHECARY, Bar Banane, Gift Shop, C Suite, No Vacancy, and CKTL & Co. as missing special-occasion cocktail competitors relevant to Bar Cart.",
+      "Social cadence and engagement fields for competitors remain directional estimates, not direct live Instagram exports.",
+      "For a fully auditable version, the next step is a manual 30-day pull of each competitor's recent posts, likes, comments, and story/event cadence."
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Bar Cart",
+      "neighbourhood": "The Esplanade / St. Lawrence",
+      "google_rating": 4.7,
+      "google_reviews": 74,
+      "review_quality": "Emerging",
+      "recognition": "Not on major 2025 lists yet",
+      "primary_handle": "@bar_cart_to",
+      "platforms": "IG",
+      "cadence": "Low to Medium",
+      "engagement": "Low to Medium",
+      "hooks": "Thursday jazz, speakeasy mood, creative cocktails"
+    },
+    {
+      "name": "Bar Pompette",
+      "neighbourhood": "Little Italy",
+      "google_rating": 4.8,
+      "google_reviews": 412,
+      "review_quality": "Very strong",
+      "recognition": "Canada's 100 Best 2025 No. 1; NA 50 Best 2025 No. 7",
+      "primary_handle": "@barpompette_to",
+      "platforms": "IG, FB",
+      "cadence": "Medium",
+      "engagement": "High",
+      "hooks": "Awards, patio romance, terroir cocktails, Sunday jazz"
+    },
+    {
+      "name": "Civil Liberties",
+      "neighbourhood": "Bloor West",
+      "google_rating": 4.7,
+      "google_reviews": 1247,
+      "review_quality": "Very strong",
+      "recognition": "NA 50 Best 2025 No. 21; Top 500 Bars 2025",
+      "primary_handle": "@civlibto",
+      "platforms": "IG",
+      "cadence": "Low to Medium",
+      "engagement": "High",
+      "hooks": "No-menu custom drinks, bartender expertise, cocktail school"
+    },
+    {
+      "name": "Library Bar",
+      "neighbourhood": "Financial District",
+      "google_rating": 4.5,
+      "google_reviews": 800,
+      "review_quality": "Strong",
+      "recognition": "Canada's 100 Best 2025 No. 6; NA 50 Best 2025 No. 51",
+      "primary_handle": "@librarybartoronto",
+      "platforms": "IG, FB",
+      "cadence": "Medium to High",
+      "engagement": "Medium to High",
+      "hooks": "Birdbath Martini, literary menu, guest shifts"
+    },
+    {
+      "name": "Cocktail Bar",
+      "neighbourhood": "Dundas West",
+      "google_rating": null,
+      "google_reviews": null,
+      "review_quality": "Strong, review count not verified in crawlable sources",
+      "recognition": "Canada's 100 Best 2025 No. 9",
+      "primary_handle": "@hoofcocktailbar",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Hoof legacy, bold flavour combinations, happy hour, cocktail-first identity"
+    },
+    {
+      "name": "Mother",
+      "neighbourhood": "Queen West",
+      "google_rating": 4.7,
+      "google_reviews": 980,
+      "review_quality": "Very strong",
+      "recognition": "Canada's 100 Best 2025 No. 12; NA 50 Best 2025 No. 44",
+      "primary_handle": "@mothercocktailbar",
+      "platforms": "IG, TikTok, YouTube",
+      "cadence": "High",
+      "engagement": "High",
+      "hooks": "Fermentation, narrative menu chapters, collaborations"
+    },
+    {
+      "name": "Civil Works",
+      "neighbourhood": "King West",
+      "google_rating": null,
+      "google_reviews": 58,
+      "review_quality": "Early but strong directional traction",
+      "recognition": "Canada's 100 Best 2025 No. 32",
+      "primary_handle": "@civwrksto",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Narrative cocktails, martinis, happy hour, sleek after-work room"
+    },
+    {
+      "name": "Slice of Life Bar",
+      "neighbourhood": "College St",
+      "google_rating": null,
+      "google_reviews": null,
+      "review_quality": "Strong, review count not verified in crawlable sources",
+      "recognition": "Canada's 100 Best 2025 No. 38",
+      "primary_handle": "@sliceoflifebar",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium",
+      "hooks": "Lab-driven drinks, plush room, chef-snack pairings, speakeasy mystique"
+    },
+    {
+      "name": "Bar Raval",
+      "neighbourhood": "Little Italy",
+      "google_rating": 4.4,
+      "google_reviews": 3095,
+      "review_quality": "Strong at scale",
+      "recognition": "Canada's 100 Best 2025 No. 29",
+      "primary_handle": "@bar_raval",
+      "platforms": "IG, FB",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Iconic room, tapas energy, all-day social atmosphere"
+    },
+    {
+      "name": "Bar Mordecai",
+      "neighbourhood": "Dundas West",
+      "google_rating": 4.2,
+      "google_reviews": 400,
+      "review_quality": "Good",
+      "recognition": "Canada's 100 Best 2025 No. 14; NA 50 Best 2025 No. 37",
+      "primary_handle": "@barmordecai",
+      "platforms": "IG, FB",
+      "cadence": "High",
+      "engagement": "Medium to High",
+      "hooks": "Karaoke, Green Room, event nights, playful community vibe"
+    },
+    {
+      "name": "Simpl Things",
+      "neighbourhood": "Roncesvalles / Parkdale West",
+      "google_rating": 4.7,
+      "google_reviews": 192,
+      "review_quality": "Strong",
+      "recognition": "Canada's 100 Best 2025 No. 30",
+      "primary_handle": "@simplthings.to",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium",
+      "hooks": "All-day cocktail bar, dual-concept kitchen, patio, casual-cool nights"
+    },
+    {
+      "name": "Doc's Green Door Lounge",
+      "neighbourhood": "Little Italy",
+      "google_rating": null,
+      "google_reviews": null,
+      "review_quality": "Recognized, review count not verified in crawlable sources",
+      "recognition": "Canada's 100 Best 2025 No. 15",
+      "primary_handle": "@docsgreendoorlounge",
+      "platforms": "IG",
+      "cadence": "Low to Medium",
+      "engagement": "Medium",
+      "hooks": "Intimate lounge, luxury-adjacent feel, upstairs hideaway"
+    },
+    {
+      "name": "BarChef",
+      "neighbourhood": "Queen West",
+      "google_rating": null,
+      "google_reviews": 738,
+      "review_quality": "Strong legacy benchmark",
+      "recognition": "Long-running Toronto cocktail institution; Canada's 100 Best-recognized over multiple years",
+      "primary_handle": "@barchef",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Theatrical modernist cocktails, multisensory service, experiential drinks"
+    },
+    {
+      "name": "PREQUEL & CO. APOTHECARY",
+      "neighbourhood": "Ossington / Dundas West",
+      "google_rating": null,
+      "google_reviews": 520,
+      "review_quality": "Very strong",
+      "recognition": "OpenTable booking leader among Toronto cocktail bars; Frankie Solarik halo concept",
+      "primary_handle": "@prequelandco",
+      "platforms": "IG, TikTok",
+      "cadence": "Medium to High",
+      "engagement": "High",
+      "hooks": "Apothecary ritual, hand-ground spices, theatrical serves, destination cocktails"
+    },
+    {
+      "name": "Bar Banane",
+      "neighbourhood": "Ossington",
+      "google_rating": null,
+      "google_reviews": 102,
+      "review_quality": "Strong early traction",
+      "recognition": "High-performing OpenTable cocktail destination; refined date-night benchmark",
+      "primary_handle": "@barbanane",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Refined room, banana split branding, polished cocktails, intimate romance"
+    },
+    {
+      "name": "Gift Shop",
+      "neighbourhood": "Ossington",
+      "google_rating": null,
+      "google_reviews": 16,
+      "review_quality": "Small but very strong review signal",
+      "recognition": "Well-regarded Ossington cocktail bar with OpenTable review presence",
+      "primary_handle": "@giftshopto",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium",
+      "hooks": "Backroom mystique, bartenders' bar energy, hidden-room feel, cocktail credibility"
+    },
+    {
+      "name": "Project Gigglewater",
+      "neighbourhood": "Cabbagetown",
+      "google_rating": null,
+      "google_reviews": 154,
+      "review_quality": "Good",
+      "recognition": "Explicit cocktail-bar comp operating more than 2 years",
+      "primary_handle": "@projectgigglewater",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium",
+      "hooks": "Friendly cocktail bar, neighbourhood warmth, approachable craft drinks"
+    },
+    {
+      "name": "C Suite",
+      "neighbourhood": "Yorkville",
+      "google_rating": null,
+      "google_reviews": 155,
+      "review_quality": "Strong",
+      "recognition": "OpenTable-validated premium cocktail destination with strong booking velocity",
+      "primary_handle": "@csuiteyorkville",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Luxury cocktail lounge, bespoke service, premium dates and celebrations"
+    },
+    {
+      "name": "In Good Spirits",
+      "neighbourhood": "Financial District",
+      "google_rating": null,
+      "google_reviews": null,
+      "review_quality": "Established, review count not verified in crawlable sources",
+      "recognition": "Explicit cocktail bar operating since 2019",
+      "primary_handle": "@ingoodspiritsto",
+      "platforms": "IG",
+      "cadence": "Low to Medium",
+      "engagement": "Medium",
+      "hooks": "After-work cocktails, downtown convenience, classic-to-creative range"
+    },
+    {
+      "name": "Cry Baby Gallery",
+      "neighbourhood": "Little Portugal / Dundas West",
+      "google_rating": 4.6,
+      "google_reviews": 475,
+      "review_quality": "Very strong",
+      "recognition": "Canada's 100 Best 2025 No. 11; NA 100 Best 2026 No. 69",
+      "primary_handle": "@crybaby.gallery",
+      "platforms": "IG, FB",
+      "cadence": "Medium",
+      "engagement": "Medium to High",
+      "hooks": "Gallery-to-speakeasy reveal, house-made infusions, rotating art, walk-in scarcity, oysters"
+    },
+    {
+      "name": "No Vacancy",
+      "neighbourhood": "Ossington",
+      "google_rating": 4.4,
+      "google_reviews": 15,
+      "review_quality": "Early but promising",
+      "recognition": "OpenTable-bookable mood-led cocktail competitor in Bar Cart's date-night lane",
+      "primary_handle": "@novacancybar",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium",
+      "hooks": "Motel-inspired mood, dinner-plus-drinks, romantic nightlife, full-evening hangout"
+    },
+    {
+      "name": "CKTL & Co.",
+      "neighbourhood": "Financial District",
+      "google_rating": 4.1,
+      "google_reviews": 206,
+      "review_quality": "Good",
+      "recognition": "OpenTable-bookable downtown cocktail lounge with strong after-work and group relevance",
+      "primary_handle": "@cktlandco",
+      "platforms": "IG",
+      "cadence": "Medium",
+      "engagement": "Medium",
+      "hooks": "After-work cocktails, market-pricing hook, business drinks, happy hour and group occasions"
+    },
+    {
+      "name": "Powder Room",
+      "neighbourhood": "Yorkville",
+      "google_rating": null,
+      "google_reviews": null,
+      "review_quality": "Too new for stable audit numbers",
+      "recognition": "User-requested Yorkville addition; opened late 2025",
+      "primary_handle": "@powderroomyorkville",
+      "platforms": "IG",
+      "cadence": "High",
+      "engagement": "Early-stage",
+      "hooks": "Yorkville glamour, intimate nights, celebrity brunch/events, dressed-up cocktails"
+    }
+  ],
+  "programming": [
+    {
+      "bar": "Bar Cart",
+      "cadence_window": "Day to Day",
+      "programming": "Tuesday-Saturday service, 5pm-2am; cocktail-led date-night occasion; happy-hour demand noted in reviews"
+    },
+    {
+      "bar": "Bar Cart",
+      "cadence_window": "Week to Week",
+      "programming": "Thursday Jazz Nights from 8pm-close"
+    },
+    {
+      "bar": "Bar Cart",
+      "cadence_window": "Month to Month",
+      "programming": "Light public programming footprint so far; biggest opportunity is layering seasonal events"
+    },
+    {
+      "bar": "Bar Pompette",
+      "cadence_window": "Day to Day",
+      "programming": "High-touch cocktail service; seasonal drink rotation; patio shoulder-season draw"
+    },
+    {
+      "bar": "Bar Pompette",
+      "cadence_window": "Week to Week",
+      "programming": "Sunday evening live jazz"
+    },
+    {
+      "bar": "Bar Pompette",
+      "cadence_window": "Month to Month",
+      "programming": "Seasonal menus, awards/news amplification, occasional collaborations"
+    },
+    {
+      "bar": "Civil Liberties",
+      "cadence_window": "Day to Day",
+      "programming": "Menu-free bespoke drinks every service; neighbourhood walk-in bar energy"
+    },
+    {
+      "bar": "Civil Liberties",
+      "cadence_window": "Week to Week",
+      "programming": "Core weekly draw is the bartender-led custom format itself"
+    },
+    {
+      "bar": "Civil Liberties",
+      "cadence_window": "Month to Month",
+      "programming": "Cocktail School and seminar-style education events"
+    },
+    {
+      "bar": "Library Bar",
+      "cadence_window": "Day to Day",
+      "programming": "Daily cocktail service with Birdbath Martini ritual"
+    },
+    {
+      "bar": "Library Bar",
+      "cadence_window": "Week to Week",
+      "programming": "Steady downtown reservation and walk-in pull anchored by signature ritual"
+    },
+    {
+      "bar": "Library Bar",
+      "cadence_window": "Month to Month",
+      "programming": "Guest shifts, literary menu refreshes, hotel-backed PR moments"
+    },
+    {
+      "bar": "Mother",
+      "cadence_window": "Day to Day",
+      "programming": "Fermentation-led cocktails; zero-proof and food integrated into full-night visit"
+    },
+    {
+      "bar": "Mother",
+      "cadence_window": "Week to Week",
+      "programming": "Symbiosis personalized cocktail experience; ingredient storytelling"
+    },
+    {
+      "bar": "Mother",
+      "cadence_window": "Month to Month",
+      "programming": "Major menu chapters, collaborations, sustainability story cycles"
+    },
+    {
+      "bar": "Bar Raval",
+      "cadence_window": "Day to Day",
+      "programming": "Open seven days; standing-room tapas and vermouth energy"
+    },
+    {
+      "bar": "Bar Raval",
+      "cadence_window": "Week to Week",
+      "programming": "Programming is the room and routine itself more than named weekly events"
+    },
+    {
+      "bar": "Bar Raval",
+      "cadence_window": "Month to Month",
+      "programming": "Seasonal menu evolution and destination-driven content"
+    },
+    {
+      "bar": "Bar Mordecai",
+      "cadence_window": "Day to Day",
+      "programming": "Cocktails and snacks upstairs; Green Room lounge; karaoke rooms"
+    },
+    {
+      "bar": "Bar Mordecai",
+      "cadence_window": "Week to Week",
+      "programming": "Karaoke and nightlife programming create frequent visit reasons"
+    },
+    {
+      "bar": "Bar Mordecai",
+      "cadence_window": "Month to Month",
+      "programming": "Spaghetti nights, themed pop-ups, community and cause-driven events"
+    },
+    {
+      "bar": "PREQUEL & CO. APOTHECARY",
+      "cadence_window": "Day to Day",
+      "programming": "Destination speakeasy service built around apothecary ritual, theatrical cocktails, and reservations-led special occasions"
+    },
+    {
+      "bar": "PREQUEL & CO. APOTHECARY",
+      "cadence_window": "Week to Week",
+      "programming": "Consistent date-night and celebration positioning; content cadence emphasizes ritualized drinks and room mood rather than broad public event listings"
+    },
+    {
+      "bar": "PREQUEL & CO. APOTHECARY",
+      "cadence_window": "Month to Month",
+      "programming": "Seasonal menu evolution and occasion-based storytelling rather than heavy recurring public programming"
+    },
+    {
+      "bar": "Bar Banane",
+      "cadence_window": "Day to Day",
+      "programming": "Refined cocktail-and-dessert room built for intimate evenings, polished service, and short-list destination use"
+    },
+    {
+      "bar": "Bar Banane",
+      "cadence_window": "Week to Week",
+      "programming": "Steady reservations and date-night relevance; recurring content themes focus on room aesthetics, cocktails, and signature dessert cues"
+    },
+    {
+      "bar": "Bar Banane",
+      "cadence_window": "Month to Month",
+      "programming": "Seasonal menu and room storytelling updates more than overt event programming"
+    },
+    {
+      "bar": "Gift Shop",
+      "cadence_window": "Day to Day",
+      "programming": "Hidden-room bartender bar with cocktail-forward service and a regular-heavy nightlife rhythm"
+    },
+    {
+      "bar": "Gift Shop",
+      "cadence_window": "Week to Week",
+      "programming": "Programming is light publicly; the repeat draw comes from bartender credibility, room mystique, and late-night culture"
+    },
+    {
+      "bar": "Gift Shop",
+      "cadence_window": "Month to Month",
+      "programming": "Momentum appears to come from insider reputation, menu refreshes, and industry word-of-mouth rather than formal event series"
+    },
+    {
+      "bar": "C Suite",
+      "cadence_window": "Day to Day",
+      "programming": "Luxury-led cocktail lounge service focused on premium celebrations, intimate parties, and polished evening bookings"
+    },
+    {
+      "bar": "C Suite",
+      "cadence_window": "Week to Week",
+      "programming": "Consistent upscale nightlife positioning with a focus on service, room polish, and high-spend social occasions"
+    },
+    {
+      "bar": "C Suite",
+      "cadence_window": "Month to Month",
+      "programming": "The monthly rhythm appears driven by premium bookings and social discovery more than serialized public programming"
+    },
+    {
+      "bar": "No Vacancy",
+      "cadence_window": "Day to Day",
+      "programming": "Full-evening cocktail-bar-and-restaurant positioning with moody Ossington date-night relevance"
+    },
+    {
+      "bar": "No Vacancy",
+      "cadence_window": "Week to Week",
+      "programming": "The weekly draw is atmosphere, dinner-plus-drinks utility, and repeat local nightlife behaviour rather than overt recurring events"
+    },
+    {
+      "bar": "No Vacancy",
+      "cadence_window": "Month to Month",
+      "programming": "Seasonal menu and room buzz are the main monthly demand levers while the review base is still building"
+    },
+    {
+      "bar": "CKTL & Co.",
+      "cadence_window": "Day to Day",
+      "programming": "After-work cocktail lounge with lunch, happy hour, and business-group utility"
+    },
+    {
+      "bar": "CKTL & Co.",
+      "cadence_window": "Week to Week",
+      "programming": "Recurring commercial rhythm is tied to weekday happy hour, corporate meetups, and downtown social traffic"
+    },
+    {
+      "bar": "CKTL & Co.",
+      "cadence_window": "Month to Month",
+      "programming": "Menu shifts and business-district activation matter more than a nightlife-event calendar"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": 1,
+      "move": "Turn Thursday jazz into a larger ritual",
+      "why": "The clearest repeatable weekly hook already exists and should become bigger, more branded, and more content-friendly."
+    },
+    {
+      "priority": 2,
+      "move": "Build 2-3 signature cocktails with named presentation",
+      "why": "Top peers all have signature drink stories that travel socially and give guests a reason to recommend the bar."
+    },
+    {
+      "priority": 3,
+      "move": "Add one monthly guest shift or collaboration",
+      "why": "This is the fastest way to borrow relevance and generate fresh demand without overhauling the whole concept."
+    },
+    {
+      "priority": 4,
+      "move": "Publish a weekly content rhythm",
+      "why": "Bar Cart needs consistency more than volume: one event push, one hero drink, one room/vibe post each week."
+    }
+  ]
+}

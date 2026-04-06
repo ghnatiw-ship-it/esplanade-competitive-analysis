@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-04-03",
+  "competitor": "The Auld Spot Pub",
+  "address": "347 Danforth Avenue, Toronto, ON M4K 1N7",
+  "neighbourhood": "The Danforth / Riverdale",
+  "phone": "(416) 461-1114",
+  "website": "auldspotpub.ca",
+  "founded": 1998,
+  "positioning": "Gastropub",
+  "tagline": "Toronto's top pub on the Danforth",
+  "ownership_history": [
+    "Founded 1998, long-time operators Nathan and Nicole Hynes built a loyal neighbourhood following over 10+ years.",
+    "Sold in 2020 to 8590 Group, who raised prices and alienated regulars (complaints about $13 drafts, $60 bills for basic orders).",
+    "Closed earlier in 2022 after community backlash.",
+    "Reopened fall 2022 under new management, appears to have course-corrected."
+  ],
+  "google_rating": 4.5,
+  "google_reviews_approx": 1245,
+  "yelp_rating": "3.5-4.0 (95 reviews, 109 photos)",
+  "tripadvisor_rating": 4.3,
+  "tripadvisor_reviews": 86,
+  "tripadvisor_ranking": "#1,000 of 5,762 restaurants in Toronto",
+  "instagram_handle": "@theauldspotpub",
+  "instagram_followers": 3157,
+  "facebook": "facebook.com/theauldspot",
+  "twitter": "@TheAuldSpotPub on X",
+  "reservation_platform": "Tock (not currently accepting reservations)",
+  "delivery_platforms": ["Uber Eats", "DoorDash (currently inactive)"],
+  "menu_highlights": {
+    "signature_items": [
+      "$1 buck-a-shuck oysters (Mondays)",
+      "$1 drummies (honey hot or buffalo sauce)",
+      "Auld Spot Bacon Double Cheese Burger with hand-cut chips",
+      "Beer-battered fresh haddock fish & chips",
+      "Deep fried tamari glazed crispy pork belly",
+      "Kung Pao Cauliflower",
+      "Jerk Chicken Tacos",
+      "Mac and Cheese",
+      "Mussels",
+      "French Onion Soup",
+      "Steak"
+    ],
+    "food_philosophy": "No manufactured food - all created fresh daily from locally sourced markets. Globally inspired pub fare.",
+    "drinks_program": "Extensive gin, bourbon, cocktail and draught beer selection. Craft beer focus with rotating taps including Mill Street, Two Loons, Common Good, Harmon's Non-Alc.",
+    "menu_sections": ["Food", "Drinks (gin, bourbon, cocktails, draught, wine, scotch)"]
+  },
+  "pricing": {
+    "burger_range": "$10 (happy hour with chips) to ~$20 (regular menu)",
+    "pint_range": "$9 to $18 depending on product",
+    "pint_plus_burger_estimate": "$29-$38",
+    "price_tier": "$$",
+    "noted_complaints": "Some reviewers find pricing high for pub food ($20 burgers + $7.50-$14.50 pints)"
+  },
+  "hours": {
+    "monday": "4 PM - 12 AM",
+    "note": "Check website for full weekly hours"
+  },
+  "review_themes": {
+    "praise": [
+      "Exceptional burger quality - juicy, well-made, praised across platforms",
+      "Fresh oysters and $1 Monday deal are a major draw",
+      "Cozy, classy-yet-comfortable neighbourhood pub atmosphere",
+      "Strong craft beer and whiskey selection",
+      "French fries consistently praised",
+      "Mac and cheese called 'incredible'",
+      "Friendly, genuine local crowd",
+      "Food quality above average pub fare - owner has restaurant industry experience",
+      "Globally inspired menu stands out from typical pub grub"
+    ],
+    "complaints": [
+      "Pricing perceived as high for pub food (burgers at $20, premium pints at $14+)",
+      "Food poisoning incident reported (Dec 2024) - group of 4 sick after burgers/mussels/salad",
+      "Dark interior lighting noted as negative by some",
+      "Staff service quality inconsistent in some reviews",
+      "Some found food 'ok but not exceptional' relative to price",
+      "Turbulent ownership history damaged trust with some longtime regulars"
+    ]
+  }
+}

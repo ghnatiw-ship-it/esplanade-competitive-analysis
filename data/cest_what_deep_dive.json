@@ -1,0 +1,207 @@
+{
+  "updated_at": "2026-04-03",
+  "competitor": "C'est What? Inc.",
+  "address": "67 Front Street East, Toronto, ON M5E 1B5",
+  "neighbourhood": "St. Lawrence Market / Old Town Toronto",
+  "phone": "(416) 867-9499",
+  "email": "info@cestwhat.com",
+  "website": "cestwhat.com",
+  "founded": 1988,
+  "positioning": "Toronto's Original Craft Beer Pub & Brewpub",
+  "tagline": "Toronto's OG Craft Beer Bar — true local flavour since 1988",
+  "owner": "George Milbrandt",
+  "ownership_history": [
+    "Founded 1988 by George Milbrandt, who left architectural training and a construction business after an early mid-life crisis at age 27.",
+    "First establishment of any kind in Toronto to offer local craft beer and wine exclusively.",
+    "Has tripled in size and quadrupled the draught selection since opening.",
+    "Became a home base for Ontario's craft brewing community — new independent breweries would knock on C'est What's door first.",
+    "George Milbrandt has a parkette named after him in the neighbourhood (George Milbrandt Parkette), signalling deep community roots.",
+    "Described by NOW Toronto as 'the granddaddy of craft beer bars' — a Toronto Pillar.",
+    "Continuously owner-operated for 38 years — remarkable stability and consistent vision."
+  ],
+  "venue_description": "Basement/cellar venue in a historic building — almost no outdoor signage, small door that leads down into a very spacious bar/restaurant. English-style pub feel with centre posts, low ceilings, and many smaller broken-up spaces. Stone and wood decor, fireplaces, couches.",
+  "google_rating": 4.5,
+  "google_reviews_approx": 3400,
+  "yelp_rating": "3.5 (373 reviews, 230 photos)",
+  "tripadvisor_rating": 4.4,
+  "tripadvisor_reviews": 586,
+  "tripadvisor_ranking": "#16 of 5,771 restaurants in Toronto",
+  "beeradvocate_notes": "Highly regarded — described as 'cask ale headwaters for Toronto', quality rated excellent, staff knowledgeable and helpful",
+  "foursquare_rating": "8.5/10 (4,610 visitors, 111 tips)",
+  "facebook_rating": 4.4,
+  "restaurantji_reviews": "402 reviews, 63 photos",
+  "instagram_handle": "@cestwhatto",
+  "instagram_followers_approx": 4006,
+  "facebook": "facebook.com/cestwhatto",
+  "twitter": "@cestwhattoronto on X",
+  "untappd": "untappd.com/cestwhat",
+  "reservation_platform": "Group bookings via website form (cestwhat.com/group-booking/) — subject to minimum spend and advance deposit",
+  "delivery_platforms": ["Uber Eats (closed/inactive since Nov 2021)"],
+  "email_capture": "Monthly e-newsletter (cestwhat.com/newsletter/cest-what-e-news)",
+  "online_ordering": "In-store pickup was listed as available; no active delivery platform as of 2026",
+  "hours": {
+    "monday": "4:00 PM - 12:00 AM",
+    "tuesday": "4:00 PM - 12:00 AM",
+    "wednesday": "4:00 PM - 12:00 AM",
+    "thursday": "12:00 PM - 1:00 AM",
+    "friday": "12:00 PM - 1:00 AM",
+    "saturday": "12:00 PM - 1:00 AM",
+    "sunday": "12:00 PM - 12:00 AM",
+    "note": "Closed Mon-Wed for lunch — opens at 4 PM. Weekend-forward hours with Thu-Sat open latest."
+  },
+  "beer_program": {
+    "total_taps": 42,
+    "cask_taps": 8,
+    "beer_philosophy": "100% Canadian beer list (mostly Ontario). First-ever Toronto venue to serve exclusively local craft beer and wine.",
+    "annual_variety": "~300 different beers per year due to constant rotation — 'you could come for lunch every weekday and never drink the same beer twice'",
+    "wine_program": "All Ontario VQA wine list — exclusively local wines",
+    "whiskey_selection": "Fine whiskies from the world over — positioned as a key part of the drinks program alongside craft beer",
+    "beer_festivals": "Hosts cask festivals, craft beer collaborations, and special beer events. Has offered $4.50 6oz pours at beer festival events.",
+    "industry_reputation": "When new Ontario craft breweries started up, C'est What was one of the first doors they knocked on. Served as a launchpad for the Ontario craft beer scene."
+  },
+  "menu_highlights": {
+    "signature_items": [
+      "Bison Burger — extra lean minced bison, grilled to medium, lettuce, tomato-onion chutney, onion straws, brioche bun",
+      "Chicken Curry — rich curried cream sauce, sliced almonds, basmati rice, mint peas, mango chutney",
+      "Lamb Burger (highly reviewed)",
+      "Poutine ('to die for' per reviewers)",
+      "Fish and Chips",
+      "Jambalaya",
+      "Black Bean and Almond Patty Burger (vegan/GF adaptable)",
+      "Cheese and Onion Pie"
+    ],
+    "food_philosophy": "Comfort food made from scratch with real honest ingredients. Diverse menu. 'If it's worth doing, it's worth doing well' — George Milbrandt.",
+    "dietary_accommodations": "Vegan and gluten-free options prominently featured (cestwhat.com/food/ title includes 'Vegan & Gluten-Free Options'). O'Doughs GF bun substitute available. Menu items clearly marked with modification options for dairy-free, GF, and vegan.",
+    "menu_sections": ["Food", "Beer List", "Beverages (wine, whiskey, cocktails)"],
+    "side_options": ["Coleslaw", "Frites", "Mint Peas", "Sweet Potato Chips", "Roasted Potatoes", "House Salad", "Kale Caesar Salad", "Greek Salad", "Classic Poutine"]
+  },
+  "pricing": {
+    "food_estimate_per_person": "$20-$25 per person for food (incl. taxes and tip)",
+    "pint_estimate": "~$9-$11 (Toronto craft beer average; specific pricing not publicly listed online)",
+    "pint_plus_burger_estimate": "$28-$36",
+    "price_tier": "$$",
+    "beer_festival_pricing": "$4.50 for 6oz pours at special events",
+    "noted_positioning": "Formula: high-quality beers in a friendly environment at a reasonable price (per NOW Toronto profile)"
+  },
+  "entertainment_and_amenities": {
+    "live_music": "Live, original, indie music in dedicated music room. Showcased the who's who of the Canadian indie music scene. Has an adjoining performance space with an Internet radio station.",
+    "board_games": true,
+    "pool_tables": true,
+    "fireplaces": true,
+    "couches": true,
+    "tvs_sports": "Not a sports-focused venue — no emphasis on TVs or live sports in any listing or review",
+    "private_event_room": "Private party room available. Group bookings via website with minimum spend and deposit.",
+    "atmosphere": "Cozy, comfortable, and attractive subterranean rooms decorated in light wood and stonework. Multiple broken-up spaces create intimate sections. Speakeasy-style hidden entrance adds mystique."
+  },
+  "digital_presence": {
+    "website_quality": "Professional, functional. Separate pages for food menu, beer list, beverages, group booking, contact, about us, and newsletter. Clear branding as 'Toronto's OG Craft Beer Bar'.",
+    "website_pages": ["Home", "Food (cestwhat.com/food/)", "Beer List (cestwhat.com/beer/)", "Beverages (cestwhat.com/bevies/)", "Group Booking (cestwhat.com/group-booking/)", "About Us (cestwhat.com/about-us/)", "Contact (cestwhat.com/contact/)", "Newsletter"],
+    "email_newsletter": "Monthly e-newsletter with signup on site",
+    "social_platforms": ["Instagram (@cestwhatto ~4,006 followers)", "Facebook (facebook.com/cestwhatto, 4.4 rating)", "X/Twitter (@cestwhattoronto)", "Untappd (untappd.com/cestwhat)"],
+    "third_party_listings": ["Yelp", "TripAdvisor", "BeerAdvocate", "Foursquare", "Untappd", "Yellow Pages", "RestaurantGuru", "Restaurantji", "Sirved", "The Vendry", "NOW Toronto"],
+    "online_ordering": "No active delivery platform. Uber Eats listing closed since Nov 2021. In-store pickup may be available."
+  },
+  "review_themes": {
+    "praise": [
+      "Beer selection is exceptional — 42 taps of exclusively Canadian craft with 8 on cask, constantly rotating. Reviewers call it 'the best' for craft beer in Toronto.",
+      "Staff extremely knowledgeable about beer — can guide patrons through the huge selection with expertise.",
+      "Cozy, unique atmosphere — the hidden basement entrance, fireplaces, stone/wood decor create a special 'discovery' feel. Multiple intimate rooms.",
+      "Bison burger, lamb burger, and poutine consistently praised as standout items.",
+      "Board games and pool tables make it a great hangout — 'awesome place to chill and play games'.",
+      "Live indie music adds cultural dimension — not just a bar, but a cultural venue.",
+      "Vegan and GF accommodations are genuine, not an afterthought.",
+      "Long history and authenticity — 'granddaddy of craft beer bars', been doing this since before craft beer was mainstream.",
+      "Ranked #16 of 5,771 Toronto restaurants on TripAdvisor — elite status.",
+      "Reasonable pricing for the quality ('high-quality beers at a reasonable price').",
+      "Strong local/Ontario-only philosophy creates a distinct identity that resonates with locals and tourists alike."
+    ],
+    "complaints": [
+      "Hard to find — almost no outdoor signage, small door into a basement. New visitors often struggle to locate it.",
+      "Inconsistent food quality in some reviews — calamari too salty, chicken burnt, brown lettuce in salad, jambalaya overly salty.",
+      "Service can be slow during busy periods — 'half an hour to order a beer' reported.",
+      "One report of a rude barman who had a 'hissy fit' about outside food.",
+      "Cheese and onion pie described as lacking taste by one reviewer.",
+      "Dark interior — the basement setting is cozy for some but feels dark/cramped for others.",
+      "No active delivery platform — closed Uber Eats in 2021.",
+      "Mon-Wed doesn't open until 4 PM — misses weekday lunch crowd."
+    ]
+  },
+  "swot_analysis": {
+    "strengths": [
+      "Pioneer status and authenticity — 38 years as Toronto's original craft beer pub creates unassailable brand heritage and credibility.",
+      "Best-in-class beer program — 42 taps, 8 cask, 100% Canadian/Ontario, ~300 different beers/year. No other pub in the neighbourhood can match this depth.",
+      "Elite review profile — 4.5 Google (~3,400 reviews), 4.4 TripAdvisor (#16 in all of Toronto), 8.5 Foursquare. Exceptional across all platforms.",
+      "Owner-operator stability — George Milbrandt has run this for 38 years with consistent vision. No ownership drama or identity crises.",
+      "Unique atmosphere — hidden basement speakeasy vibe, fireplaces, multiple intimate rooms. The 'discovery' factor of finding it is part of the brand.",
+      "Cultural programming — live indie music, cask festivals, beer events create reasons to visit beyond just food and drink.",
+      "Strong dietary accommodation — genuine vegan and GF options attract a wider audience.",
+      "Deep community roots — George Milbrandt has a parkette named after him. NOW Toronto 'Pillar' status. Industry respect.",
+      "Multi-revenue streams — food, drinks, private events, group bookings, live music events, beer festivals.",
+      "Website with email capture — monthly newsletter builds a direct customer relationship."
+    ],
+    "weaknesses": [
+      "Discoverability — the hidden entrance and minimal signage means reliance on word-of-mouth and online discovery. First-time visitors may walk past.",
+      "No sports/TV focus — misses the large sports-viewing pub market entirely.",
+      "Limited weekday hours — Mon-Wed opens at 4 PM, losing the weekday lunch crowd to competitors.",
+      "No active delivery/online ordering — closed Uber Eats in 2021, missing the convenience channel.",
+      "Instagram following (~4,006) is modest for a venue of this reputation and history — digital marketing could be stronger.",
+      "Food inconsistency appears in reviews — while the beer is universally praised, food quality complaints recur.",
+      "Aging infrastructure — 38-year-old basement venue may face ongoing maintenance and accessibility challenges.",
+      "Basement location may have accessibility limitations for mobility-impaired customers."
+    ],
+    "opportunities": [
+      "Leverage TripAdvisor #16 ranking more aggressively in marketing — this is an extraordinary ranking for a pub.",
+      "Grow Instagram presence — 4,006 followers is low for a venue with 3,400+ Google reviews. Content showcasing the beer rotation, hidden entrance, and live music could go viral.",
+      "Expand weekday lunch hours — the St. Lawrence Market neighbourhood has strong daytime foot traffic from office workers and tourists.",
+      "Partner with Ontario craft breweries for exclusive tap takeovers and collaborative brews — deepen the 'launchpad' positioning.",
+      "Develop a stronger digital ordering/pickup channel — post-COVID expectations for convenience remain high.",
+      "Capitalize on the 'hidden gem / speakeasy' trend in social media content creation.",
+      "Beer tourism programming — formalize brewery partnerships into tasting flights, beer education events, and brewery tour tie-ins."
+    ],
+    "threats": [
+      "Craft beer market saturation — dozens of new craft beer bars and breweries in Toronto mean the 'first mover' advantage erodes over time.",
+      "Rising commercial rents in the St. Lawrence/Front St corridor could pressure margins.",
+      "Younger demographics may gravitate to newer, more Instagram-friendly venues with stronger social media presence.",
+      "Economic pressure on discretionary spending (dining out) in a high-cost-of-living city.",
+      "Neighbourhood competitors (Scotland Yard, Bier Market, etc.) continue to evolve their offerings.",
+      "Founder risk — George Milbrandt has been the singular vision for 38 years. Succession planning is a long-term concern."
+    ]
+  },
+  "positioning_vs_scotland_yard": {
+    "proximity": "Literally around the corner — 67 Front St E (C'est What) vs 56 The Esplanade (Scotland Yard). Same St. Lawrence Market / Old Town neighbourhood. Shared local foot traffic from office workers, tourists, and St. Lawrence Market visitors.",
+    "cest_what_advantages": [
+      "Vastly superior beer program — 42 taps (8 cask) vs SY's more standard pub tap lineup. Beer enthusiasts will choose C'est What every time.",
+      "Stronger review profile by volume — ~3,400 Google reviews vs SY's 4,109, but C'est What's TripAdvisor #16 ranking is extraordinary.",
+      "Pioneer brand credibility — 'Toronto's original craft beer pub' since 1988 is a powerful positioning statement.",
+      "Cultural programming — live indie music and cask festivals give C'est What a multi-dimensional identity beyond just pub.",
+      "Unique atmosphere — hidden basement, fireplaces, board games, pool tables create a distinct experience.",
+      "Dietary accommodations — genuine vegan/GF options broaden the audience.",
+      "Whiskey selection — 'fine whiskies from the world over' adds another draw."
+    ],
+    "scotland_yard_advantages": [
+      "Higher Google rating — SY's 4.7 vs C'est What's 4.5. SY has the higher quality score despite fewer niche credentials.",
+      "More Google reviews — 4,109 vs ~3,400. SY generates more review volume.",
+      "Sports and football focus — SY owns the match-day and sports-viewing occasion. C'est What has zero sports positioning.",
+      "Longer heritage — SY since 1978 (48 years) vs C'est What since 1988 (38 years). SY is the older pub.",
+      "Better discoverability — SY has street-level presence on The Esplanade vs C'est What's hidden basement entrance.",
+      "English pub identity — clear, specific positioning that resonates with a defined audience. C'est What's 'craft beer' identity is broader but less tribal.",
+      "Weekday accessibility — if SY has lunch hours Mon-Wed, it captures the crowd C'est What misses by opening at 4 PM."
+    ],
+    "key_insight": "These two pubs serve fundamentally different occasions despite sharing foot traffic. C'est What owns the 'craft beer discovery / cultural hangout' occasion. Scotland Yard owns the 'sports match / English pub' occasion. The overlap is the casual after-work pint and weekend social — that's where they truly compete head-to-head.",
+    "what_sy_can_learn": [
+      "Beer program depth matters — C'est What's 42-tap, all-Canadian program is a magnet. SY should consider expanding its craft beer rotation and potentially adding cask options.",
+      "Dietary accommodation is now table stakes — C'est What's genuine vegan/GF options attract groups where even one member has restrictions. SY should audit its menu for dietary inclusivity.",
+      "Email capture and newsletters build direct relationships — C'est What has a monthly newsletter. SY should consider implementing email capture for match-day promotions and events.",
+      "TripAdvisor ranking is powerful for tourism — C'est What at #16 captures tourist traffic heavily. SY should actively solicit TripAdvisor reviews to climb the rankings.",
+      "Board games and non-sports entertainment expand dwell time — C'est What's board games and pool tables keep people longer on non-match days. SY could add similar low-cost entertainment options.",
+      "Cultural events create repeat visits — C'est What's live music and cask festivals drive visits beyond the normal pub occasion. SY's equivalent could be quiz nights, live music, or themed events.",
+      "The 'hidden gem' mystique works on social media — C'est What's basement entrance is actually a marketing asset. SY should identify and amplify its own unique story elements."
+    ],
+    "where_sy_already_wins": [
+      "Google rating quality (4.7 > 4.5) — SY delivers a more consistently excellent experience per review scores.",
+      "Sports/football community — this is a defensible moat. C'est What cannot credibly enter this space.",
+      "Brand clarity — 'English pub since 1978' is instantly understood. C'est What's identity requires more explanation.",
+      "Street presence and discoverability — no one walks past SY without knowing it's there."
+    ]
+  }
+}
