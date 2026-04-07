@@ -804,6 +804,12 @@ ELOISE_SOCIAL_AUDIT = pd.DataFrame([
 
 DOLLY_SOCIAL_AUDIT = pd.DataFrame([
     ["Dolly's", "@dollyscountrybarto", None, None, None, None, "IG, TikTok, FB, X, YouTube, Pinterest, Snapchat, Spotify, Bluesky, Reddit", "Pre-launch", "Owned launch accounts reserved", "Teaser reels, build journal, staff intros, line-dance setup, bachelorette positioning, female-safety messaging", "Pre-launch", "The social footprint is reserved across platforms; the opportunity is to launch with a disciplined pre-opening content system instead of building accounts after opening."],
+    ["Scotland Yard", "@scotlandyardtoronto", 1903, 127, 4.7, 4109, "IG, FB", "~0.4", "Single venue", "Pub atmosphere, sports energy, specials, event utility", "Low to Moderate", "Useful local baseline for how much The Esplanade foot traffic can be activated without a nightlife-first content engine."],
+    ["Bar Cathedral", "@barcathedral", 23400, None, 4.3, 243, "IG, FB", "~4.5", "Single venue", "Nightlife interiors, DJs, live-performance visuals, creator-friendly room shots", "Moderate to High", "Important local nightlife benchmark for content cadence and room-based atmosphere marketing."],
+    ["Old Spaghetti Factory", "@oldspaghettifactoryto", 6157, 624, 4.4, 12793, "IG, FB", "~1.2", "Single venue", "Nostalgia, family dining, whimsical interiors", "Moderate", "Not a direct nightlife comp, but a useful proof point that the Esplanade can sustain destination traffic if the brand promise is legible."],
+    ["The Keg Esplanade", "@thekegsteakhouse", 117000, 1580, 4.3, 3000, "IG, FB", "~3.0", "Chain account", "Steakhouse polish, occasion dining, broad brand familiarity", "High", "Competes for pre-night-out dollars and demonstrates how strong corporate social discipline can dominate local awareness."],
+    ["C'est What?", "@cestwhatto", 4006, 500, 4.5, 3400, "IG, FB", "~1.1", "Single venue", "Beer culture, event flyers, local community familiarity", "Moderate", "A reminder that local institutions can win with consistency and community, not just polish."],
+    ["King Taps First Canadian Place", "@kingtaps", None, None, 4.3, 4500, "IG, FB", "~2.5", "Multi-location account", "Patio moments, group nights, happy hour, sports-adjacent downtown energy", "Moderate", "Useful local occasion competitor for after-work groups before they decide where late-night goes."],
     ["Rock 'N' Horse Saloon", "@rocknhorseto", 16000, None, 4.1, 1967, "IG, FB, TikTok", "~2.5", "Single venue", "Line dancing, mechanical bull, party groups, country-night atmosphere", "Moderate to High", "The clearest active Toronto country-night benchmark for category legitimacy and repeatable party energy."],
     ["Paris Texas", "@paristexasparistexas", 14000, None, 4.7, 200, "IG, TikTok", "~3.5", "Single venue", "Bachelorette energy, polished interiors, party-group content, brunch and patio flexing", "High", "Shows how country nightlife can be made fashionable, photogenic, and female-skewed without losing broad appeal."],
     ["Rodeo Dive", "@rodeodiveto", 3000, None, None, None, "IG, TikTok", "~2.0", "Single venue", "Country-sports crossover, launch buzz, INK-backed nightlife polish", "Early / building", "Important because it competes for newer downtown curiosity and group nightlife traffic."],
@@ -814,6 +820,10 @@ DOLLY_SOCIAL_AUDIT = pd.DataFrame([
     ["Stampede Ranch", "@thestampederanch", None, None, None, None, "IG, FB", "~1.5", "Single venue", "Dance-floor culture, line dancing, suburban-country nightlife", "Moderate", "Useful Ontario operating reference for weekly country programming and dance-floor-led demand."],
     ["Bub City", "@bubcity", 17000, None, 4.6, 2000, "IG, TikTok, FB", "~4.0", "Multi-unit brand", "Line-dancing lessons, BBQ, live bands, bachelorettes, broad occasion programming", "High", "The closest structural benchmark for Dolly's because it blends real food, country programming, and high-volume nightlife."],
     ["Ole Red", "@olered", 199000, None, 4.1, 5000, "IG, TikTok, FB, YouTube", "~5.0", "Multi-location / celebrity brand", "Massive interior reveals, bachelorette groups, rooftop energy, branded entertainment moments", "High", "Best benchmark for designing a room and content system that guests want to film."],
+    ["Tootsie's Orchid Lounge", "@tootsies_orchid_lounge", 69000, None, 4.2, 8000, "IG, FB", "~3.0", "Single venue", "Honky-tonk heritage, live bands, all-day country credibility", "High", "The benchmark for cultural authenticity and continuous live-music energy rather than sleek nightlife polish."],
+    ["Luke's 32 Bridge", "@lukes32bridge", 69000, None, 4.3, 3000, "IG, TikTok, FB", "~4.0", "Celebrity mega-bar", "Multi-floor spectacle, rooftop, artist moments, day-to-night transition", "High", "Best scale benchmark for how multiple floors and moods can widen the addressable occasion set."],
+    ["Robert's Western World", "@robertswesternworld", 47000, None, 4.7, 5000, "IG, FB", "~2.5", "Single venue", "Authentic honky-tonk music, cheap iconic food, anti-polish personality", "High", "Strongest proof that authenticity and one iconic value item can outperform more polished concepts."],
+    ["Losers Bar", "@losersoriginal", 41000, None, 4.1, 2000, "IG, FB", "~2.5", "Single venue", "Dive-bar chaos, artist credibility, spontaneous celebrity drop-ins", "Moderate to High", "Useful benchmark for how a rougher more irreverent brand voice can still feel aspirational to the right audience."],
     ["Whiskey Rose", "@whiskeyroseyyc", 19000, None, 4.1, 1500, "IG, FB, TikTok", "~3.0", "Single venue", "Nashville-coded nightlife, western styling, party-night visuals, dance-floor group content", "Moderate to High", "Closest Canadian benchmark for a purpose-built modern country party room."],
     ["Coyote Ugly", "@coyoteuglynyc", 18000, None, 4.1, 1000, "IG, TikTok, FB", "~3.0", "Global brand", "Female-led bar spectacle, staff performance, tourist-night-out energy", "High", "Relevant less for music and more for the female-forward celebration and spectacle model."],
     ["The Blues Can", "@thebluescancalgary", 6700, None, 4.5, 500, "IG, FB", "~2.0", "Single venue", "Live-band energy, comfort food, roots authenticity, local-music community", "Moderate", "Good benchmark for how a music-first venue can still support itself with food and a loyal local base."],
@@ -838,6 +848,34 @@ DOLLY_LAUNCH_FRAMEWORK = pd.DataFrame([
     ["Community Ownership", "Months 3–6", "Become a loyalists' bar rather than just the new bar", "Dance-group partnerships, artist residencies, charity/community nights, feature regulars and staff personalities", "Organic reach growth, returning guests, lower paid-acquisition dependence"],
     ["Evolution", "Ongoing", "Keep the concept fresh without losing identity", "Seasonal menus, limited-time themed nights, guest DJs/artists, one major moment per quarter", "Engagement spikes tied to refreshes, sustained foot traffic after month 6"],
 ], columns=["Phase", "Timing", "Goal", "Key Moves", "Success Metrics"])
+
+DOLLY_BACHELORETTE_PACKAGES = pd.DataFrame([
+    ["Howdy Crew", "$20-25 / guest", "Guest-list access before 10 PM, welcome shot, bride bandana, reserved area for 60-90 minutes", "Smaller groups and lower-friction first bookings", "Removes planning friction and turns casual inquiry into a bookable product."],
+    ["Bride's Last Ride", "$45-60 / guest", "Skip-the-line access, reserved rail/table, one themed cocktail or pitcher per 4 guests, bride sash/hat, group photo moment, late-night pizza add-on pricing", "Core 8-14 person bachelorette groups", "Should become the default package because it monetizes the occasion without requiring bottle service."],
+    ["Dolly Deluxe", "$75-95 / guest", "Priority entry, semi-private premium section, dedicated host/server, welcome cocktail, shared snacks + pizza, custom sign, bride shout-out / line-dance dedication, merch pack", "Higher-spend groups and concierge/planner traffic", "Creates a premium tier without forcing Dolly's into a club/bottle-service identity."],
+], columns=["Package", "Price", "Includes", "Best For", "Why It Matters"])
+
+DOLLY_BACHELORETTE_MARKETING = pd.DataFrame([
+    ["Dedicated landing page", "Clear packages, pricing, inquiry form, FAQ, safety promise, photo gallery", "Website / SEO / direct response", "Turn bachelorette demand into an owned funnel instead of DMs and one-off inquiries."],
+    ["Creator seeding", "Invite micro-creators to staged bachelorette preview nights before and during opening month", "TikTok / Instagram Reels", "The category wins on UGC; Dolly's needs proof-of-party content immediately."],
+    ["Planner outreach", "Build a one-page sell sheet for bridal planners, hotels, and concierge desks", "Email / partnerships", "High-intent group business should not depend only on consumer social discovery."],
+    ["Referral hook", "Bride books, group gets line-skip and a round for the maid of honour if they post and tag", "Social + group sales", "Incentivizes organic reach from the exact audience Dolly's wants more of."],
+    ["UGC prompts", "Branded mirror, bride signage, cowboy hat wall, pizza-window shot, line-dance hero angle", "In-room conversion", "The room itself should do part of the marketing work after guests arrive."],
+], columns=["Tactic", "Execution", "Channel", "Reason"])
+
+DOLLY_OFF_PEAK_FRAMEWORK = pd.DataFrame([
+    ["Sunday", "Bluegrass Brunch + Sunday Social", "Family-friendly live music brunch from late morning, then transition to an early-evening social with acoustic sets and comfort specials", "Broader age mix, families by day, local/date-night by evening", "Sunday becomes a different occasion, not a weaker version of Saturday."],
+    ["Monday", "Industry Monday", "No-cover hospitality night, simple drinks, pizza/window specials, playlist-led social energy after service", "Hospitality workers and downtown regulars", "Creates a repeatable low-cost loyalty engine and staff-word-of-mouth channel."],
+    ["Tuesday", "Line Dance School", "Beginner lesson at a fixed time, repeat instructor, low-friction first-visit offer, group booking prompt", "Women 22-35, first-timers, birthdays, suburban planners", "Best acquisition night because it removes the intimidation barrier."],
+    ["Wednesday", "Country Karaoke + Cowgirl Crew", "Country karaoke plus group-friendly specials and birthday/bachelorette-lite hooks", "Friend groups and midweek celebrators", "Keeps the room participatory and social without needing full live-band economics."],
+], columns=["Night", "Working Title", "Programming Shape", "Target Guest", "Commercial Logic"])
+
+DOLLY_OFF_PEAK_KPIS = pd.DataFrame([
+    ["Sunday", "Brunch covers, live-music attendance, family/group bookings"],
+    ["Monday", "Industry repeat rate, staff referrals, low-cost beverage volume"],
+    ["Tuesday", "Lesson attendance, % first-time guests, rebook intent for Fri-Sat"],
+    ["Wednesday", "Karaoke sign-ups, birthday/group inquiries, social mentions and tags"],
+], columns=["Night", "Primary KPI"])
 
 ELOISE_DEMAND_AUDIT = pd.DataFrame([
     ["Eloise", 4.6, 121, 12, "2026-04-04", "Moderate", "Fri-Sat dinner; Bar Cart spillover; special-occasion and date-night demand", "Tue-Thu lunch and early dinner", "Reservations are recommended on weekends; lunch prix-fixe and quieter midweek windows are the clearest demand-building opportunities."],
@@ -1033,10 +1071,11 @@ def _clean_research_df(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def load_venue_research_tables(base_path: Path) -> dict:
-    research_root = base_path.parent / "Esplanade Restaurants" / "_general" / "competitor_research"
     tables = {}
     for venue, filename in VENUE_RESEARCH_FILES.items():
-        path = research_root / filename
+        repo_path = base_path / "data" / "competitor_research" / filename
+        external_path = base_path.parent / "Esplanade Restaurants" / "_general" / "competitor_research" / filename
+        path = repo_path if repo_path.exists() else external_path
         if not path.exists():
             continue
         if path.suffix.lower() == ".csv":

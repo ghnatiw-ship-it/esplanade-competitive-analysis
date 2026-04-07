@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-_OUR_VENUES = {"Scotland Yard", "Bar Cart", "Bar Cathedral", "Eloise", "Old Spaghetti Factory"}
+_OUR_VENUES = {"Scotland Yard", "Bar Cart", "Bar Cathedral", "Eloise", "Dolly's", "Old Spaghetti Factory"}
 _VENUE_COLOR = "#1E8449"
 _COMPETITOR_COLOR = "#5D6D7E"
 _TIER_COLORS = {"Local": "#2980B9", "City-wide": "#E67E22", "Global": "#8E44AD"}
@@ -258,10 +258,10 @@ def teardown_radar(teardown: dict, venue_name: str, competitor_name: str, bench_
 # Returns a dict of figures so caller can lay them out.
 
 def teardown_sidebyside_bar(teardown: dict, venue_name: str, competitor_name: str, bench_row: pd.Series) -> dict:
-    comp_rating = teardown["google_rating"]
-    venue_rating = float(bench_row["Google Rating"])
-    comp_reviews = teardown["google_reviews"]
-    venue_reviews = int(bench_row["Google Reviews"])
+    comp_rating = teardown.get("google_rating")
+    venue_rating = pd.to_numeric(pd.Series([bench_row.get("Google Rating")]), errors="coerce").iloc[0]
+    comp_reviews = teardown.get("google_reviews")
+    venue_reviews = pd.to_numeric(pd.Series([bench_row.get("Google Reviews")]), errors="coerce").iloc[0]
 
     volume_specs = [
         ("IG Followers", teardown.get("ig_followers"), bench_row.get("IG Followers")),
@@ -279,16 +279,18 @@ def teardown_sidebyside_bar(teardown: dict, venue_name: str, competitor_name: st
 
     # Chart A: Google Rating — zoomed y-axis 3.5–5.0
     fig_rating = go.Figure()
-    fig_rating.add_trace(go.Bar(
-        name=competitor_name, x=[competitor_name], y=[comp_rating],
-        marker_color=_COMPETITOR_COLOR,
-        text=[f"{comp_rating}"], textposition="outside", textfont=dict(size=16),
-    ))
-    fig_rating.add_trace(go.Bar(
-        name=venue_name, x=[venue_name], y=[venue_rating],
-        marker_color=_VENUE_COLOR,
-        text=[f"{venue_rating}"], textposition="outside", textfont=dict(size=16),
-    ))
+    if comp_rating is not None and not pd.isna(comp_rating):
+        fig_rating.add_trace(go.Bar(
+            name=competitor_name, x=[competitor_name], y=[comp_rating],
+            marker_color=_COMPETITOR_COLOR,
+            text=[f"{comp_rating}"], textposition="outside", textfont=dict(size=16),
+        ))
+    if pd.notna(venue_rating):
+        fig_rating.add_trace(go.Bar(
+            name=venue_name, x=[venue_name], y=[venue_rating],
+            marker_color=_VENUE_COLOR,
+            text=[f"{venue_rating}"], textposition="outside", textfont=dict(size=16),
+        ))
     fig_rating.update_layout(
         barmode="group", height=350,
         margin=dict(l=10, r=10, t=40, b=30),
@@ -299,16 +301,18 @@ def teardown_sidebyside_bar(teardown: dict, venue_name: str, competitor_name: st
 
     # Chart B: Google Reviews — separate scale
     fig_reviews = go.Figure()
-    fig_reviews.add_trace(go.Bar(
-        name=competitor_name, x=[competitor_name], y=[comp_reviews],
-        marker_color=_COMPETITOR_COLOR,
-        text=[f"{comp_reviews:,}"], textposition="outside", textfont=dict(size=14),
-    ))
-    fig_reviews.add_trace(go.Bar(
-        name=venue_name, x=[venue_name], y=[venue_reviews],
-        marker_color=_VENUE_COLOR,
-        text=[f"{venue_reviews:,}"], textposition="outside", textfont=dict(size=14),
-    ))
+    if comp_reviews is not None and not pd.isna(comp_reviews):
+        fig_reviews.add_trace(go.Bar(
+            name=competitor_name, x=[competitor_name], y=[comp_reviews],
+            marker_color=_COMPETITOR_COLOR,
+            text=[f"{int(comp_reviews):,}"], textposition="outside", textfont=dict(size=14),
+        ))
+    if pd.notna(venue_reviews):
+        fig_reviews.add_trace(go.Bar(
+            name=venue_name, x=[venue_name], y=[venue_reviews],
+            marker_color=_VENUE_COLOR,
+            text=[f"{int(venue_reviews):,}"], textposition="outside", textfont=dict(size=14),
+        ))
     fig_reviews.update_layout(
         barmode="group", height=350,
         margin=dict(l=10, r=10, t=40, b=30),
@@ -318,16 +322,17 @@ def teardown_sidebyside_bar(teardown: dict, venue_name: str, competitor_name: st
 
     # Chart C: Social metrics
     fig_social = go.Figure()
-    fig_social.add_trace(go.Bar(
-        name=competitor_name, x=volume_metrics, y=comp_volume,
-        marker_color=_COMPETITOR_COLOR,
-        text=[f"{int(v):,}" if float(v).is_integer() else f"{v:.1f}" for v in comp_volume], textposition="outside",
-    ))
-    fig_social.add_trace(go.Bar(
-        name=venue_name, x=volume_metrics, y=venue_volume,
-        marker_color=_VENUE_COLOR,
-        text=[f"{int(v):,}" if float(v).is_integer() else f"{v:.1f}" for v in venue_volume], textposition="outside",
-    ))
+    if volume_metrics:
+        fig_social.add_trace(go.Bar(
+            name=competitor_name, x=volume_metrics, y=comp_volume,
+            marker_color=_COMPETITOR_COLOR,
+            text=[f"{int(v):,}" if float(v).is_integer() else f"{v:.1f}" for v in comp_volume], textposition="outside",
+        ))
+        fig_social.add_trace(go.Bar(
+            name=venue_name, x=volume_metrics, y=venue_volume,
+            marker_color=_VENUE_COLOR,
+            text=[f"{int(v):,}" if float(v).is_integer() else f"{v:.1f}" for v in venue_volume], textposition="outside",
+        ))
     fig_social.update_layout(
         barmode="group", height=350,
         margin=dict(l=10, r=10, t=40, b=30),

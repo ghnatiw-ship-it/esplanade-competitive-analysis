@@ -160,8 +160,10 @@ COMPETITOR_LOOKUP = {
     "Paris Texas": (4.7, 200, "@paristexasparistexas", 14000),
     "Rodeo Dive": (None, None, "@rodeodiveto", 3000),  # new venue
     "Badlands": (None, None, "@badlandsgoodtimes", 1074),  # new venue
+    "King Taps First Canadian Place": (4.3, 4500, "@kingtaps", None),
     "Horseshoe Tavern": (4.5, 3000, "@horseshoetavern", 30000),
     "The Cameron House": (4.5, 800, "@the.cameronhouse", 12000),
+    "The Dakota Tavern": (4.5, 2100, "@thedakotatavern", 15000),
     # === DOLLY'S GLOBAL ===
     "Ole Red": (4.1, 5000, "@olered", 199000),
     "Tootsie's Orchid Lounge": (4.2, 8000, "@tootsies_orchid_lounge", 69000),
@@ -170,6 +172,7 @@ COMPETITOR_LOOKUP = {
     "Losers Bar": (4.1, 2000, "@losersoriginal", 41000),
     "Bub City": (4.6, 2000, "@bubcity", 17000),
     "Whiskey Rose": (4.1, 1500, "@whiskeyroseyyc", 19000),
+    "Stampede Ranch": (None, None, "@thestampederanch", None),
     "Coyote Ugly": (4.1, 1000, "@coyoteuglynyc", 18000),
     "The Blues Can": (4.5, 500, "@thebluescancalgary", 6700),
 

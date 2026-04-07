@@ -20,6 +20,13 @@ from data.portfolio_data import (
     BC_SOCIAL_AUDIT,
     COMPETITOR_PRICING,
     COMPETITORS,
+    DOLLY_BACHELORETTE_MARKETING,
+    DOLLY_BACHELORETTE_PACKAGES,
+    DOLLY_LAUNCH_FRAMEWORK,
+    DOLLY_OFF_PEAK_FRAMEWORK,
+    DOLLY_OFF_PEAK_KPIS,
+    DOLLY_SOCIAL_AUDIT,
+    DOLLY_SOCIAL_HANDLES,
     ELOISE_AWARD_COMPETITION,
     ELOISE_DEMAND_AUDIT,
     ELOISE_DEMAND_SOURCES,
@@ -46,7 +53,7 @@ st.set_page_config(
 
 # --- GLOBAL TABLE STYLE ---
 
-_OUR_VENUES = {"Scotland Yard", "Bar Cart", "Bar Cathedral", "Eloise", "Old Spaghetti Factory"}
+_OUR_VENUES = {"Scotland Yard", "Bar Cart", "Bar Cathedral", "Eloise", "Dolly's", "Old Spaghetti Factory"}
 
 _TABLE_CSS = (
     '<style>'
@@ -2561,7 +2568,7 @@ ELOISE_TEARDOWNS = {
 }
 
 DOLLYS_TEARDOWNS = {
-    "Rock N Horse Saloon": {
+    "Rock 'N' Horse Saloon": {
         "address": "250 Adelaide St W, 2nd Floor, Toronto, ON M5H 1X6",
         "neighbourhood": "Entertainment District",
         "parent": "MRG Ventures (Matthew Gibbons, founder); Jeff Hathcock listed as current owner",
@@ -2686,10 +2693,125 @@ DOLLYS_TEARDOWNS = {
             "Multiple weekly programming anchors vs one Thursday event",
         ],
     },
+    "Rodeo Dive": {
+        "address": "600 King Street West, Toronto, ON M5V 1M3",
+        "neighbourhood": "King West / Portland Square",
+        "parent": "INK Entertainment / Portland Square",
+        "founded": "Late 2025 / emerging concept",
+        "website": "portlandsquareto.com",
+        "positioning": "Country-sports bar and western-coded nightlife room inside Portland Square. Strong operator backing, but still defining whether it is a real country bar, a sports bar, or a themed downtown hangout.",
+        "screenshot": None,
+        "google_rating": None, "google_reviews": None,
+        "yelp_rating": None, "yelp_reviews": None,
+        "ig_handle": "@rodeodiveto", "ig_followers": 3000, "ig_posts": None,
+        "platforms": "IG, TikTok", "posts_per_week": "~2.0",
+        "menus": [
+            "Country-sports-bar positioning with beer, cocktails, and shareable food implied",
+            "Portland Square ecosystem suggests strong event and group-booking crossover",
+        ],
+        "signature_items": [
+            "INK-backed launch credibility",
+            "Portland Square visibility and cross-traffic",
+            "Country-sports crossover angle",
+            "Downtown group-night potential",
+        ],
+        "review_strengths": [
+            "Launch buzz and curiosity factor still work in its favour",
+            "Operator polish and downtown location give it immediate credibility",
+            "Potential to attract both sports groups and country-curious nightlife traffic",
+        ],
+        "review_weaknesses": [
+            "Identity is still blurry — sports bar, country bar, or themed nightlife room",
+            "No deeply owned weekly ritual yet in the public-facing brand",
+            "Operator-backed polish can read as generic if the concept lacks authenticity",
+            "No obvious female-safety or hospitality-first differentiation",
+            "Still too new to have the trust and memory structure of a true institution",
+        ],
+        "swot": {
+            "strengths": ["Strong operator backing", "King West visibility", "Group-night and event potential", "Can move quickly with marketing and programming support"],
+            "weaknesses": ["Unclear identity", "No meaningful proof of repeat demand yet", "Less obviously female-forward than Dolly's", "No known signature ritual strong enough to own the category"],
+            "opportunities": ["Could scale fast if one weekly franchise takes off", "Portland Square ecosystem enables bigger collaboration and event plays", "Can still reposition while the market is learning the brand"],
+            "threats": ["Dolly's can claim the 'real' country lane before Rodeo Dive settles its identity", "Dolly's hospitality-first positioning is a clearer emotional offer", "A bigger dedicated room on The Esplanade can make Rodeo feel like a side concept"],
+        },
+        "learns": [
+            "Operator backing matters, but a nightlife concept still needs one-sentence clarity guests can repeat",
+            "Country-sports crossover is useful, but Dolly's should stay country-first rather than sports-first",
+            "Downtown visibility and event tie-ins are worth stealing where possible",
+            "New concepts need a recognizable weekly franchise quickly or they drift into generic nightlife",
+        ],
+        "advantages": [
+            "Dolly's has a much clearer emotional promise: female-forward, safe, hospitality-first country nightlife",
+            "Dolly's is not trying to split itself between country and sports-bar identity",
+            "The Esplanade gives Dolly's a cleaner opportunity to own destination-country positioning",
+            "A larger dedicated room and line-dancing core can make Dolly's feel more authoritative and less experimental",
+        ],
+        "sources": [
+            {"label": "Portland Square", "url": "https://portlandsquareto.com/"},
+            {"label": "Rodeo Dive Instagram", "url": "https://www.instagram.com/rodeodiveto/"},
+            {"label": "Toronto Life Portland Square coverage", "url": "https://torontolife.com/food/eight-new-bars-restaurants-portland-square/"},
+        ],
+    },
+    "Badlands": {
+        "address": "190 Ossington Avenue, Toronto, ON M6J 2Z7",
+        "neighbourhood": "Ossington",
+        "parent": "Independent single-venue concept",
+        "founded": "2025",
+        "website": "https://www.instagram.com/badlandsgoodtimes/",
+        "positioning": "Smaller, cooler neighbourhood-country room on Ossington. More indie, more local, and less bachelorette-scale than the King West country entries.",
+        "screenshot": None,
+        "google_rating": None, "google_reviews": None,
+        "yelp_rating": None, "yelp_reviews": None,
+        "ig_handle": "@badlandsgoodtimes", "ig_followers": 1074, "ig_posts": None,
+        "platforms": "IG", "posts_per_week": "~2.0",
+        "menus": [
+            "Neighbourhood bar menu orientation rather than large-format nightlife food program",
+            "Country-coded drinks and casual food support the vibe more than they define it",
+        ],
+        "signature_items": [
+            "Ossington neighbourhood credibility",
+            "Smaller-room intimacy",
+            "Country aesthetic filtered through a cooler downtown lens",
+            "Good-times rather than high-gloss party positioning",
+        ],
+        "review_strengths": [
+            "Feels more local and less corporate than bigger downtown nightlife rooms",
+            "Smaller format can feel more authentic and less intimidating",
+            "Neighbourhood positioning gives it date-night and casual-repeat relevance",
+        ],
+        "review_weaknesses": [
+            "Scale ceiling is low relative to Dolly's occasion strategy",
+            "Does not naturally own bachelorettes or big group celebrations",
+            "Smaller room limits revenue streams and the sense of event spectacle",
+            "Could get trapped as a 'cool vibe' bar rather than a must-visit destination",
+        ],
+        "swot": {
+            "strengths": ["Ossington cool factor", "Neighbourhood intimacy", "Country personality without obvious cheese", "Can feel more authentic than corporate-backed entries"],
+            "weaknesses": ["Low scale", "Weaker group-booking economics", "No obvious category-defining ritual yet", "Less likely to dominate broad GTA country demand"],
+            "opportunities": ["Can deepen local loyalty and music credibility", "Could own the indie-country lane if disciplined", "Neighbourhood repeat traffic can outperform hype if nurtured"],
+            "threats": ["Dolly's can dominate the large-group and bachelorette lane immediately", "A stronger content engine from Dolly's could make Badlands feel too small to matter citywide", "Country competitors with more scale can out-shout it"],
+        },
+        "learns": [
+            "There is room for a country bar that feels cooler and more local, not only louder and bigger",
+            "Ossington proves that aesthetic discipline matters — Dolly's should not feel like generic theme decor",
+            "Neighbourhood intimacy is attractive, so Dolly's needs smaller in-room zones that still feel personal inside a big room",
+            "Badlands is a reminder that not every country guest wants a mega-party every time",
+        ],
+        "advantages": [
+            "Dolly's can own the citywide destination lane while Badlands stays neighbourhood-scale",
+            "Dolly's group packages, live programming, and pizza window create more reasons to choose it for planned occasions",
+            "Dolly's safety positioning and hospitality-first service promise are sharper and more commercially legible",
+            "A larger room allows Dolly's to create multiple moods instead of one small-room vibe",
+        ],
+        "sources": [
+            {"label": "Badlands Instagram", "url": "https://www.instagram.com/badlandsgoodtimes/"},
+            {"label": "The Corner Toronto listing", "url": "https://www.thecorner.io/listings/badlands"},
+            {"label": "Apple Maps listing", "url": "https://maps.apple.com/place?auid=2858995336528685910"},
+        ],
+    },
 }
 
 VENUE_TEARDOWNS = {"Scotland Yard": SY_TEARDOWNS, "Bar Cart": BAR_CART_TEARDOWNS, "Bar Cathedral": BC_TEARDOWNS, "Eloise": ELOISE_TEARDOWNS, "Old Spaghetti Factory": OSF_TEARDOWNS, "Dolly's": DOLLYS_TEARDOWNS}
-VENUE_SOCIAL_AUDIT = {"Scotland Yard": SY_SOCIAL_AUDIT, "Bar Cart": BAR_CART_COMPETITOR_AUDIT, "Bar Cathedral": BC_SOCIAL_AUDIT, "Eloise": ELOISE_SOCIAL_AUDIT, "Old Spaghetti Factory": OSF_SOCIAL_AUDIT}
+VENUE_SOCIAL_AUDIT = {"Scotland Yard": SY_SOCIAL_AUDIT, "Bar Cart": BAR_CART_COMPETITOR_AUDIT, "Bar Cathedral": BC_SOCIAL_AUDIT, "Eloise": ELOISE_SOCIAL_AUDIT, "Dolly's": DOLLY_SOCIAL_AUDIT, "Old Spaghetti Factory": OSF_SOCIAL_AUDIT}
 VENUE_TEARDOWN_BENCHMARKS = {
     "Bar Cathedral": pd.Series(
         {
@@ -3062,6 +3184,8 @@ elif active_page and active_page in VENUES:
     if selected_venue == "Eloise":
         venue_sections.append("Demand")
         venue_sections.append("Awards")
+    if selected_venue == "Dolly's":
+        venue_sections.append("Strategy")
     if selected_venue == "Old Spaghetti Factory":
         venue_sections.append("Menu")
 
@@ -3130,6 +3254,7 @@ elif active_page and active_page in VENUES:
             ["Research", "Yes" if selected_venue in VENUE_RESEARCH_TABLES else "No", "Spreadsheet-backed structured competitor notes"],
             ["Social", "Yes" if selected_venue in VENUE_SOCIAL_AUDIT else "No", "Social presence, cadence, and review signals"],
             ["Demand", "Yes" if selected_venue == "Eloise" else "No", "OpenTable demand pattern and reservation velocity snapshot"],
+            ["Strategy", "Yes" if selected_venue == "Dolly's" else "No", "Bachelorette package design and Sun-Wed off-peak framework"],
             ["Teardowns", "Yes" if selected_venue in VENUE_TEARDOWNS and len(VENUE_TEARDOWNS[selected_venue]) > 0 else "No", "Deep-dive competitor teardowns"],
             ["Menu", "Yes" if selected_venue == "Old Spaghetti Factory" else "No", "Core menu comparison against chain competitors"],
         ]
@@ -3258,6 +3383,8 @@ elif active_page and active_page in VENUES:
         st.markdown(f"### {selected_venue} — Social & Review Audit")
         if selected_venue == "Bar Cathedral":
             st.caption("First-pass competitive social audit focused on content patterns, cadence, and programming signals from the current Bar Cathedral competitor set.")
+        elif selected_venue == "Dolly's":
+            st.caption("Pre-opening social and launch-readiness view. Dolly's own row reflects reserved platform infrastructure and the launch strategy documents already in Drive.")
         _display_df = audit_df.copy()
         if "IG Followers Display" in _display_df.columns:
             _display_df["IG Followers"] = _display_df["IG Followers Display"]
@@ -3328,6 +3455,28 @@ elif active_page and active_page in VENUES:
                     ["Twitter/X", "No", "Fox on John, Flatiron, The Pilot"],
                 ], columns=["Platform", "SY", "Competitors With It"])
                 show_table(platform_df)
+        elif selected_venue == "Dolly's":
+            st.divider()
+            st.markdown("### Key Findings")
+            findings_df = pd.DataFrame(
+                [
+                    ["Audience", "The source strategy is explicit: Dolly's is female-led, celebration-friendly, and designed for 22-35 nightlife occasions."],
+                    ["Biggest Risk", "Off-peak demand is the main business risk, so Sun-Wed cannot be left as generic bar nights."],
+                    ["Best Benchmark", "Bub City is the most structurally relevant comp because it combines real food, line-dancing programming, and high-energy nightlife."],
+                    ["Best Toronto Signal", "Paris Texas proves that country nightlife can feel current, fashionable, and bachelorette-ready in downtown Toronto."],
+                    ["Operational Edge", "Female safety is a sharper point of difference than product alone, but only if it becomes visible operating practice."],
+                ],
+                columns=["Focus", "Read"],
+            )
+            show_table(findings_df)
+
+            st.divider()
+            st.markdown("### Reserved Social Handles")
+            show_table(DOLLY_SOCIAL_HANDLES, max_height=420)
+
+            st.divider()
+            st.markdown("### Launch-to-Sustain Framework")
+            show_table(DOLLY_LAUNCH_FRAMEWORK, max_height=520)
         elif selected_venue == "Eloise":
             st.divider()
             st.markdown("### Key Findings")
@@ -3396,6 +3545,25 @@ elif active_page and active_page in VENUES:
             hide_index=True,
         )
 
+    elif venue_section == "Strategy" and selected_venue == "Dolly's":
+        st.markdown("### Dolly's — Commercial Strategy")
+        st.caption("Working commercial framework built from the Dolly's launch docs, current country-bar benchmarks, and Toronto nightlife competition.")
+
+        st.markdown("### Bachelorette Package Design")
+        show_table(DOLLY_BACHELORETTE_PACKAGES, max_height=420)
+
+        st.divider()
+        st.markdown("### Bachelorette Marketing Plan")
+        show_table(DOLLY_BACHELORETTE_MARKETING, max_height=420)
+
+        st.divider()
+        st.markdown("### Sun-Wed Off-Peak Programming")
+        show_table(DOLLY_OFF_PEAK_FRAMEWORK, max_height=420)
+
+        st.divider()
+        st.markdown("### Night-by-Night KPIs")
+        show_table(DOLLY_OFF_PEAK_KPIS, max_height=320)
+
     elif venue_section == "Teardowns" and selected_venue in VENUE_TEARDOWNS:
         st.markdown("### Competitor Teardowns")
 
@@ -3413,7 +3581,8 @@ elif active_page and active_page in VENUES:
 
         for td_name, t in _active_teardowns.items():
             _ig_header = _format_optional_metric(t.get("ig_followers"))
-            with st.expander(f"{td_name}  —  {t['neighbourhood']}  |  Google {t['google_rating']}  |  {_ig_header} IG followers"):
+            _google_header = _format_optional_metric(t.get("google_rating"))
+            with st.expander(f"{td_name}  —  {t['neighbourhood']}  |  Google {_google_header}  |  {_ig_header} IG followers"):
 
                 st.markdown(f"#### Company Overview")
                 col1, col2 = st.columns(2)
@@ -3437,16 +3606,16 @@ elif active_page and active_page in VENUES:
                 st.divider()
                 st.markdown("#### Reviews & Digital Presence")
                 c1, c2, c3, c4, c5, c6 = st.columns(6)
-                c1.metric("Google", f"{t['google_rating']} ⭐")
-                c2.metric("Google Reviews", f"{t['google_reviews']:,}")
+                c1.metric("Google", _format_optional_metric(t.get("google_rating")))
+                c2.metric("Google Reviews", _format_optional_metric(t.get("google_reviews")))
                 c3.metric("Yelp", _format_optional_metric(t.get("yelp_rating")))
                 c4.metric("IG Followers", _format_optional_metric(t.get("ig_followers")))
                 c5.metric("IG Posts", _format_optional_metric(t.get("ig_posts")))
                 c6.metric("Posts/Week", t["posts_per_week"])
 
                 compare_rows = [
-                    ["Google Rating", str(t["google_rating"]), str(bench["Google Rating"])],
-                    ["Google Reviews", f"{t['google_reviews']:,}", _format_optional_metric(bench.get("Google Reviews"))],
+                    ["Google Rating", _format_optional_metric(t.get("google_rating")), _format_optional_metric(bench.get("Google Rating"))],
+                    ["Google Reviews", _format_optional_metric(t.get("google_reviews")), _format_optional_metric(bench.get("Google Reviews"))],
                     ["IG Followers", _format_optional_metric(t.get("ig_followers")), _format_optional_metric(bench.get("IG Followers"))],
                 ]
                 if t.get("ig_posts") is not None or bench.get("Total Posts") is not None:
