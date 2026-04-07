@@ -2560,7 +2560,135 @@ ELOISE_TEARDOWNS = {
     },
 }
 
-VENUE_TEARDOWNS = {"Scotland Yard": SY_TEARDOWNS, "Bar Cart": BAR_CART_TEARDOWNS, "Bar Cathedral": BC_TEARDOWNS, "Eloise": ELOISE_TEARDOWNS, "Old Spaghetti Factory": OSF_TEARDOWNS}
+DOLLYS_TEARDOWNS = {
+    "Rock N Horse Saloon": {
+        "address": "250 Adelaide St W, 2nd Floor, Toronto, ON M5H 1X6",
+        "neighbourhood": "Entertainment District",
+        "parent": "MRG Ventures (Matthew Gibbons, founder); Jeff Hathcock listed as current owner",
+        "founded": "December 2013",
+        "website": "rocknhorsesaloon.com",
+        "positioning": "Toronto's original country bar — mechanical bull, line dancing, DJ-driven nightlife. CCMA Canada's Country Bar of the Year 2019.",
+        "screenshot": None,
+        "google_rating": 4.1, "google_reviews": 1967,
+        "yelp_rating": 3.5, "yelp_reviews": 71,
+        "ig_handle": "@rocknhorseto", "ig_followers": 16000, "ig_posts": 800,
+        "platforms": "IG, FB, TikTok", "posts_per_week": "~2.0",
+        "menus": ["Food Menu (corn dogs $4, bison burger $14, fried chicken $17, ribeye $19)", "Drinks (21 draft beers, Beeritas, bourbon cocktails)", "The Porch Rooftop Patio"],
+        "signature_items": [
+            "Mechanical bull (centerpiece experience)",
+            "Line dancing lessons Wed-Sat from 8pm",
+            "Cowgirl Fridays (ladies free before 10:30pm)",
+            "Giant 'Beeritas' (beer-margarita hybrids)",
+            "The Porch rooftop with CN Tower views",
+            "CCMA Country Bar of the Year 2019",
+        ],
+        "review_strengths": [
+            "Overall concept — 'a BLAST', country-bar-in-the-city novelty works",
+            "Mechanical bull is #1 draw and talking point",
+            "Line dancing lessons accessible for beginners",
+            "Good for groups, birthdays, bachelorettes",
+            "The Porch rooftop patio with CN Tower views",
+        ],
+        "review_weaknesses": [
+            "Bouncer/door staff issues — rude, aggressive, running cover charge scams on first-timers",
+            "Cover charge confusion — varies unpredictably, different amounts than posted",
+            "Excessive heat/overcrowding — 150 cap on 2nd floor, poor airflow",
+            "Food quality — described as 'subpar', an afterthought",
+            "Mechanical bull downtime — when it breaks, value proposition collapses",
+            "Communication failures — can't reach venue by email or phone",
+            "Safety concerns — unresponsive management during incidents",
+        ],
+        "swot": {
+            "strengths": ["12-year first-mover advantage and brand recognition", "Entertainment District location, high foot traffic", "Mechanical bull — unique, shareable", "The Porch rooftop patio", "CCMA award credential", "Established Cowgirl Fridays programming"],
+            "weaknesses": ["Tiny capacity (~150) — Dolly's is 6x larger", "2nd floor, no street presence, hard to find", "Stale programming — same formula for 12 years, no live music", "Hospitality failures — bouncer complaints, communication failures", "Food is an afterthought", "No late-night food", "16K IG after 12 years is weak", "Safety perception issues"],
+            "opportunities": ["Could respond with renovation or programming refresh", "CCMA relationships could be leveraged", "The Porch rooftop is an underutilized asset"],
+            "threats": ["Dolly's 850 capacity unlocks revenue streams Rock N Horse can't touch", "Dolly's female-safety positioning directly exploits bouncer complaints", "Late-night pizza solves a gap they don't address", "Modern 70s aesthetic vs dated saloon look"],
+        },
+        "learns": [
+            "Mechanical bull is proven — Dolly's should consider one but ensure it's always operational",
+            "Line dancing lessons from 8pm is the right timing — Dolly's should adopt",
+            "Cowgirl Fridays format works but can be done better with genuine hospitality",
+            "The Porch rooftop proves the patio opportunity — Dolly's must maximize theirs",
+            "Bachelorette package exists but is generic (cow balloons) — Dolly's can build premium tiered packages",
+        ],
+        "advantages": [
+            "Capacity: 850 vs ~150 — nearly 6x larger, unlocks large groups and events",
+            "Hospitality-first vs bouncer complaints — direct positioning contrast",
+            "Street-level presence vs hidden 2nd floor",
+            "Late-night pizza vs no late-night food",
+            "Modern 70s aesthetic vs dated saloon",
+            "Live music programming vs DJ-only",
+            "Female safety as brand pillar vs safety concerns in reviews",
+            "Urban + traditional country programming vs single country format",
+        ],
+    },
+    "Paris Texas": {
+        "address": "461 King Street West, Unit A, Toronto, ON M5V 1K4",
+        "neighbourhood": "King West",
+        "parent": "Joint venture: Municipal Goods (Gurpreet Kailley, Jason Bitton, Rahul Raina) + Liberty Entertainment Group (Nick & Luca Di Donato)",
+        "founded": "Mid-2023 (replaced Arcane nightclub)",
+        "website": "paristexas.ca",
+        "positioning": "Toronto's premier sports and country bar — upscale 'grand saloon' blending Parisian opulence with Texan charm. Chef-driven food, $19-28 cocktails, dress code.",
+        "screenshot": None,
+        "google_rating": 4.7, "google_reviews": 1675,
+        "yelp_rating": 3.5, "yelp_reviews": 14,
+        "ig_handle": "@paristexasparistexas", "ig_followers": 14000, "ig_posts": 500,
+        "platforms": "IG, TikTok (1.1M+ UGC tag views), Eventbrite", "posts_per_week": "~2.5",
+        "menus": ["Chef Eric Phung menu (cornbread $10, fish tacos $21, chicken & waffles $28, ribeye $80)", "Cocktails ($19-28, happy hour $10)", "Happy Hour ($5 domestic beer, $5 rail drinks, $7 apps)", "Sunday Brunch (11:30am)"],
+        "signature_items": [
+            "'Hold The Line' free line dancing Thursdays (flagship event)",
+            "Expansive patio with CN Tower views, cabanas, palm trees",
+            "Chef-driven menu by Eric Phung",
+            "$5 happy hour domestics",
+            "Dress code: fashionable attire, no sneakers",
+            "500-person capacity",
+            "Liberty Entertainment Group backing",
+        ],
+        "review_strengths": [
+            "Gorgeous space — exposed brick, upscale feel, country aesthetic done well",
+            "Patio with CN Tower views, cabanas, outdoor bar",
+            "Food quality praised — buffalo cauliflower, chicken & waffles, fajitas",
+            "Specific servers called out by name positively",
+            "Thursday line dancing — viral, fun, accessible",
+            "Happy hour value — $5 beers, $10 cocktails for King West",
+        ],
+        "review_weaknesses": [
+            "Bouncer conduct — racial discrimination allegations, 'xenophobic bullies', TikTok pages dedicated to incidents",
+            "Management non-responsiveness — GM dismissed complaints, 'protected the thugs he calls his employees'",
+            "Bathroom cleanliness — 'floors STILL covered in piss', multi-year unresolved issue",
+            "Watered-down cocktails — 'juice-heavy', 'light on alcohol' at $19-28/drink",
+            "Skews young (21-24) — 'bougie Rock N Horse without the bull'",
+            "Sneaker ban / dress code friction — excludes casual visitors",
+        ],
+        "swot": {
+            "strengths": ["3-year established brand, 1,675 Google reviews, 4.7 rating", "Liberty Entertainment Group + Municipal Goods — deep pockets", "King West foot traffic and visibility", "Chef-driven food gives culinary credibility", "CN Tower patio", "Thursday line dancing franchise"],
+            "weaknesses": ["Bouncer/discrimination complaints — brand cancer, documented across platforms", "Watered-down $22 cocktails — trust betrayal", "Bathroom filth — multi-year unresolved", "500 cap — turns people away by 10:30pm", "Skews 21-24 — loses higher-spending 25-35 demo", "Dress code friction — contradicts 'come have fun' country energy", "Only one real weekly anchor (Thursday)"],
+            "opportunities": ["Could expand programming if threatened", "Liberty Group resources enable fast pivots", "TikTok UGC engine could be amplified with paid spend"],
+            "threats": ["Dolly's 'not pretentious' positioning directly attacks PT's biggest weakness", "Dolly's 850 cap is 70% larger", "Dolly's older demo (25-35) has higher spending power", "Dolly's female-safety messaging exploits bouncer reputation", "Late-night pizza is differentiated and on-brand vs $80 ribeye", "Urban + traditional country mix broadens appeal"],
+        },
+        "learns": [
+            "Happy hour structure ($5 beer, $10 cocktails) is smart for early-evening funnel — Dolly's should match or beat",
+            "Chef-driven food is NOT the model for Dolly's — own the casual/pizza lane instead",
+            "Patio with views is non-negotiable — Dolly's must maximize their outdoor space",
+            "'Hold The Line' Thursday proves one branded weekly event can drive awareness — Dolly's needs multiple",
+            "Dress code is a friction point — Dolly's 'no dress code' is a direct differentiator",
+            "TikTok UGC (1.1M tag views) proves the content engine potential of country bars — Dolly's must be TikTok-native from Day 1",
+        ],
+        "advantages": [
+            "'Not pretentious' vs 'bougie' — fundamentally different positioning that's more inclusive",
+            "Honest drinks at $14-18 vs watered-down $22 cocktails",
+            "Clean washrooms as a brand feature vs years of bathroom complaints",
+            "No dress code vs sneaker ban",
+            "850 vs 500 capacity — no more getting turned away at 10:30",
+            "25-35 demo vs 21-24 — higher LTV, more disposable income",
+            "Hospitality-first vs bouncer discrimination allegations",
+            "The Esplanade is a fresh canvas vs saturated King West",
+            "Multiple weekly programming anchors vs one Thursday event",
+        ],
+    },
+}
+
+VENUE_TEARDOWNS = {"Scotland Yard": SY_TEARDOWNS, "Bar Cart": BAR_CART_TEARDOWNS, "Bar Cathedral": BC_TEARDOWNS, "Eloise": ELOISE_TEARDOWNS, "Old Spaghetti Factory": OSF_TEARDOWNS, "Dolly's": DOLLYS_TEARDOWNS}
 VENUE_SOCIAL_AUDIT = {"Scotland Yard": SY_SOCIAL_AUDIT, "Bar Cart": BAR_CART_COMPETITOR_AUDIT, "Bar Cathedral": BC_SOCIAL_AUDIT, "Eloise": ELOISE_SOCIAL_AUDIT, "Old Spaghetti Factory": OSF_SOCIAL_AUDIT}
 VENUE_TEARDOWN_BENCHMARKS = {
     "Bar Cathedral": pd.Series(
@@ -2581,6 +2709,16 @@ VENUE_TEARDOWN_BENCHMARKS = {
             "Google Rating": 4.6,
             "Google Reviews": 121,
             "Platforms": "IG",
+            "Est. Posts/Week": "n/a",
+        }
+    ),
+    "Dolly's": pd.Series(
+        {
+            "Name": "Dolly's",
+            "IG Followers": None,
+            "Google Rating": None,
+            "Google Reviews": None,
+            "Platforms": "TBD",
             "Est. Posts/Week": "n/a",
         }
     ),

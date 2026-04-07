@@ -79,6 +79,7 @@ RESEARCH_CATEGORY_COLUMNS = {
 VENUE_RESEARCH_FILES = {
     "Bar Cathedral": "bc_competitors.xlsx",
     "Scotland Yard": "sy_competitors.csv",
+    "Dolly's": "dolly_competitors.csv",
     "Old Spaghetti Factory": "osf_competitors.csv",
 }
 
@@ -660,6 +661,7 @@ COMPETITORS = {
             ["Old Spaghetti Factory", "The Esplanade", "Family Italian dining", "Shares the building/corridor"],
             ["The Keg Steakhouse", "The Esplanade", "Steakhouse + bar", "Pre-dinner crowd overlap"],
             ["C'est What?", "67 Front St E", "Craft beer brewpub", "After-work / casual night out overlap"],
+            ["King Taps First Canadian Place", "100 King St W", "Large-format downtown bar with strong happy hour and group energy", "Competes for after-work and group occasions before guests decide where the night goes"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
         "City-wide (Toronto)": pd.DataFrame([
             ["Rock 'N' Horse Saloon", "250 Adelaide W", "Country nightclub — line dancing, mechanical bull, CCMA winner", "Main incumbent in Toronto country bar space"],
@@ -668,6 +670,7 @@ COMPETITORS = {
             ["Badlands", "190 Ossington", "Country neighbourhood bar — intimate, food-forward", "Different positioning but same genre audience"],
             ["Horseshoe Tavern", "370 Queen W", "Live music heritage venue since 1947", "Indirect — concert venue, country music roots, 30K IG"],
             ["The Cameron House", "408 Queen W", "Roots/alt-country live music", "Indie country/roots, small intimate venue"],
+            ["The Dakota Tavern", "249 Ossington Ave", "Roots/bluegrass/live-music tavern", "Useful programming benchmark for authenticity and music-led repeat visitation"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
         "Global": pd.DataFrame([
             ["Ole Red", "Nashville", "Blake Shelton's honky-tonk — 26K sq ft, rooftop, 199K IG", "Highest IG — glam-meets-grit aesthetic, bachelorette VIP model"],
@@ -677,6 +680,7 @@ COMPETITORS = {
             ["Losers Bar", "Nashville", "Industry dive bar — surprise celebrity shows", "Genius branding — counterintuitive name, artist credibility"],
             ["Bub City", "Chicago", "BBQ + honky-tonk — 150+ whiskeys, line dancing lessons", "Closest non-Nashville comp — dual identity restaurant/nightclub"],
             ["Whiskey Rose", "Calgary", "Nashville-inspired saloon — 10K sq ft, two levels", "Closest Canadian comp — proves concept works in Canada"],
+            ["Stampede Ranch", "Guelph", "Ontario country bar with dance-floor and weekly country programming", "Ontario operating benchmark for a true country-nightlife room outside Toronto"],
             ["Coyote Ugly", "New York", "Female-forward bar concept — global franchise", "Proof female-forward concept can become global brand"],
             ["The Blues Can", "Calgary", "Live music venue — Cajun kitchen, 400+ shows/yr", "Sound quality + real food in a music venue"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
@@ -797,6 +801,43 @@ ELOISE_SOCIAL_AUDIT = pd.DataFrame([
     ["Terroni", "@terronito", 36000, None, None, None, "IG", "~3.0", "Chain account", "Classic Italian brand cues, high-volume food content, broad familiarity", "High", "Brand scale is real, but follower count reflects multiple locations."],
     ["Byblos", "@byblostoronto", 13000, None, None, None, "IG", "~2.0", "Venue-specific group account", "Moody luxury, global-flavour dishes, fashionable dining-room imagery", "Moderate", "Useful benchmark for how a premium restaurant turns flavour point of view into brand identity."],
 ], columns=["Name", "Instagram", "IG Followers", "Total Posts", "Google Rating", "Google Reviews", "Platforms", "Est. Posts/Week", "Account Scope", "Content Themes", "Engagement Read", "Why It Matters"])
+
+DOLLY_SOCIAL_AUDIT = pd.DataFrame([
+    ["Dolly's", "@dollyscountrybarto", None, None, None, None, "IG, TikTok, FB, X, YouTube, Pinterest, Snapchat, Spotify, Bluesky, Reddit", "Pre-launch", "Owned launch accounts reserved", "Teaser reels, build journal, staff intros, line-dance setup, bachelorette positioning, female-safety messaging", "Pre-launch", "The social footprint is reserved across platforms; the opportunity is to launch with a disciplined pre-opening content system instead of building accounts after opening."],
+    ["Rock 'N' Horse Saloon", "@rocknhorseto", 16000, None, 4.1, 1967, "IG, FB, TikTok", "~2.5", "Single venue", "Line dancing, mechanical bull, party groups, country-night atmosphere", "Moderate to High", "The clearest active Toronto country-night benchmark for category legitimacy and repeatable party energy."],
+    ["Paris Texas", "@paristexasparistexas", 14000, None, 4.7, 200, "IG, TikTok", "~3.5", "Single venue", "Bachelorette energy, polished interiors, party-group content, brunch and patio flexing", "High", "Shows how country nightlife can be made fashionable, photogenic, and female-skewed without losing broad appeal."],
+    ["Rodeo Dive", "@rodeodiveto", 3000, None, None, None, "IG, TikTok", "~2.0", "Single venue", "Country-sports crossover, launch buzz, INK-backed nightlife polish", "Early / building", "Important because it competes for newer downtown curiosity and group nightlife traffic."],
+    ["Badlands", "@badlandsgoodtimes", 1074, None, None, None, "IG", "~2.0", "Single venue", "Neighbourhood country aesthetic, intimacy, casual good-times positioning", "Early / moderate", "Useful counterpoint: smaller, cooler, more local-country energy rather than big-room bachelorette scale."],
+    ["Horseshoe Tavern", "@horseshoetavern", 30000, None, 4.5, 3000, "IG, FB", "~3.0", "Single venue", "Artist-led posters, heritage music credibility, crowd shots, live-show atmosphere", "High", "Not a direct country-bar comp, but it is a major benchmark for authentic live-music credibility in Toronto."],
+    ["The Cameron House", "@the.cameronhouse", 12000, None, 4.5, 800, "IG, FB", "~2.5", "Single venue", "Roots-music intimacy, listings-style promotion, local-scene authenticity", "Moderate", "A stronger benchmark for alt-country and roots credibility than for nightlife scale."],
+    ["The Dakota Tavern", "@thedakotatavern", 15000, None, 4.5, 2100, "IG, FB", "~2.0", "Single venue", "Bluegrass nights, roots credibility, warm tavern energy, music-community storytelling", "Moderate", "Even as a smaller room, it proves how deeply a venue can own a music tribe and a recurring weekly ritual."],
+    ["Stampede Ranch", "@thestampederanch", None, None, None, None, "IG, FB", "~1.5", "Single venue", "Dance-floor culture, line dancing, suburban-country nightlife", "Moderate", "Useful Ontario operating reference for weekly country programming and dance-floor-led demand."],
+    ["Bub City", "@bubcity", 17000, None, 4.6, 2000, "IG, TikTok, FB", "~4.0", "Multi-unit brand", "Line-dancing lessons, BBQ, live bands, bachelorettes, broad occasion programming", "High", "The closest structural benchmark for Dolly's because it blends real food, country programming, and high-volume nightlife."],
+    ["Ole Red", "@olered", 199000, None, 4.1, 5000, "IG, TikTok, FB, YouTube", "~5.0", "Multi-location / celebrity brand", "Massive interior reveals, bachelorette groups, rooftop energy, branded entertainment moments", "High", "Best benchmark for designing a room and content system that guests want to film."],
+    ["Whiskey Rose", "@whiskeyroseyyc", 19000, None, 4.1, 1500, "IG, FB, TikTok", "~3.0", "Single venue", "Nashville-coded nightlife, western styling, party-night visuals, dance-floor group content", "Moderate to High", "Closest Canadian benchmark for a purpose-built modern country party room."],
+    ["Coyote Ugly", "@coyoteuglynyc", 18000, None, 4.1, 1000, "IG, TikTok, FB", "~3.0", "Global brand", "Female-led bar spectacle, staff performance, tourist-night-out energy", "High", "Relevant less for music and more for the female-forward celebration and spectacle model."],
+    ["The Blues Can", "@thebluescancalgary", 6700, None, 4.5, 500, "IG, FB", "~2.0", "Single venue", "Live-band energy, comfort food, roots authenticity, local-music community", "Moderate", "Good benchmark for how a music-first venue can still support itself with food and a loyal local base."],
+], columns=["Name", "Instagram", "IG Followers", "Total Posts", "Google Rating", "Google Reviews", "Platforms", "Est. Posts/Week", "Account Scope", "Content Themes", "Engagement Read", "Why It Matters"])
+
+DOLLY_SOCIAL_HANDLES = pd.DataFrame([
+    ["Instagram", "@dollyscountrybarto", "Primary launch channel", "chloe@esplanaderestaurants.com"],
+    ["TikTok", "@dollysontheesplanade", "Secondary launch channel; strongest viral upside", "emma@esplanaderestaurants.com"],
+    ["Facebook", "Reserved", "Legacy/local event distribution", "Reserved in credentials doc"],
+    ["X", "@dollys80222", "Low priority; optional nightlife signal channel", "905-531-8331"],
+    ["YouTube", "@DollysCountryBarTO", "Longer-form launch and event recaps", "dollyscountrybar@gmail.com"],
+    ["Pinterest", "@DollysCountryBarTO", "Low priority; visual brand extension", "chevonne@esplanaderestaurants.com"],
+    ["Snapchat", "@DollysTO", "Guest-story / nightlife-friendly support channel", "chevonne@esplanaderestaurants.com"],
+    ["Bluesky", "@DollysCountryBarTO", "Low priority / future-proofing", "chevonne@esplanaderestaurants.com"],
+    ["Spotify", "DollysCountryBarTO", "Playlist extension and pre-visit mood setting", "chevonne@esplanaderestaurants.com"],
+], columns=["Platform", "Handle", "Priority / Use", "Owner"])
+
+DOLLY_LAUNCH_FRAMEWORK = pd.DataFrame([
+    ["Pre-Launch Build", "Jan–May 2026", "Build awareness, capture audience, and sell demand before doors open", "Teaser reels, build journal, teaser site, email/SMS capture, light paid spend, press announcement", "Email/SMS growth, social engagement, website traffic and signups"],
+    ["Opening Moment", "Opening Week", "Create cultural buzz without burning the brand out in 7 days", "Media/influencer preview, soft opening, grand opening weekend, staggered creator posting, high-volume UGC capture", "Opening-week foot traffic, UGC volume and quality, press coverage secured"],
+    ["Post-Opening Sustain", "Weeks 2–8", "Convert curiosity into repeat visits and smooth demand beyond weekends", "Locked weekly programming, retargeted paid media, weekly CRM pushes, regular-guest storytelling", "Repeat visitation, weeknight traffic growth, event attendance consistency"],
+    ["Community Ownership", "Months 3–6", "Become a loyalists' bar rather than just the new bar", "Dance-group partnerships, artist residencies, charity/community nights, feature regulars and staff personalities", "Organic reach growth, returning guests, lower paid-acquisition dependence"],
+    ["Evolution", "Ongoing", "Keep the concept fresh without losing identity", "Seasonal menus, limited-time themed nights, guest DJs/artists, one major moment per quarter", "Engagement spikes tied to refreshes, sustained foot traffic after month 6"],
+], columns=["Phase", "Timing", "Goal", "Key Moves", "Success Metrics"])
 
 ELOISE_DEMAND_AUDIT = pd.DataFrame([
     ["Eloise", 4.6, 121, 12, "2026-04-04", "Moderate", "Fri-Sat dinner; Bar Cart spillover; special-occasion and date-night demand", "Tue-Thu lunch and early dinner", "Reservations are recommended on weekends; lunch prix-fixe and quieter midweek windows are the clearest demand-building opportunities."],
