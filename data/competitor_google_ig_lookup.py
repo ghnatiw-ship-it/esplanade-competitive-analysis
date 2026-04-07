@@ -155,6 +155,24 @@ COMPETITOR_LOOKUP = {
     "Alma": (4.4, 400, "@alma.mtl", 29000),
     "Momofuku Ko": (None, None, None, None),  # CLOSED
 
+    # === DOLLY'S CITY-WIDE ===
+    "Rock 'N' Horse Saloon": (4.1, 1967, "@rocknhorseto", 16000),
+    "Paris Texas": (4.7, 200, "@paristexasparistexas", 14000),
+    "Rodeo Dive": (None, None, "@rodeodiveto", 3000),  # new venue
+    "Badlands": (None, None, "@badlandsgoodtimes", 1074),  # new venue
+    "Horseshoe Tavern": (4.5, 3000, "@horseshoetavern", 30000),
+    "The Cameron House": (4.5, 800, "@the.cameronhouse", 12000),
+    # === DOLLY'S GLOBAL ===
+    "Ole Red": (4.1, 5000, "@olered", 199000),
+    "Tootsie's Orchid Lounge": (4.2, 8000, "@tootsies_orchid_lounge", 69000),
+    "Luke's 32 Bridge": (4.3, 3000, "@lukes32bridge", 69000),
+    "Robert's Western World": (4.7, 5000, "@robertswesternworld", 47000),
+    "Losers Bar": (4.1, 2000, "@losersoriginal", 41000),
+    "Bub City": (4.6, 2000, "@bubcity", 17000),
+    "Whiskey Rose": (4.1, 1500, "@whiskeyroseyyc", 19000),
+    "Coyote Ugly": (4.1, 1000, "@coyoteuglynyc", 18000),
+    "The Blues Can": (4.5, 500, "@thebluescancalgary", 6700),
+
     # === OSF LOCAL ===
     "Bellissimo Pizzeria & Ristorante": (4.3, 931, "@bellissimo164", 283),
     "Amano Italian Kitchen": (4.4, 1500, "@eat.amano", 8647),  # now Notte Ristorante (Jan 2026)

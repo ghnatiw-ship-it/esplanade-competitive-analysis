@@ -152,6 +152,18 @@ COMPETITOR_PRICING = {
         ["Alma", "$109", "Global", "*Tasting menu only — 5 courses $109 CAD. Wine pairing included"],
         ["Momofuku Ko", "N/A", "Global", "*CLOSED (Nov 2023)"],
     ]),
+    "Dolly's": _make_pricing_df([
+        ["Dolly's", "$18", "Local", "Signature cocktail ~$14 + Domestic beer ~$8 (estimated pre-opening)"],
+        ["Scotland Yard", "$26", "Local", "Draft pint ~$8 + Burger ~$18"],
+        ["Bar Cathedral", "$23", "Local", "The Money Shot $15 + Draft ~$8"],
+        ["Rock 'N' Horse Saloon", "$22", "City-wide", "Domestic beer ~$8 + Cover $15 (ladies free before 11pm)"],
+        ["Paris Texas", "$30", "City-wide", "Cocktail ~$19 + Draft ~$11"],
+        ["Rodeo Dive", "$25", "City-wide", "Cocktail ~$16 + Draft ~$9"],
+        ["Badlands", "$25", "City-wide", "Cocktail ~$14 + Domestic beer ~$8 + No cover"],
+        ["Whiskey Rose", "$27", "Global", "Cocktail ~$18 + Domestic beer ~$9 (CAD)"],
+        ["Bub City", "$28", "Global", "Cocktail ~$18 + Domestic beer ~$10 (USD->CAD)"],
+        ["Tootsie's", "$20", "Global", "Domestic beer ~$10 + Domestic beer ~$10 (USD->CAD, no cover)"],
+    ]),
     "Old Spaghetti Factory": _make_pricing_df([
         ["Old Spaghetti Factory", "$31", "Local", "Spaghetti w/ Meat Sauce $23 (bundled: bread+soup/salad+spumoni+coffee) + Molson draft $8"],
         ["Scaddabush Italian Kitchen & Bar", "$41", "Local", "*Spaghetti Sorrentina $19.97 + Salad ~$12 + Draft ~$9"],

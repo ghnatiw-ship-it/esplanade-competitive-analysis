@@ -32,6 +32,12 @@ VENUES = {
         "price": "$20–35/pp",
         "color": "#1E8449",
     },
+    "Dolly's": {
+        "address": "The Esplanade, Toronto (former Bier Markt)",
+        "concept": "The largest country bar in Toronto. Line dancing, live music, bachelorette parties. Drink-led with late-night pizza. Female 25–35 target. Hospitality-first, not pretentious King West.",
+        "price": "~$40/pp",
+        "color": "#D4A017",
+    },
     "Old Spaghetti Factory": {
         "address": "The Esplanade, Toronto (+ Edmonton locations)",
         "concept": "Casual family Italian dining. Classic pasta dishes, family-friendly pricing, nostalgic decor (antiques, trolley car). Complete meal value proposition.",
@@ -380,6 +386,72 @@ VENUE_RECOMMENDATIONS = {
             "why_it_fits": "The pub has institutional strength, but it can smooth demand with one more dependable off-peak ritual."
         },
     ],
+    "Dolly's": [
+        {
+            "priority": 1,
+            "action": "Design the space for Instagram from Day 1 — neon signs, photo walls, signature cocktail presentations, and a photogenic patio/rooftop.",
+            "borrowed_from": "Ole Red (199K IG — 'glam-meets-grit' aesthetic)",
+            "type": "Brand",
+            "what_they_do_right": "Ole Red has the highest IG following of any country bar globally because the space is designed to be photographed.",
+            "why_it_fits": "Female 25-35 demo shares everything. Every corner of Dolly's should produce content."
+        },
+        {
+            "priority": 2,
+            "action": "Make free line dancing lessons the nightly anchor — the #1 proven funnel for first-time female visitors at every successful country bar.",
+            "borrowed_from": "Bub City Chicago, Rock 'N' Horse, Paris Texas",
+            "type": "Programming",
+            "what_they_do_right": "Bub City's free lessons are their #1 draw for women 25-35. Low barrier, social, Instagrammable.",
+            "why_it_fits": "Line dancing is Dolly's core occasion. Free lessons convert newcomers who 'don't know how to line dance' into regulars."
+        },
+        {
+            "priority": 3,
+            "action": "Build dedicated bachelorette packages — VIP skip-the-line, reserved dance floor section, themed cocktail pitchers, branded swag bags, free line dance lesson.",
+            "borrowed_from": "Ole Red (VIP passes ~$59), Paris Texas",
+            "type": "Revenue",
+            "what_they_do_right": "Ole Red monetizes the bachelorette occasion with premium VIP packages that feel special, not transactional.",
+            "why_it_fits": "Bachelorettes are Dolly's #2 occasion. No Toronto country bar has purpose-built packages. This is wide open."
+        },
+        {
+            "priority": 4,
+            "action": "Create one iconic, cheap, photogenic menu item that defines Dolly's — the 'Recession Special' of Toronto.",
+            "borrowed_from": "Robert's Western World (fried bologna sandwich + PBR = iconic)",
+            "type": "Product",
+            "what_they_do_right": "Robert's has the highest Google rating (4.7) of any honky-tonk. One $6 sandwich defines the entire brand.",
+            "why_it_fits": "Late-night pizza is the vehicle, but one specific item (named, priced, photographed) needs to become the thing people talk about."
+        },
+        {
+            "priority": 5,
+            "action": "Fill Sun–Wed with distinct branded programming: Industry Monday, Karaoke Tuesday, Country Trivia Wednesday, with cornhole/ping pong as always-on draws.",
+            "borrowed_from": "Bub City (Live Band Karaoke Tuesdays), Lula Lounge (branded anchor nights)",
+            "type": "Programming",
+            "what_they_do_right": "Bub City fills weekdays with distinct programming. Lula's branded nights are searchable and hashtagable.",
+            "why_it_fits": "Off-peak is the #1 fear. Each night needs its own identity so there's always a reason to come."
+        },
+        {
+            "priority": 6,
+            "action": "Prioritize female safety as an explicit, visible, operational commitment — not just words. Trained staff, safe ride partnerships, visible security presence, 'Ask for Angela' program.",
+            "borrowed_from": "Dolly's own positioning",
+            "type": "Operations",
+            "what_they_do_right": "No Toronto country bar explicitly markets female safety. It's the #1 concern of the target demo.",
+            "why_it_fits": "This is the core brand promise. If operationalized credibly, it's a genuine competitive moat that King West venues cannot claim."
+        },
+        {
+            "priority": 7,
+            "action": "Invest in sound quality and live music credibility — book real country/urban country musicians, not just DJs. Consider a songwriter-in-residence or emerging artist series.",
+            "borrowed_from": "Robert's Western World (4.7 rating from musical authenticity), The Blues Can (sound investment)",
+            "type": "Product",
+            "what_they_do_right": "Robert's proves authenticity wins the highest ratings. Blues Can invested in acoustics and it defines the experience.",
+            "why_it_fits": "Urban country sub-genres are an untapped programming lane in Toronto. Musical credibility separates Dolly's from 'a bar that plays country music.'"
+        },
+        {
+            "priority": 8,
+            "action": "Consider adopting the Dakota Tavern's orphaned Bluegrass Brunch concept for Sunday daytime — family-friendly, live music, all-you-can-eat.",
+            "borrowed_from": "Dakota Tavern (CLOSED — beloved Bluegrass Brunch now homeless)",
+            "type": "Programming",
+            "what_they_do_right": "Dakota's Bluegrass Brunch was a Toronto institution. Families, live music, all-you-can-eat format drove massive weekend traffic.",
+            "why_it_fits": "Sunday is an off-peak day. A family-friendly daytime brunch fills a different occasion than the nighttime party and captures an audience nobody else is serving."
+        },
+    ],
     "Old Spaghetti Factory": [
         {
             "priority": 1,
@@ -579,6 +651,34 @@ COMPETITORS = {
             ["The Star Inn", "Harome, UK", "14th-century inn, innovative British cuisine", "Historic pub with culinary excellence"],
             ["Ye Olde Cheshire Cheese", "London", "Historic pub since 1667", "Iconic long-running English pub institution"],
             ["The Churchill Arms", "London", "Famous traditional pub, 40+ years", "Iconic British pub comparable to Scotland Yard's heritage"],
+        ], columns=["Name", "Location", "Concept", "Why Competitor"]),
+    },
+    "Dolly's": {
+        "Local (1–2 km)": pd.DataFrame([
+            ["Scotland Yard", "56 The Esplanade", "English pub, sports", "Shares The Esplanade foot traffic"],
+            ["Bar Cathedral", "54 The Esplanade", "Nightclub / live music", "Competes for same late-night occasion"],
+            ["Old Spaghetti Factory", "The Esplanade", "Family Italian dining", "Shares the building/corridor"],
+            ["The Keg Steakhouse", "The Esplanade", "Steakhouse + bar", "Pre-dinner crowd overlap"],
+            ["C'est What?", "67 Front St E", "Craft beer brewpub", "After-work / casual night out overlap"],
+        ], columns=["Name", "Location", "Concept", "Why Competitor"]),
+        "City-wide (Toronto)": pd.DataFrame([
+            ["Rock 'N' Horse Saloon", "250 Adelaide W", "Country nightclub — line dancing, mechanical bull, CCMA winner", "Main incumbent in Toronto country bar space"],
+            ["Paris Texas", "461 King W", "Upscale country nightclub — 500 cap, CN Tower patio, brunch", "Newest/trendiest country venue, King West"],
+            ["Rodeo Dive", "600 King W (Portland Square)", "Country sports bar — INK Entertainment", "New (Oct 2025), backed by INK, still finding identity"],
+            ["Badlands", "190 Ossington", "Country neighbourhood bar — intimate, food-forward", "Different positioning but same genre audience"],
+            ["Horseshoe Tavern", "370 Queen W", "Live music heritage venue since 1947", "Indirect — concert venue, country music roots, 30K IG"],
+            ["The Cameron House", "408 Queen W", "Roots/alt-country live music", "Indie country/roots, small intimate venue"],
+        ], columns=["Name", "Location", "Concept", "Why Competitor"]),
+        "Global": pd.DataFrame([
+            ["Ole Red", "Nashville", "Blake Shelton's honky-tonk — 26K sq ft, rooftop, 199K IG", "Highest IG — glam-meets-grit aesthetic, bachelorette VIP model"],
+            ["Tootsie's Orchid Lounge", "Nashville", "Legendary 3-floor honky-tonk since 1960", "No cover charge model, live music 10am-3am, authenticity benchmark"],
+            ["Luke's 32 Bridge", "Nashville", "Celebrity mega-bar — 30K sq ft, 6 floors, 7 bars", "Scale benchmark — day/night transition, multi-level multi-vibe"],
+            ["Robert's Western World", "Nashville", "Purist honky-tonk — traditional country, 4.7 Google", "Highest rated — Recession Special, authenticity wins"],
+            ["Losers Bar", "Nashville", "Industry dive bar — surprise celebrity shows", "Genius branding — counterintuitive name, artist credibility"],
+            ["Bub City", "Chicago", "BBQ + honky-tonk — 150+ whiskeys, line dancing lessons", "Closest non-Nashville comp — dual identity restaurant/nightclub"],
+            ["Whiskey Rose", "Calgary", "Nashville-inspired saloon — 10K sq ft, two levels", "Closest Canadian comp — proves concept works in Canada"],
+            ["Coyote Ugly", "New York", "Female-forward bar concept — global franchise", "Proof female-forward concept can become global brand"],
+            ["The Blues Can", "Calgary", "Live music venue — Cajun kitchen, 400+ shows/yr", "Sound quality + real food in a music venue"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
     },
     "Old Spaghetti Factory": {
