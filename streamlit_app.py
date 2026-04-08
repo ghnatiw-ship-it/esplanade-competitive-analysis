@@ -33,10 +33,12 @@ from data.portfolio_data import (
     ELOISE_SOCIAL_AUDIT,
     LOCAL_SEARCH_AUDIT,
     LOCAL_SEARCH_KEYWORDS,
+    OSF_TAKEOUT_PACKAGING,
     OSF_SOCIAL_AUDIT,
     OSF_MENU_ANALYSIS,
     OSF_MENU_ANALYSIS_SOURCES,
     RESEARCH_CATEGORY_COLUMNS,
+    SY_TAKEOUT_PACKAGING,
     SY_SOCIAL_AUDIT,
     TIER_LABELS,
     VENUES,
@@ -2878,6 +2880,7 @@ _PRICING_FRAMEWORKS = {
     "Bar Cart": ("1 signature cocktail + 1 cheapest protein appetizer", "Drinks-only venue with no food menu — cocktail only"),
     "Bar Cathedral": ("1 signature cocktail + 1 cheapest regular draft beer", "No cocktails served — most popular drink substituted"),
     "Eloise": ("1 cheapest protein appetizer (shared) + 1 signature main course + 1 cheapest glass of wine", "No wine by the glass — cheapest cocktail substituted"),
+    "Dolly's": ("1 domestic beer pint (20oz pref) + 1 vodka soda + 1 tequila shot", "No draft domestic — large can substituted and noted. Shot pricing unavailable — estimated from spirit menu."),
     "Old Spaghetti Factory": ("1 complete bundled meal + 1 cheapest regular draft beer", "Competitor doesn't bundle — entree + side/salad + drink priced separately"),
 }
 
@@ -3188,6 +3191,8 @@ elif active_page and active_page in VENUES:
         venue_sections.append("Strategy")
     if selected_venue == "Old Spaghetti Factory":
         venue_sections.append("Menu")
+    if selected_venue in {"Scotland Yard", "Old Spaghetti Factory"}:
+        venue_sections.append("Takeout")
 
     venue_section = st.segmented_control(
         f"{selected_venue} sections",
@@ -3251,6 +3256,7 @@ elif active_page and active_page in VENUES:
         analysis_rows = [
             ["Competitors", "Yes", "Tiered citywide and local competitor set"],
             ["Pricing", "Yes", "Standardized price basket comparison"],
+            ["Takeout", "Yes" if selected_venue in {"Scotland Yard", "Old Spaghetti Factory"} else "No", "Confirmed off-premise packaging examples with evidence and photo links"],
             ["Research", "Yes" if selected_venue in VENUE_RESEARCH_TABLES else "No", "Spreadsheet-backed structured competitor notes"],
             ["Social", "Yes" if selected_venue in VENUE_SOCIAL_AUDIT else "No", "Social presence, cadence, and review signals"],
             ["Demand", "Yes" if selected_venue == "Eloise" else "No", "OpenTable demand pattern and reservation velocity snapshot"],
@@ -3336,6 +3342,28 @@ elif active_page and active_page in VENUES:
             width="stretch",
             column_config={"URL": st.column_config.LinkColumn("URL")},
             hide_index=True,
+        )
+
+    elif venue_section == "Takeout" and selected_venue in {"Scotland Yard", "Old Spaghetti Factory"}:
+        st.markdown(f"### {selected_venue} — Confirmed Takeout Packaging")
+        st.caption(
+            "Only rows with an explicit off-premise packaging signal are included. "
+            "If the evidence did not clearly support the package claim, the competitor item was left out."
+        )
+
+        takeout_df = SY_TAKEOUT_PACKAGING.copy() if selected_venue == "Scotland Yard" else OSF_TAKEOUT_PACKAGING.copy()
+        st.dataframe(
+            takeout_df,
+            width="stretch",
+            hide_index=True,
+            column_config={
+                "Evidence URL": st.column_config.LinkColumn("Evidence Source"),
+                "Photo URL": st.column_config.LinkColumn("Photo Link"),
+            },
+        )
+        st.caption(
+            "Photo links point to the closest page I could verify that contains the packaging or takeout visual context from the competitor or guests. "
+            "This table is intentionally sparse because exact package photography is much harder to verify than menu or delivery availability."
         )
 
     elif venue_section == "Research":

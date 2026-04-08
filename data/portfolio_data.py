@@ -194,6 +194,62 @@ OSF_MENU_ANALYSIS_SOURCES = [
     },
 ]
 
+SY_TAKEOUT_PACKAGING = pd.DataFrame([
+    {
+        "Competitor": "King Taps",
+        "Comparable Item": "King Burger + fries",
+        "Package Type": "Hot takeout entrée container with lid; fries packed for transit and reheating",
+        "Evidence": "King Taps explicitly markets the King Burger for takeout and separately lists Sea Salted Fries and Truffle Fries in its reheating guide, which tells guests to remove or open the lid of the takeout packaging.",
+        "Evidence URL": "https://kingtaps.com/seriously-good-takeout-delivery/",
+        "Photo Source": "Official King Taps takeout / delivery article",
+        "Photo URL": "https://kingtaps.com/seriously-good-takeout-delivery/",
+        "Read": "Best current Scotland Yard benchmark for a burger-and-fries pub order packaged for short transit without pretending it should eat like dine-in.",
+    },
+    {
+        "Competitor": "King Taps",
+        "Comparable Item": "Chicken wings + fries",
+        "Package Type": "Lidded hot takeout packaging with oven-reheat guidance",
+        "Evidence": "King Taps calls out wings and fries as items best reheated after delivery / pickup, confirming they are sent in closed hot takeout packaging rather than open baskets.",
+        "Evidence URL": "https://kingtaps.com/reheat/",
+        "Photo Source": "Official King Taps takeout / delivery article",
+        "Photo URL": "https://kingtaps.com/seriously-good-takeout-delivery/",
+        "Read": "Useful benchmark for Scotland Yard's fried items: explicit reheat guidance acknowledges steam / texture loss and sets a better guest expectation.",
+    },
+])
+
+OSF_TAKEOUT_PACKAGING = pd.DataFrame([
+    {
+        "Competitor": "East Side Mario's",
+        "Comparable Item": "Chicken Parmigiana + spaghetti",
+        "Package Type": "Single-serve takeout entrée plus broader family-meal takeout program",
+        "Evidence": "East Side Mario's promotes Mario's Chicken Parmigiana as a signature item with takeout / delivery available and separately promotes Family Pasta Deals that bundle family-sized pastas with a large salad and two garlic homeloaves.",
+        "Evidence URL": "https://www.eastsidemarios.com/en/takeout.html",
+        "Photo Source": "Official East Side Mario's takeout page / item page",
+        "Photo URL": "https://www.eastsidemarios.com/en/menu/food/i100663/mario-s-chicken-parmigiana.html",
+        "Read": "Strong OSF comp because it shows both single-serve and family-bundle takeout positioning around the same core red-sauce items.",
+    },
+    {
+        "Competitor": "East Side Mario's",
+        "Comparable Item": "Spaghetti & meatballs / lasagna family meal",
+        "Package Type": "Family-sized pasta takeout bundle with salad and garlic homeloaves",
+        "Evidence": "The East Side Mario's takeout page explicitly markets Family Pasta Deals and Family & Group Takeout Meals, confirming a larger-format package architecture for pasta-led orders.",
+        "Evidence URL": "https://www.eastsidemarios.com/en/takeout.html",
+        "Photo Source": "Official East Side Mario's takeout page",
+        "Photo URL": "https://www.eastsidemarios.com/en/takeout.html",
+        "Read": "Relevant for OSF because family bundling is part of the brand's value story and East Side is already framing pasta takeout that way.",
+    },
+    {
+        "Competitor": "Olive Garden",
+        "Comparable Item": "Fettuccine Alfredo / Spaghetti with Meat Sauce / Lasagna take-home add-on",
+        "Package Type": "Freshly prepared, chilled take-home entrée pack",
+        "Evidence": "Olive Garden's official Take Home Offer says guests can add a freshly prepared and chilled classic, including Fettuccine Alfredo and Spaghetti with Meat Sauce, to a to-go order.",
+        "Evidence URL": "https://www.olivegarden.com/specials/take-home-offer",
+        "Photo Source": "Official Olive Garden Take Home Offer page",
+        "Photo URL": "https://www.olivegarden.com/specials/take-home-offer",
+        "Read": "Important benchmark for OSF's freezer / next-meal thinking: Olive Garden turns pasta takeout into a second-occasion packaged product, not just a one-meal transaction.",
+    },
+])
+
 VENUE_RECOMMENDATIONS = {
     "Bar Cart": [
         {
