@@ -21,8 +21,11 @@ from data.portfolio_data import (
     COMPETITOR_PRICING,
     COMPETITORS,
     DOLLY_BACHELORETTE_MARKETING,
+    DOLLY_BACHELORETTE_BENCHMARK,
     DOLLY_BACHELORETTE_PACKAGES,
+    DOLLY_FEMALE_SAFETY_FRAMEWORK,
     DOLLY_LAUNCH_FRAMEWORK,
+    DOLLY_OFF_PEAK_BENCHMARK,
     DOLLY_OFF_PEAK_FRAMEWORK,
     DOLLY_OFF_PEAK_KPIS,
     DOLLY_SOCIAL_AUDIT,
@@ -3285,7 +3288,7 @@ elif active_page and active_page in VENUES:
             ["Research", "Yes" if selected_venue in VENUE_RESEARCH_TABLES else "No", "Spreadsheet-backed structured competitor notes"],
             ["Social", "Yes" if selected_venue in VENUE_SOCIAL_AUDIT else "No", "Social presence, cadence, and review signals"],
             ["Demand", "Yes" if selected_venue == "Eloise" else "No", "OpenTable demand pattern and reservation velocity snapshot"],
-            ["Strategy", "Yes" if selected_venue == "Dolly's" else "No", "Bachelorette package design and Sun-Wed off-peak framework"],
+            ["Strategy", "Yes" if selected_venue == "Dolly's" else "No", "Bachelorette benchmark, Sun-Wed off-peak benchmark, and female-safety operating framework"],
             ["Teardowns", "Yes" if selected_venue in VENUE_TEARDOWNS and len(VENUE_TEARDOWNS[selected_venue]) > 0 else "No", "Deep-dive competitor teardowns"],
             ["Menu", "Yes" if selected_venue == "Old Spaghetti Factory" else "No", "Core menu comparison against chain competitors"],
         ]
@@ -3606,6 +3609,10 @@ elif active_page and active_page in VENUES:
         st.markdown("### Dolly's — Commercial Strategy")
         st.caption("Working commercial framework built from the Dolly's launch docs, current country-bar benchmarks, and Toronto nightlife competition.")
 
+        st.markdown("### Bachelorette Benchmark")
+        show_table(DOLLY_BACHELORETTE_BENCHMARK, max_height=420)
+
+        st.divider()
         st.markdown("### Bachelorette Package Design")
         show_table(DOLLY_BACHELORETTE_PACKAGES, max_height=420)
 
@@ -3614,12 +3621,20 @@ elif active_page and active_page in VENUES:
         show_table(DOLLY_BACHELORETTE_MARKETING, max_height=420)
 
         st.divider()
+        st.markdown("### Off-Peak Benchmark")
+        show_table(DOLLY_OFF_PEAK_BENCHMARK, max_height=420)
+
+        st.divider()
         st.markdown("### Sun-Wed Off-Peak Programming")
         show_table(DOLLY_OFF_PEAK_FRAMEWORK, max_height=420)
 
         st.divider()
         st.markdown("### Night-by-Night KPIs")
         show_table(DOLLY_OFF_PEAK_KPIS, max_height=320)
+
+        st.divider()
+        st.markdown("### Female-Safety Operating Framework")
+        show_table(DOLLY_FEMALE_SAFETY_FRAMEWORK, max_height=520)
 
     elif venue_section == "Teardowns" and selected_venue in VENUE_TEARDOWNS:
         st.markdown("### Competitor Teardowns")

@@ -879,6 +879,14 @@ DOLLY_BACHELORETTE_MARKETING = pd.DataFrame([
     ["UGC prompts", "Branded mirror, bride signage, cowboy hat wall, pizza-window shot, line-dance hero angle", "In-room conversion", "The room itself should do part of the marketing work after guests arrive."],
 ], columns=["Tactic", "Execution", "Channel", "Reason"])
 
+DOLLY_BACHELORETTE_BENCHMARK = pd.DataFrame([
+    ["Paris Texas", "Modern country nightlife", "Guest-list / line-skip energy, fashion-forward western styling, highly taggable girls-night visuals", "Low to medium", "Closer to nightlife table-energy than a formal package structure", "Closest Toronto proof that country-coded nightlife can attract the right female celebration crowd downtown."],
+    ["Rock 'N' Horse Saloon", "Classic country bar", "Line dancing, broad group appeal, approachable western theme, repeatable celebration-friendly atmosphere", "Low to medium", "Can likely support reserved-area group bookings more naturally than premium bottle-service venues", "Best direct Toronto benchmark for whether Dolly's should make booking feel simple and low-friction rather than VIP-clubby."],
+    ["Bub City", "Country bar + restaurant + live music", "Brunch-to-night transition, group dining, line-dancing/country event credibility, broad celebration occasions", "Medium", "Packages can combine food, music, and reserved-area access rather than just entry perks", "Most structurally relevant out-of-market benchmark for a bookable bachelorette offer that still feels like a real hospitality business."],
+    ["Coyote Ugly", "Female-led spectacle bar", "High-energy bride-squad occasion, staff performance, iconic photo moments, celebration-first brand recognition", "Medium to high", "Sells the night as an event; guests expect a memorable ritual, not just a table assignment", "Useful benchmark for how Dolly's can make the bride feel seen without becoming bottle-service dependent."],
+    ["Whiskey Rose", "Canadian country party room", "Dance-floor visuals, western styling, bachelorette-friendly photo language, late-night group energy", "Medium", "Likely strongest Canadian comp for reserved-group plus themed-drink package framing", "Closest Canadian benchmark for a modern country-party booking product with female-forward social appeal."],
+], columns=["Benchmark", "Positioning", "What They Do Well", "Likely Spend Tier", "Package Lesson", "Why It Matters"])
+
 DOLLY_OFF_PEAK_FRAMEWORK = pd.DataFrame([
     ["Sunday", "Bluegrass Brunch + Sunday Social", "Family-friendly live music brunch from late morning, then transition to an early-evening social with acoustic sets and comfort specials", "Broader age mix, families by day, local/date-night by evening", "Sunday becomes a different occasion, not a weaker version of Saturday."],
     ["Monday", "Industry Monday", "No-cover hospitality night, simple drinks, pizza/window specials, playlist-led social energy after service", "Hospitality workers and downtown regulars", "Creates a repeatable low-cost loyalty engine and staff-word-of-mouth channel."],
@@ -892,6 +900,24 @@ DOLLY_OFF_PEAK_KPIS = pd.DataFrame([
     ["Tuesday", "Lesson attendance, % first-time guests, rebook intent for Fri-Sat"],
     ["Wednesday", "Karaoke sign-ups, birthday/group inquiries, social mentions and tags"],
 ], columns=["Night", "Primary KPI"])
+
+DOLLY_OFF_PEAK_BENCHMARK = pd.DataFrame([
+    ["Sunday", "Bub City", "Brunch + music + day-drinking", "Treat Sunday as its own social occasion instead of a weak leftover weekend night.", "Bluegrass brunch, shared platters, acoustic early-evening reset."],
+    ["Monday", "The Dakota Tavern", "Music-community loyalty night", "Monday should prioritize scene-building and regulars over margin maximization.", "Industry night, low-friction drinks, local-musician/hospitality crossover."],
+    ["Tuesday", "Rock 'N' Horse Saloon", "Beginner dance / themed acquisition night", "A structured learnable activity is the best antidote to Tuesday demand softness.", "Fixed-time line-dance lesson, first-timer offer, easy group-booking CTA."],
+    ["Wednesday", "Paris Texas", "Girls-night momentum + social content", "Wednesday should feel like an easy pre-weekend celebration night, not a discount night.", "Cowgirl crew package, karaoke or theme hook, highly filmable crowd moments."],
+], columns=["Night", "Benchmark", "Observed Model", "What Dolly's Should Borrow", "Recommended Execution"])
+
+DOLLY_FEMALE_SAFETY_FRAMEWORK = pd.DataFrame([
+    ["Door & Entry", "Visible female-friendly host presence at the front, clear intoxication screening, quick intervention when groups feel uncomfortable", "Reduces anxiety before the night starts and makes the safety promise tangible immediately."],
+    ["Floor Coverage", "Balanced security + floor managers with at least one clearly identifiable female floor lead on peak nights", "Makes help easier to access for the exact audience Dolly's wants to win."],
+    ["Harassment Response", "Simple no-debate removal policy for harassment/groping, plus staff trained to escalate fast", "Turns 'female safety' from marketing language into an operating rule."],
+    ["Guest Help Signal", "Discreet code-word or direct-to-host help option promoted in washrooms and on-table signage", "Gives guests a low-friction way to ask for help without escalating publicly."],
+    ["Washroom Oversight", "Frequent checks, line management, brighter sightlines, anti-loitering enforcement near washroom corridors", "This is a common friction point in nightlife venues and strongly shapes how safe women feel."],
+    ["Drink Protection", "Offer drink covers near peak periods and train staff to replace suspicious drinks without argument", "Small-cost signal that strongly reinforces the brand promise."],
+    ["Exit Support", "Offer safe-walk-to-car/rideshare support and tightly manage curbside dismissal after closing", "The safety promise has to extend to the departure moment, not just the dance floor."],
+    ["Booking & Messaging", "Put the safety commitment directly in bachelorette pages, group-booking comms, and event FAQs", "This differentiator should drive conversion, not stay hidden as an internal operating note."],
+], columns=["Area", "Recommended Standard", "Why It Matters"])
 
 ELOISE_DEMAND_AUDIT = pd.DataFrame([
     ["Eloise", 4.6, 121, 12, "2026-04-04", "Moderate", "Fri-Sat dinner; Bar Cart spillover; special-occasion and date-night demand", "Tue-Thu lunch and early dinner", "Reservations are recommended on weekends; lunch prix-fixe and quieter midweek windows are the clearest demand-building opportunities."],
