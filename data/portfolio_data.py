@@ -656,12 +656,11 @@ COMPETITORS = {
     },
     "Dolly's": {
         "Local (1–2 km)": pd.DataFrame([
-            ["Scotland Yard", "56 The Esplanade", "English pub, sports", "Shares The Esplanade foot traffic"],
-            ["Bar Cathedral", "54 The Esplanade", "Nightclub / live music", "Competes for same late-night occasion"],
-            ["Old Spaghetti Factory", "The Esplanade", "Family Italian dining", "Shares the building/corridor"],
             ["The Keg Steakhouse", "The Esplanade", "Steakhouse + bar", "Pre-dinner crowd overlap"],
             ["C'est What?", "67 Front St E", "Craft beer brewpub", "After-work / casual night out overlap"],
+            ["Duke's Refresher St Lawrence", "73 Front St E", "Retro bar & grill with games and a strong happy-hour/group occasion", "Casual social bar in the same corridor competing for spontaneous group nights and pre-late-night traffic"],
             ["King Taps First Canadian Place", "100 King St W", "Large-format downtown bar with strong happy hour and group energy", "Competes for after-work and group occasions before guests decide where the night goes"],
+            ["The Carbon Bar", "99 Queen St E", "Large-format barbecue and cocktail room with group-dining and occasion energy", "Competes for pre-party dinner groups, birthdays, and social-night occasions in the same broader downtown catchment"],
         ], columns=["Name", "Location", "Concept", "Why Competitor"]),
         "City-wide (Toronto)": pd.DataFrame([
             ["Rock 'N' Horse Saloon", "250 Adelaide W", "Country nightclub — line dancing, mechanical bull, CCMA winner", "Main incumbent in Toronto country bar space"],
@@ -804,12 +803,11 @@ ELOISE_SOCIAL_AUDIT = pd.DataFrame([
 
 DOLLY_SOCIAL_AUDIT = pd.DataFrame([
     ["Dolly's", "@dollyscountrybarto", None, None, None, None, "IG, TikTok, FB, X, YouTube, Pinterest, Snapchat, Spotify, Bluesky, Reddit", "Pre-launch", "Owned launch accounts reserved", "Teaser reels, build journal, staff intros, line-dance setup, bachelorette positioning, female-safety messaging", "Pre-launch", "The social footprint is reserved across platforms; the opportunity is to launch with a disciplined pre-opening content system instead of building accounts after opening."],
-    ["Scotland Yard", "@scotlandyardtoronto", 1903, 127, 4.7, 4109, "IG, FB", "~0.4", "Single venue", "Pub atmosphere, sports energy, specials, event utility", "Low to Moderate", "Useful local baseline for how much The Esplanade foot traffic can be activated without a nightlife-first content engine."],
-    ["Bar Cathedral", "@barcathedral", 23400, None, 4.3, 243, "IG, FB", "~4.5", "Single venue", "Nightlife interiors, DJs, live-performance visuals, creator-friendly room shots", "Moderate to High", "Important local nightlife benchmark for content cadence and room-based atmosphere marketing."],
-    ["Old Spaghetti Factory", "@oldspaghettifactoryto", 6157, 624, 4.4, 12793, "IG, FB", "~1.2", "Single venue", "Nostalgia, family dining, whimsical interiors", "Moderate", "Not a direct nightlife comp, but a useful proof point that the Esplanade can sustain destination traffic if the brand promise is legible."],
     ["The Keg Esplanade", "@thekegsteakhouse", 117000, 1580, 4.3, 3000, "IG, FB", "~3.0", "Chain account", "Steakhouse polish, occasion dining, broad brand familiarity", "High", "Competes for pre-night-out dollars and demonstrates how strong corporate social discipline can dominate local awareness."],
     ["C'est What?", "@cestwhatto", 4006, 500, 4.5, 3400, "IG, FB", "~1.1", "Single venue", "Beer culture, event flyers, local community familiarity", "Moderate", "A reminder that local institutions can win with consistency and community, not just polish."],
+    ["Duke's Refresher St Lawrence", "@dukesrefresherslm", 2997, 350, 4.0, 2200, "IG, FB", "~1.0", "Single venue", "Casual patio moments, sports-adjacent energy, approachable food-and-drink content", "Moderate", "Important nearby social bar that competes for the same informal group-night and after-work decisions."],
     ["King Taps First Canadian Place", "@kingtaps", None, None, 4.3, 4500, "IG, FB", "~2.5", "Multi-location account", "Patio moments, group nights, happy hour, sports-adjacent downtown energy", "Moderate", "Useful local occasion competitor for after-work groups before they decide where late-night goes."],
+    ["The Carbon Bar", "@thecarbonbar", 17700, None, 4.5, 4600, "IG, FB", "~2.0", "Single venue", "Big-room food-and-drink visuals, group dining, barbecue spectacle, event-friendly atmosphere", "Moderate to High", "Useful local occasion benchmark for larger group bookings, birthdays, and social dinner occasions before nightlife takes over."],
     ["Rock 'N' Horse Saloon", "@rocknhorseto", 16000, None, 4.1, 1967, "IG, FB, TikTok", "~2.5", "Single venue", "Line dancing, mechanical bull, party groups, country-night atmosphere", "Moderate to High", "The clearest active Toronto country-night benchmark for category legitimacy and repeatable party energy."],
     ["Paris Texas", "@paristexasparistexas", 14000, None, 4.7, 200, "IG, TikTok", "~3.5", "Single venue", "Bachelorette energy, polished interiors, party-group content, brunch and patio flexing", "High", "Shows how country nightlife can be made fashionable, photogenic, and female-skewed without losing broad appeal."],
     ["Rodeo Dive", "@rodeodiveto", 3000, None, None, None, "IG, TikTok", "~2.0", "Single venue", "Country-sports crossover, launch buzz, INK-backed nightlife polish", "Early / building", "Important because it competes for newer downtown curiosity and group nightlife traffic."],

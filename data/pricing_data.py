@@ -153,9 +153,7 @@ COMPETITOR_PRICING = {
         ["Momofuku Ko", "N/A", "Global", "*CLOSED (Nov 2023)"],
     ]),
     "Dolly's": _make_pricing_df([
-        ["Dolly's", "$18", "Local", "Signature cocktail ~$14 + Domestic beer ~$8 (estimated pre-opening)"],
-        ["Scotland Yard", "$26", "Local", "Draft pint ~$8 + Burger ~$18"],
-        ["Bar Cathedral", "$23", "Local", "The Money Shot $15 + Draft ~$8"],
+        ["Dolly's", "$22", "Local", "Signature cocktail ~$14 + Domestic beer ~$8 (estimated pre-opening)"],
         ["King Taps First Canadian Place", "$29", "Local", "Cocktail ~$18 + Domestic draft ~$11"],
         ["Rock 'N' Horse Saloon", "$22", "City-wide", "Domestic beer ~$8 + Cover $15 (ladies free before 11pm)"],
         ["Paris Texas", "$30", "City-wide", "Cocktail ~$19 + Draft ~$11"],
