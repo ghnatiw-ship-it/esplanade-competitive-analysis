@@ -214,6 +214,31 @@ def render_venue_logo(venue_name: str):
     if logo_path:
         st.image(str(logo_path), width=220)
 
+
+def render_takeout_gallery(df: pd.DataFrame):
+    if df.empty:
+        st.info("No verified guest-shot packaged-arrival photos are loaded yet for this venue.")
+        return
+    grouped = df.groupby("Item Group", sort=False)
+    for item_group, group_df in grouped:
+        st.markdown(f"### {item_group}")
+        cols = st.columns(min(2, max(1, len(group_df))))
+        for idx, (_, row) in enumerate(group_df.iterrows()):
+            with cols[idx % len(cols)]:
+                st.markdown(f"**{row['Competitor']}**")
+                st.caption(row["Comparable Item"])
+                photo_asset = str(row.get("Photo Asset URL", "") or "").strip()
+                if photo_asset:
+                    st.image(photo_asset, use_container_width=True)
+                else:
+                    st.warning("No verified packaged-arrival photo loaded yet.")
+                st.markdown(f"**Package Type:** {row['Package Type']}")
+                st.markdown(f"**Evidence:** {row['Evidence']}")
+                st.markdown(f"[Evidence Source]({row['Evidence URL']})")
+                st.markdown(f"[Photo Source]({row['Photo URL']})")
+                st.caption(row["Read"])
+        st.divider()
+
 # --- SY TEARDOWN DATA ---
 
 SY_TEARDOWNS = {
@@ -3352,18 +3377,22 @@ elif active_page and active_page in VENUES:
         )
 
         takeout_df = SY_TAKEOUT_PACKAGING.copy() if selected_venue == "Scotland Yard" else OSF_TAKEOUT_PACKAGING.copy()
-        st.dataframe(
-            takeout_df,
-            width="stretch",
-            hide_index=True,
-            column_config={
-                "Evidence URL": st.column_config.LinkColumn("Evidence Source"),
-                "Photo URL": st.column_config.LinkColumn("Photo Link"),
-            },
-        )
+        render_takeout_gallery(takeout_df)
+
+        if not takeout_df.empty:
+            st.markdown("### Source Table")
+            st.dataframe(
+                takeout_df.drop(columns=["Photo Asset URL"], errors="ignore"),
+                width="stretch",
+                hide_index=True,
+                column_config={
+                    "Evidence URL": st.column_config.LinkColumn("Evidence Source"),
+                    "Photo URL": st.column_config.LinkColumn("Photo Link"),
+                },
+            )
         st.caption(
-            "Photo links point to the closest page I could verify that contains the packaging or takeout visual context from the competitor or guests. "
-            "This table is intentionally sparse because exact package photography is much harder to verify than menu or delivery availability."
+            "This section is now restricted to arrived-product packaging evidence. Generic takeout promo shots are not treated as packaging proof. "
+            "If a competitor row is present without an embedded image, the evidence supports the off-premise format but not yet a verified packaged-arrival photo."
         )
 
     elif venue_section == "Research":

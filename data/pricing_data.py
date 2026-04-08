@@ -24,7 +24,7 @@ def _make_pricing_df(rows):
 
 COMPETITOR_PRICING = {
     "Scotland Yard": _make_pricing_df([
-        ["Scotland Yard", "$26", "Local", "Draft pint ~$8 + Burger ~$18"],
+        ["Scotland Yard", "$29.85", "Local", "Three Toques Lager draft $8.85 + Yard Cheeseburger $21 | scotlandyard.ca"],
         ["Score on King", "$30", "Local", "Mill St Organic draft $9 + Burger ~$21"],
         ["King Taps", "$34", "Local", "Draft beer ~$10 + Burger ~$24"],
         ["Walrus Pub & Beer Hall", "$31", "Local", "Draft beer ~$9 + Burger ~$22"],
