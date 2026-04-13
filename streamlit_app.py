@@ -164,7 +164,7 @@ def _format_optional_metric(value):
 
 BASE_PATH = Path(__file__).parent
 ASSETS_PATH = BASE_PATH / "assets" / "logos"
-ELOISE_DOCS_PATH = Path("/Users/grahamhnatiw/Local/Esplanade Restaurants/Eloise")
+ELOISE_DOCS_PATH = BASE_PATH / "assets" / "docs" / "eloise"
 BAR_CART_DATA, BAR_CART_SNAPSHOT, BAR_CART_COMPETITOR_AUDIT, BAR_CART_PROGRAMMING, BAR_CART_RECOMMENDATIONS = load_bar_cart_deep_dive(BASE_PATH)
 VENUE_RESEARCH_TABLES = load_venue_research_tables(BASE_PATH)
 
@@ -248,11 +248,19 @@ def render_download_buttons(file_specs, columns=2):
         with cols[idx % columns]:
             file_path = Path(path)
             if file_path.exists():
+                suffix = file_path.suffix.lower()
+                mime = "application/octet-stream"
+                if suffix == ".pdf":
+                    mime = "application/pdf"
+                elif suffix == ".md":
+                    mime = "text/markdown"
+                elif suffix == ".txt":
+                    mime = "text/plain"
                 st.download_button(
                     label=label,
                     data=file_path.read_bytes(),
                     file_name=file_path.name,
-                    mime="text/markdown",
+                    mime=mime,
                     width="stretch",
                 )
             else:
@@ -3554,6 +3562,18 @@ elif active_page and active_page in VENUES:
     elif venue_section == "Fixed Price Menu" and selected_venue == "Eloise":
         st.markdown("### Taste Eloise Signature — Fixed Price Menu")
         st.caption("Final menu: $110/pp base + wine pairing $45 + striploin supplement $18. Target: $125/pp avg cheque. Thu–Sat, 6:30 / 7:00 / 7:30pm seatings.")
+        render_download_buttons(
+            [
+                ("Download Guest Menu PDF", ELOISE_DOCS_PATH / "taste_eloise_signature_menu.pdf"),
+                ("Download Guest Menu Draft", ELOISE_DOCS_PATH / "taste_eloise_signature_menu.md"),
+                ("Download Proposal", ELOISE_DOCS_PATH / "fixed_price_menu_proposal.md"),
+                ("Download OpenTable Copy", ELOISE_DOCS_PATH / "opentable_experience_copy.md"),
+                ("Download FOH Cheat Sheet", ELOISE_DOCS_PATH / "foh_cheat_sheet.md"),
+                ("Download Research Notes", ELOISE_DOCS_PATH / "peak_time_pricing_research.md"),
+            ],
+            columns=2,
+        )
+        st.divider()
 
         st.markdown("#### The Problem")
         st.warning("6:30–8pm Friday/Saturday fills easily, but not every guest hits the $125/pp target. Some tables order one pasta and water, occupying a prime-time seat that could generate 2–3x the revenue.", icon="⚠️")
