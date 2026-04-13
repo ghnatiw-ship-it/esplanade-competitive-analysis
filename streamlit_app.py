@@ -3552,8 +3552,8 @@ elif active_page and active_page in VENUES:
                 show_table(caveat_df)
 
     elif venue_section == "Fixed Price Menu" and selected_venue == "Eloise":
-        st.markdown("### The Eloise Experience — Fixed Price Menu Proposal")
-        st.caption("Strategy to guarantee $125/pp target average cheque during peak times (6:30–8pm Fri/Sat). Based on actual Eloise menu pricing and internal costing from Google Drive.")
+        st.markdown("### Taste Eloise Signature — Fixed Price Menu")
+        st.caption("Final menu: $110/pp base + wine pairing $45 + striploin supplement $18. Target: $125/pp avg cheque. Thu–Sat, 6:30 / 7:00 / 7:30pm seatings.")
 
         st.markdown("#### The Problem")
         st.warning("6:30–8pm Friday/Saturday fills easily, but not every guest hits the $125/pp target. Some tables order one pasta and water, occupying a prime-time seat that could generate 2–3x the revenue.", icon="⚠️")
