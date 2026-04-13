@@ -164,6 +164,7 @@ def _format_optional_metric(value):
 
 BASE_PATH = Path(__file__).parent
 ASSETS_PATH = BASE_PATH / "assets" / "logos"
+ELOISE_DOCS_PATH = Path("/Users/grahamhnatiw/Local/Esplanade Restaurants/Eloise")
 BAR_CART_DATA, BAR_CART_SNAPSHOT, BAR_CART_COMPETITOR_AUDIT, BAR_CART_PROGRAMMING, BAR_CART_RECOMMENDATIONS = load_bar_cart_deep_dive(BASE_PATH)
 VENUE_RESEARCH_TABLES = load_venue_research_tables(BASE_PATH)
 
@@ -239,6 +240,23 @@ def render_takeout_gallery(df: pd.DataFrame):
                 st.markdown(f"[Photo Source]({row['Photo URL']})")
                 st.caption(row["Read"])
         st.divider()
+
+
+def render_download_buttons(file_specs, columns=2):
+    cols = st.columns(columns)
+    for idx, (label, path) in enumerate(file_specs):
+        with cols[idx % columns]:
+            file_path = Path(path)
+            if file_path.exists():
+                st.download_button(
+                    label=label,
+                    data=file_path.read_bytes(),
+                    file_name=file_path.name,
+                    mime="text/markdown",
+                    width="stretch",
+                )
+            else:
+                st.caption(f"Missing: {file_path.name}")
 
 # --- SY TEARDOWN DATA ---
 
@@ -3282,6 +3300,7 @@ elif active_page and active_page in VENUES:
             ["Pricing", "Yes", "Standardized price basket comparison"],
             ["Research", "Yes" if selected_venue in VENUE_RESEARCH_TABLES else "No", "Spreadsheet-backed structured competitor notes"],
             ["Social", "Yes" if selected_venue in VENUE_SOCIAL_AUDIT else "No", "Social presence, cadence, and review signals"],
+            ["Fixed Price Menu", "Yes" if selected_venue == "Eloise" else "No", "Peak-time OpenTable experience proposal, guest copy, and FOH support docs"],
             ["Demand", "Yes" if selected_venue == "Eloise" else "No", "OpenTable demand pattern and reservation velocity snapshot"],
             ["Strategy", "Yes" if selected_venue == "Dolly's" else "No", "Bachelorette benchmark, Sun-Wed off-peak benchmark, and female-safety operating framework"],
             ["Teardowns", "Yes" if selected_venue in VENUE_TEARDOWNS and len(VENUE_TEARDOWNS[selected_venue]) > 0 else "No", "Deep-dive competitor teardowns"],
@@ -3534,133 +3553,150 @@ elif active_page and active_page in VENUES:
 
     elif venue_section == "Fixed Price Menu" and selected_venue == "Eloise":
         st.markdown("### The Eloise Experience — Fixed Price Menu Proposal")
-        st.caption("Strategy to guarantee target average cheque during peak reservation times (6:30–8pm Fri/Sat) using OpenTable Experiences.")
+        st.caption("Strategy to guarantee $125/pp target average cheque during peak times (6:30–8pm Fri/Sat). Based on actual Eloise menu pricing and internal costing from Google Drive.")
 
-        # The Problem
         st.markdown("#### The Problem")
-        st.warning("6:30–8pm Friday/Saturday fills easily, but not every guest hits the target average cheque. Some tables order one pasta and water, occupying a prime-time seat that could generate 2–3x the revenue.", icon="⚠️")
-
+        st.warning("6:30–8pm Friday/Saturday fills easily, but not every guest hits the $125/pp target. Some tables order one pasta and water, occupying a prime-time seat that could generate 2–3x the revenue.", icon="⚠️")
         st.divider()
 
-        # The Mechanism
-        st.markdown("#### The Mechanism: OpenTable Experiences")
-        st.info(
-            "**OpenTable Experiences** allows you to create a prepaid dining package that is the ONLY booking option for a specific time window. "
-            "Guests must book and pay for the Experience to reserve 6:30–8pm Fri/Sat. Earlier and later slots remain standard à la carte reservations.",
-            icon="🔧"
-        )
-
-        st.divider()
-
-        # Who's Already Doing This
-        st.markdown("#### Who's Already Doing This")
-        _benchmark_data = [
-            ["Suraya", "Philadelphia", "Tasting menu REQUIRED on Fri/Sat only", "$78/pp", "Closest model to what Eloise should do"],
-            ["Demi", "Chicago", "Different menu tiers by night ($175 Fri/Sat, $125 other)", "$125–175/pp", "Shows price can flex by day of week"],
-            ["The Coach House", "Chicago", "Weekends only, 2 seatings, set menu mandatory", "$135/pp", "Scarcity-driven model"],
-            ["Eleven Madison Park", "New York", "Tasting menu only — no à la carte in dining room", "$385/pp", "Most extreme version"],
-            ["Alo", "Toronto", "Tasting menu only, prepaid via Tock", "$245/pp", "Toronto reference — different tier"],
+        st.markdown("#### Current Eloise Menu Prices")
+        _current_menu = [
+            ["Starters", "Scallop Crudo, Tuna Tiradito, Oysters, Potato Pavé, Pain au Lait", "Up to $26"],
+            ["Vegetables", "Heirloom Tomatoes, Romaine & Endives, Grilled Caraflex, Rapini, Roasted Carrot", "$14–18"],
+            ["Pasta", "Agnolotti, Pappardelle, Lobster Risotto", "Up to $30"],
+            ["Big Plates", "12oz Dry Aged Striploin, Rainbow Trout, Half Roasted Chicken, Dover Sole, Iberico Pork Katsu", "Up to $68"],
+            ["Sides", "Potato Pavé, Charred Broccolini, Grilled Cabbage", "$16"],
+            ["Desserts", "Apple Tarte Tatin, Citrus Parfait, Mango Mille-Feuille", "$20"],
+            ["Cocktails", "Signature cocktails", "$23"],
         ]
-        _benchmark_df = pd.DataFrame(_benchmark_data, columns=["Restaurant", "City", "What They Do", "Price", "Relevance"])
-        show_table(_benchmark_df)
-
-        st.caption("**Toronto gap:** No restaurant in Eloise's competitive tier uses time-slot-specific prepaid Experiences. This is a first-mover opportunity.")
-
+        show_table(pd.DataFrame(_current_menu, columns=["Category", "Items", "Price (up to)"]))
+        st.caption("Internal costs: Starters ~$11, Pasta ~$10, Mains ~$28.80, Sides ~$4.84, Desserts ~$6.65, Cocktails ~$4.14")
         st.divider()
 
-        # Proposed Menu
-        st.markdown("#### Proposed Menu: Option C (Recommended — $95/pp)")
-        st.markdown("Single tier, simple to market and operate. Same menu items, same kitchen — just structured to guarantee 3 courses.")
-
-        _menu_proposal = [
-            ["Starter (choose 1)", "Hamachi Crudo, Brioche, Oysters (6pc), Seasonal Soup", "$16–28"],
-            ["Main (choose 1)", "Casarecce Pork Ragu, Ricotta Agnolotti, Grilled Salmon, Grilled Chicken, Potato Gnudi", "$26–42"],
-            ["Third Course (choose 1)", "Dessert du Jour, OR Glass of wine (curated list), OR Side to share", "$14–22"],
+        st.markdown("#### Package 1: Eloise Dinner for Two — $130/pp")
+        st.markdown("*Also scales to 4 (quantities doubled). OpenTable configured for 2 or 4 only.*")
+        _pkg1 = [
+            ["Complimentary Brioche", "Included", "—"],
+            ["Starters (choose 2)", "Beet Salad, Scallop Crudo, Mushroom Parfait", "$26 each"],
+            ["Pasta (1 to share)", "Ravioli (+ truffle add-on option)", "$30"],
+            ["Mains (choose 2)", "Roast Chicken, Salmon, Striploin", "Up to $68"],
+            ["Side (1 for table)", "Potato Pavé or Cabbage", "$16"],
+            ["Dessert (choose 1)", "Apple Tarte Tatin or Citrus Parfait", "$20"],
+            ["2 Cocktails at Bar Cart", "End the evening next door", "$23 each"],
         ]
-        _menu_df = pd.DataFrame(_menu_proposal, columns=["Course", "Selections", "Current à la carte range"])
-        show_table(_menu_df)
-
-        st.markdown("**Experience Price: $95 per person** (prepaid at booking, gratuity and additional beverages extra)")
-        st.caption("Premium mains (striploin, Dover sole) excluded from this tier — available at 8:15pm+ standard reservations or via supplement (+$25–40).")
-
+        show_table(pd.DataFrame(_pkg1, columns=["Course", "Selections", "Menu Price"]))
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Menu Value (for 2)", "$300")
+        c2.metric("Selling Price", "$130/pp")
+        c3.metric("Food Cost", "~35%")
         st.divider()
 
-        # Pricing Scenarios
-        st.markdown("#### Revenue Impact Scenarios")
-        _scenarios = [
-            ["Current (no minimum)", "~$55/pp avg", "~40 covers", "$2,200", "—"],
-            ["Option A ($85/pp)", "$85/pp guaranteed", "~40 covers", "$3,400", "+55%"],
-            ["Option B ($110/pp)", "$110/pp guaranteed", "~35 covers", "$3,850", "+75%"],
-            ["Option C ($95/pp) ★", "$95/pp guaranteed", "~38 covers", "$3,610", "+64%"],
+        st.markdown("#### Package 2: Shared Experience Core (6–8 guests) — $120/pp")
+        _pkg2 = [
+            ["Starters", "1 Scallop pp + 2 plates Hamachi + 2 plates Beet Salad", "$184"],
+            ["Mid Course", "3–4 plates pasta TBD + truffle", "$70"],
+            ["Mains", "Striploin + Grilled Chicken + Grilled Salmon", "$158"],
+            ["Sides (2)", "Potato Pavé + Charred Broccolini", "$56"],
+            ["Desserts (3)", "Citrus Parfait + Mango Mille-Feuille + Apple Tarte Tatin", "$54"],
+            ["6 Prosecco", "Welcome drinks", "Included"],
         ]
-        _scenarios_df = pd.DataFrame(_scenarios, columns=["Scenario", "Per Person", "Covers (Fri+Sat 6:30–8pm)", "Weekend Revenue", "vs Current"])
-        show_table(_scenarios_df)
-        st.caption("Even with 5–10% demand reduction from the restriction, revenue per weekend increases 55–75%.")
-
+        show_table(pd.DataFrame(_pkg2, columns=["Course", "What's Included", "Menu Value"]))
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Food Value", "$522 ($87/pp)")
+        c2.metric("Selling Price", "$120/pp")
+        c3.metric("Food Cost", "30.5%")
         st.divider()
 
-        # Time Slot Structure
-        st.markdown("#### How It Works — Time Slot Structure")
+        st.markdown("#### Package 3: Shared Experience Premium (6–8 guests) — $140/pp")
+        _pkg3 = [
+            ["Starters", "2 Oysters pp + 1 Scallop pp + 2 Hamachi + 2 Mushroom Parfait", "$184"],
+            ["Mid Course", "3 plates Shrimp Pasta", "$120"],
+            ["Mains", "Côte de Boeuf (50oz) + Dover Sole + Iberico Pork Chop", "$300"],
+            ["Sides (4)", "2 Cabbage + 2 Charred Broccolini", "$60"],
+            ["Desserts (3)", "Citrus Parfait + Mango Mille-Feuille + Apple Tarte Tatin", "$54"],
+            ["6 Champagne", "Welcome drinks", "Included"],
+        ]
+        show_table(pd.DataFrame(_pkg3, columns=["Course", "What's Included", "Menu Value"]))
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Food Value", "$718 ($120/pp)")
+        c2.metric("Selling Price", "$140/pp")
+        c3.metric("Food Cost", "31.9%")
+        st.divider()
+
+        st.markdown("#### Internal Costing Summary")
+        _costing = [
+            ["Dinner for 2/4 (no drinks)", "$100/pp", "$224 (2pp)", "45.6%"],
+            ["Dinner for 2/4 + Bar Cart cocktails", "$130/pp", "$300 (2pp)", "~35%"],
+            ["Shared Core (6–8)", "$120/pp", "$522 (6pp)", "30.5%"],
+            ["Shared Premium (6–8)", "$140/pp", "$718 (6pp)", "31.9%"],
+        ]
+        show_table(pd.DataFrame(_costing, columns=["Package", "Selling Price/pp", "Menu Value", "Food Cost %"]))
+        st.divider()
+
+        st.markdown("#### Time Slot Structure")
         _slots = [
-            ["5:00–6:15pm", "Standard reservation, à la carte", "No change"],
-            ["6:30–8:00pm Fri/Sat", "★ Eloise Experience ONLY — prepaid 3-course", "New: minimum spend guaranteed"],
-            ["8:15pm+", "Standard reservation, à la carte", "No change"],
+            ["5:00–6:15pm", "Standard à la carte", "No change"],
+            ["6:30–8:00pm Fri/Sat", "★ Eloise Experience ONLY — prepaid package", "Guarantees $125+/pp"],
+            ["8:15pm+", "Standard à la carte", "No change"],
         ]
-        _slots_df = pd.DataFrame(_slots, columns=["Time Slot", "Booking Type", "Status"])
-        show_table(_slots_df)
-
+        show_table(pd.DataFrame(_slots, columns=["Time Slot", "Booking Type", "Impact"]))
+        st.caption("Party sizes: 2 or 4 (Dinner for Two) or 6–8 (Shared Experience). Odd sizes book outside peak window.")
         st.divider()
 
-        # Marketing Language
+        st.markdown("#### Global Benchmarks")
+        _benchmarks = [
+            ["Suraya", "Philadelphia", "Tasting menu REQUIRED Fri/Sat only", "$78/pp"],
+            ["Demi", "Chicago", "Different tiers: $175 Fri/Sat, $125 other nights", "$125–175/pp"],
+            ["The Coach House", "Chicago", "Weekends only, 2 seatings, set menu", "$135/pp"],
+            ["Eleven Madison Park", "New York", "Tasting menu only, no à la carte", "$385/pp"],
+            ["Alo", "Toronto", "Tasting menu only, prepaid via Tock", "$245/pp"],
+        ]
+        show_table(pd.DataFrame(_benchmarks, columns=["Restaurant", "City", "What They Do", "Price"]))
+        st.caption("**Toronto gap:** No restaurant in Eloise's tier uses time-slot-specific prepaid Experiences. First-mover opportunity.")
+        st.divider()
+
+        st.markdown("#### Revenue Impact (Fri+Sat 6:30–8pm)")
+        _scenarios = [
+            ["Current (no minimum)", "Varies", "~40 covers", "~$3,200", "—"],
+            ["At $120/pp", "$120 guaranteed", "~38 covers", "$4,560", "+43%"],
+            ["At $125/pp ★", "$125 guaranteed", "~38 covers", "$4,750", "+48%"],
+            ["At $130/pp", "$130 guaranteed", "~36 covers", "$4,680", "+46%"],
+        ]
+        show_table(pd.DataFrame(_scenarios, columns=["Scenario", "Per Person", "Covers", "Weekend Revenue", "vs Current"]))
+        st.divider()
+
         st.markdown("#### Marketing Language")
-
-        st.markdown("**OpenTable listing:**")
-        st.markdown(
-            "> *Join us for a curated three-course dinner at Eloise. Select your starter, main, and a third course from our seasonal menu — "
-            "crafted by Chef Akhil Hajare to showcase the best of Canadian contemporary cuisine with global influences. "
-            "Available Friday and Saturday evenings, 6:30–8pm. $95 per person. Prepaid at booking.*"
-        )
-
-        st.markdown("**For regulars / email:**")
-        st.markdown(
-            "> *We're introducing The Eloise Experience — a three-course dinner available Friday and Saturday evenings from 6:30–8pm. "
-            "Prefer our full à la carte menu? Tables are still available before 6:30pm and after 8:15pm — same menu, same kitchen, same Eloise.*"
-        )
-
+        st.markdown("**OpenTable:**")
+        st.markdown("> *The Eloise Experience — a curated multi-course dinner by Chef Akhil Hajare. Starters, mains, dessert, and a cocktail at Bar Cart. Friday & Saturday, 6:30–8pm. From $120/pp. Prepaid at booking.*")
+        st.markdown("**For regulars:**")
+        st.markdown("> *Prefer à la carte? Tables available before 6:30pm and after 8:15pm — same menu, same kitchen, same Eloise.*")
         st.divider()
 
-        # Risks
         st.markdown("#### Risks & Mitigations")
         _risks = [
-            ["Guests feel forced", "Frame as 'Experience' not 'restriction'. Language: 'curated evening' not 'minimum spend'"],
-            ["Demand drops for 6:30–8pm", "These slots already fill easily. Test: do $95 guests replace $40 guests? Measure for 4 weekends."],
-            ["Regulars feel penalized", "Offer regulars priority booking at 5pm and 8:15pm+ (outside Experience window). They keep full à la carte."],
-            ["Kitchen complexity", "None — same menu items, same execution. Kitchen just knows every table is 3-course."],
-            ["OpenTable setup", "OpenTable Experiences supports this natively. Their support team can help configure time-slot restrictions."],
+            ["Guests feel restricted", "Frame as 'Experience' — Bar Cart cocktail makes it a journey, not a restriction"],
+            ["Demand drops", "Slots fill easily now. Even 5% attrition lifts revenue significantly."],
+            ["Regulars penalized", "Priority at 5pm and 8:15pm+. Full à la carte preserved."],
+            ["Party size friction", "OpenTable: 2, 4, 6, 8 only. Odd sizes book outside peak."],
+            ["Kitchen load", "Same menu, same execution. May simplify service."],
         ]
-        _risks_df = pd.DataFrame(_risks, columns=["Risk", "Mitigation"])
-        show_table(_risks_df)
-
+        show_table(pd.DataFrame(_risks, columns=["Risk", "Mitigation"]))
         st.divider()
 
-        # Implementation
-        st.markdown("#### Implementation Checklist")
+        st.markdown("#### Implementation")
         _steps = [
-            ["1", "Finalize menu item selections for the Experience"],
-            ["2", "Set price point ($85 / $95 / $110 — or tiered)"],
-            ["3", "Configure on OpenTable Experiences (prepaid, time-restricted 6:30–8pm Fri/Sat)"],
-            ["4", "Remove standard reservation availability for 6:30–8pm Fri/Sat"],
-            ["5", "Brief FOH team on how to explain to guests"],
-            ["6", "Social media + email announcement"],
-            ["7", "Run 4-weekend pilot"],
-            ["8", "Measure: avg cheque, total revenue per window, no-show rate, guest feedback"],
-            ["9", "Adjust: price, items, time window — expand to Thursday if successful"],
+            ["1", "Confirm final items per tier with Chef Hajare"],
+            ["2", "Set selling prices ($120 / $130 / $140 per tier)"],
+            ["3", "Configure OpenTable Experiences — prepaid, 6:30–8pm Fri/Sat"],
+            ["4", "Configure party sizes: 2/4 and 6/8"],
+            ["5", "Remove standard reservations for peak window"],
+            ["6", "Brief FOH + Bar Cart team"],
+            ["7", "Social + email announcement"],
+            ["8", "4-weekend pilot — track cheque, covers, no-shows, feedback"],
+            ["9", "Expand to Thursday if successful"],
         ]
-        _steps_df = pd.DataFrame(_steps, columns=["Step", "Action"])
-        show_table(_steps_df)
-
-        st.divider()
-        st.caption("Full research and proposal saved to: Esplanade Restaurants/Eloise/peak_time_pricing_research.md and fixed_price_menu_proposal.md")
+        show_table(pd.DataFrame(_steps, columns=["Step", "Action"]))
+        st.caption("Source: ECC Fixed Price Menu spreadsheet, Eloise Menu doc, Eloise Menu Packages doc (Google Drive)")
 
     elif venue_section == "Demand" and selected_venue == "Eloise":
         st.markdown("### Eloise — Demand Pattern & Reservation Velocity")
