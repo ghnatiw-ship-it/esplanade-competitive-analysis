@@ -3565,11 +3565,10 @@ elif active_page and active_page in VENUES:
         render_download_buttons(
             [
                 ("Download Guest Menu PDF", ELOISE_DOCS_PATH / "taste_eloise_signature_menu.pdf"),
-                ("Download Guest Menu Draft", ELOISE_DOCS_PATH / "taste_eloise_signature_menu.md"),
-                ("Download Proposal", ELOISE_DOCS_PATH / "fixed_price_menu_proposal.md"),
-                ("Download OpenTable Copy", ELOISE_DOCS_PATH / "opentable_experience_copy.md"),
-                ("Download FOH Cheat Sheet", ELOISE_DOCS_PATH / "foh_cheat_sheet.md"),
-                ("Download Research Notes", ELOISE_DOCS_PATH / "peak_time_pricing_research.md"),
+                ("Download Proposal PDF", ELOISE_DOCS_PATH / "fixed_price_menu_proposal.pdf"),
+                ("Download OpenTable Copy PDF", ELOISE_DOCS_PATH / "opentable_experience_copy.pdf"),
+                ("Download FOH Cheat Sheet PDF", ELOISE_DOCS_PATH / "foh_cheat_sheet.pdf"),
+                ("Download Research Notes PDF", ELOISE_DOCS_PATH / "peak_time_pricing_research.pdf"),
             ],
             columns=2,
         )
@@ -3612,34 +3611,36 @@ elif active_page and active_page in VENUES:
         st.divider()
 
         st.markdown("#### Package 2: Shared Experience Core (6–8 guests) — $120/pp")
+        st.markdown("*Family-style for the table. Quantities shown are total dishes served to the group.*")
         _pkg2 = [
-            ["Starters", "1 Scallop pp + 2 plates Hamachi + 2 plates Beet Salad", "$184"],
-            ["Mid Course", "3–4 plates pasta TBD + truffle", "$70"],
-            ["Mains", "Striploin + Grilled Chicken + Grilled Salmon", "$158"],
-            ["Sides (2)", "Potato Pavé + Charred Broccolini", "$56"],
+            ["Starters (6 scallops + 2 plates + 2 plates)", "1 Seared Scallop pp + 2 plates Hamachi Crudo + 2 plates Beet Salad", "$184"],
+            ["Mid Course (3–4 plates)", "Pasta TBD + truffle", "$70"],
+            ["Mains (3 plates)", "1 plate Striploin + 1 plate Grilled Chicken + 1 plate Grilled Salmon", "$158"],
+            ["Sides (2 plates)", "Potato Pavé + Charred Broccolini", "$56"],
             ["Desserts (3)", "Citrus Parfait + Mango Mille-Feuille + Apple Tarte Tatin", "$54"],
-            ["6 Prosecco", "Welcome drinks", "Included"],
+            ["Prosecco (6 glasses)", "Welcome drinks", "Included"],
         ]
-        show_table(pd.DataFrame(_pkg2, columns=["Course", "What's Included", "Menu Value"]))
+        show_table(pd.DataFrame(_pkg2, columns=["Course (qty for table)", "What's Included", "Menu Value (table)"]))
         c1, c2, c3 = st.columns(3)
-        c1.metric("Food Value", "$522 ($87/pp)")
-        c2.metric("Selling Price", "$120/pp")
+        c1.metric("Food Value (table of 6)", "$522 ($87/pp)")
+        c2.metric("Selling Price", "$120/pp ($720 table)")
         c3.metric("Food Cost", "30.5%")
         st.divider()
 
         st.markdown("#### Package 3: Shared Experience Premium (6–8 guests) — $140/pp")
+        st.markdown("*Family-style for the table. Quantities shown are total dishes served to the group.*")
         _pkg3 = [
-            ["Starters", "2 Oysters pp + 1 Scallop pp + 2 Hamachi + 2 Mushroom Parfait", "$184"],
-            ["Mid Course", "3 plates Shrimp Pasta", "$120"],
-            ["Mains", "Côte de Boeuf (50oz) + Dover Sole + Iberico Pork Chop", "$300"],
-            ["Sides (4)", "2 Cabbage + 2 Charred Broccolini", "$60"],
+            ["Starters (12 oysters + 6 scallops + 2 plates + 2 plates)", "2 Oysters pp + 1 Scallop pp + 2 plates Hamachi Crudo + 2 plates Mushroom Parfait", "$184"],
+            ["Mid Course (3 plates)", "Shrimp Pasta", "$120"],
+            ["Mains (3 plates)", "Côte de Boeuf (50oz) + Dover Sole + Iberico Pork Chop", "$300"],
+            ["Sides (4 plates)", "2 plates Cabbage + 2 plates Charred Broccolini", "$60"],
             ["Desserts (3)", "Citrus Parfait + Mango Mille-Feuille + Apple Tarte Tatin", "$54"],
-            ["6 Champagne", "Welcome drinks", "Included"],
+            ["Champagne (6 glasses)", "Welcome drinks", "Included"],
         ]
-        show_table(pd.DataFrame(_pkg3, columns=["Course", "What's Included", "Menu Value"]))
+        show_table(pd.DataFrame(_pkg3, columns=["Course (qty for table)", "What's Included", "Menu Value (table)"]))
         c1, c2, c3 = st.columns(3)
-        c1.metric("Food Value", "$718 ($120/pp)")
-        c2.metric("Selling Price", "$140/pp")
+        c1.metric("Food Value (table of 6)", "$718 ($120/pp)")
+        c2.metric("Selling Price", "$140/pp ($840 table)")
         c3.metric("Food Cost", "31.9%")
         st.divider()
 
