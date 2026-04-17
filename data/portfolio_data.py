@@ -919,6 +919,43 @@ DOLLY_FEMALE_SAFETY_FRAMEWORK = pd.DataFrame([
     ["Booking & Messaging", "Put the safety commitment directly in bachelorette pages, group-booking comms, and event FAQs", "This differentiator should drive conversion, not stay hidden as an internal operating note."],
 ], columns=["Area", "Recommended Standard", "Why It Matters"])
 
+DOLLY_SECURITY_BENCHMARK = pd.DataFrame([
+    ["Toronto", "HISTORY", "Concert venue / nightlife-adjacent", "Fan Code of Conduct + direct reporting to management or Security", "Publishes a clear guest-conduct standard covering harassment, intoxication, violence, and direct reporting to management or Security.", "Shows how a premium live venue makes safety legible before guests ever arrive.", "Publish a short public conduct code and make the reporting path obvious on-site and online.", "High"],
+    ["Toronto", "Cake Bar & Nightclub", "Nightclub", "Warm-door reputation in reviews", "Public review aggregators repeatedly mention unusually nice bouncers and a hands-on owner, though evidence is mixed.", "Useful proof that guests notice and remember a welcoming front door in Toronto nightlife.", "Hire for warmth at the door, not just physical presence; keep a visible manager in the room.", "Medium-Low"],
+    ["Toronto", "Bangarang", "Bar / nightlife venue", "Friendly-bouncer reputation", "Review aggregators describe friendly bouncers, attentive bartenders, and a warm, welcoming environment.", "Suggests even a casual party bar can stand out if the door feels easy and social rather than combative.", "Train the door team to act like hosts and tone-setters, not gatekeepers.", "Medium-Low"],
+    ["Canada", "The Cap", "Live music venue / bar", "Safer Spaces staff", "Runs a formal Safer Spaces policy, keeps copies behind every bar and main door, provides annual bystander-intervention training, and stocks naloxone behind every bar.", "This is one of the strongest Canadian examples of safety being operationalized, not just advertised.", "Use annual intervention training, visible support language, and behind-the-bar response tools.", "High"],
+    ["Canada", "The Red Room", "Nightclub", "BarWatch + ID scan + bag-search consent", "Makes hard-control measures explicit: BarWatch participation, mandatory photo ID scan, possible bag search, and CCTV.", "Less warm in tone, but strong as a serious-risk-control model for busy late-night rooms.", "Keep hard controls for peak risk nights, but pair them with softer guest-facing language so it does not feel punitive.", "High"],
+    ["North America", "House of Yes", "Nightclub / immersive event venue", "Safer Spaces + consent-first language", "Publishes a zero-tolerance safer-spaces policy, tells guests to speak to security or a manager, and explicitly says: 'We will believe you, and we will help.'", "Best-in-class example of turning nightlife security into part of brand and guest experience.", "Use consent-forward language, gender-inclusive facilities, and a believe-first help response.", "High"],
+    ["North America", "Bar Publica", "Bar / nightspot", "Safer Space page in main site navigation", "Makes safer-space language part of the venue brand and frames safety as a collaborative culture, not just enforcement.", "Strong example of making safety part of the venue identity instead of burying it in legal copy.", "Put the safety promise on the website and in guest FAQs, not only in internal SOPs.", "High"],
+    ["Global", "Revenge & R-Bar", "LGBTQ+ nightclub / bar", "Safe Space Initiatives + selective door policy", "Publicly frames itself as a safe space and uses door policy to protect that identity, including screening for disrespectful groups.", "Good example of using the door to protect the room's intended social contract, not just to check IDs.", "Brief the door team on who the venue is for, and refuse groups whose behavior will undermine that promise.", "High"],
+    ["Global", "Labyrinth Bar & Nightclub", "Nightclub", "Ask for Angela + Safe Bus support", "Management publicly discusses Ask for Angela training and the venue sponsors Bath's Safe Bus so guests have welfare support after leaving the club.", "Shows safety can extend beyond the door and dance floor into the journey home.", "Pair in-venue help signals with exit support, rideshare help, and post-close guest recovery.", "Medium-High"],
+], columns=["Market", "Venue", "Format", "Security Signal", "Public Evidence", "Why It Stands Out", "What Dolly's Should Borrow", "Evidence Strength"])
+
+DOLLY_SECURITY_DESIGN_PRINCIPLES = pd.DataFrame([
+    ["Rename the function", "Avoid 'bouncer' language. Use Door Host, Guest Safety, or Floor Safety in guest-facing materials and training.", "The strongest operators frame the role as hospitality plus protection, not brute enforcement."],
+    ["Split the role", "Separate door screening, floor safety, and guest-support responsibilities on peak nights.", "One giant generic security role is too blunt for a female-forward nightlife room."],
+    ["Visible help path", "Promote a code-word or direct-to-host help option in washrooms, on menus, and on the website.", "Guests need a discreet way to ask for help before a problem escalates."],
+    ["Believe-first response", "Train managers and security to remove friction from harassment complaints and act fast.", "House of Yes is the clearest benchmark: make the response feel supportive, not adversarial."],
+    ["Protect the room", "Use the door to filter out the wrong energy, not just intoxication and fake IDs.", "Revenge shows the door can protect the social contract of the venue."],
+    ["Back soft language with hard controls", "Use ID checks, bag checks, CCTV, and incident logging on true risk nights.", "The Red Room is a strong reminder that hospitable security still needs disciplined control systems."],
+    ["Train annually", "Run recurring bystander-intervention, de-escalation, and drink-spiking-response refreshers.", "The Cap's annual training model is much more credible than one-time onboarding."],
+    ["Extend safety past closing", "Offer safe-walk, rideshare, and curbside dismissal support at the end of the night.", "Labyrinth's Safe Bus support shows the safety promise should not end when the guest exits the room."],
+], columns=["Principle", "Recommended Move", "Why"])
+
+DOLLY_SECURITY_SOURCES = pd.DataFrame([
+    ["HISTORY", "https://www.historytoronto.com/venue-information/fan-code-of-conduct"],
+    ["Cake Bar & Nightclub (review aggregation)", "https://wanderlog.com/place/details/1824326/cake-bar--nightclub"],
+    ["Bangarang (review aggregation)", "https://www.restaurantji.com/on/toronto/bangarang-/"],
+    ["The Cap", "https://www.thecaplive.com/safer-spaces-policy"],
+    ["The Red Room", "https://redroomvancouver.com/code-of-conduct/"],
+    ["House of Yes", "https://www.houseofyes.org/safer"],
+    ["House of Yes - Consent", "https://www.houseofyes.org/consent"],
+    ["Bar Publica", "https://www.barpublica.com/safer-space"],
+    ["Revenge & R-Bar", "https://www.revenge.co.uk/safe-space/"],
+    ["Labyrinth Nightclub / Bath Safe Bus", "https://www.visitwest.co.uk/news/read/2026/01/labyrinth-nightclub-extends-sponsorship-of-the-bath-safe-bus-for-another-year-b6599"],
+    ["Ask for Angela (reference program)", "https://askforangelaofficial.uk/"],
+], columns=["Source", "URL"])
+
 ELOISE_DEMAND_AUDIT = pd.DataFrame([
     ["Eloise", 4.6, 121, 12, "2026-04-04", "Moderate", "Fri-Sat dinner; Bar Cart spillover; special-occasion and date-night demand", "Tue-Thu lunch and early dinner", "Reservations are recommended on weekends; lunch prix-fixe and quieter midweek windows are the clearest demand-building opportunities."],
     ["Alo", 4.8, 629, 11, "2026-04-05", "Moderate", "Tue-Sat tasting-menu dinner; occasion-led fine dining", "No true low-friction period; earlier seatings are calmer", "Despite elite positioning, Alo's booked-today count is lower because the format is narrower and higher commitment than Eloise's."],

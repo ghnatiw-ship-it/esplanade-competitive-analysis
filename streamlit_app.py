@@ -23,6 +23,9 @@ from data.portfolio_data import (
     DOLLY_BACHELORETTE_MARKETING,
     DOLLY_BACHELORETTE_BENCHMARK,
     DOLLY_BACHELORETTE_PACKAGES,
+    DOLLY_SECURITY_BENCHMARK,
+    DOLLY_SECURITY_DESIGN_PRINCIPLES,
+    DOLLY_SECURITY_SOURCES,
     DOLLY_FEMALE_SAFETY_FRAMEWORK,
     DOLLY_LAUNCH_FRAMEWORK,
     DOLLY_OFF_PEAK_BENCHMARK,
@@ -3310,7 +3313,7 @@ elif active_page and active_page in VENUES:
             ["Social", "Yes" if selected_venue in VENUE_SOCIAL_AUDIT else "No", "Social presence, cadence, and review signals"],
             ["Fixed Price Menu", "Yes" if selected_venue == "Eloise" else "No", "Peak-time OpenTable experience proposal, guest copy, and FOH support docs"],
             ["Demand", "Yes" if selected_venue == "Eloise" else "No", "OpenTable demand pattern and reservation velocity snapshot"],
-            ["Strategy", "Yes" if selected_venue == "Dolly's" else "No", "Bachelorette benchmark, Sun-Wed off-peak benchmark, and female-safety operating framework"],
+            ["Strategy", "Yes" if selected_venue == "Dolly's" else "No", "Bachelorette benchmark, Sun-Wed off-peak benchmark, female-safety framework, and hospitality-led security benchmarks"],
             ["Teardowns", "Yes" if selected_venue in VENUE_TEARDOWNS and len(VENUE_TEARDOWNS[selected_venue]) > 0 else "No", "Deep-dive competitor teardowns"],
             ["Menu", "Yes" if selected_venue == "Old Spaghetti Factory" else "No", "Core menu comparison against chain competitors"],
         ]
@@ -3791,6 +3794,24 @@ elif active_page and active_page in VENUES:
         st.divider()
         st.markdown("### Female-Safety Operating Framework")
         show_table(DOLLY_FEMALE_SAFETY_FRAMEWORK, max_height=520)
+
+        st.divider()
+        st.markdown("### Hospitality-Led Security Benchmarks")
+        st.caption("Venue-level examples where safety is either marketed as part of the experience or repeatedly shows up in public guest feedback. Toronto evidence is thinner and more review-driven than the strongest North American benchmarks, so evidence strength is shown explicitly.")
+        show_table(DOLLY_SECURITY_BENCHMARK, max_height=560)
+
+        st.divider()
+        st.markdown("### What Dolly's Should Borrow")
+        show_table(DOLLY_SECURITY_DESIGN_PRINCIPLES, max_height=420)
+
+        st.divider()
+        st.markdown("### Security Research Sources")
+        st.dataframe(
+            DOLLY_SECURITY_SOURCES,
+            use_container_width=True,
+            hide_index=True,
+            column_config={"URL": st.column_config.LinkColumn("URL")},
+        )
 
     elif venue_section == "Teardowns" and selected_venue in VENUE_TEARDOWNS:
         st.markdown("### Competitor Teardowns")
