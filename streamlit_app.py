@@ -175,6 +175,25 @@ ELOISE_DOCS_PATH = BASE_PATH / "assets" / "docs" / "eloise"
 BAR_CART_DATA, BAR_CART_SNAPSHOT, BAR_CART_COMPETITOR_AUDIT, BAR_CART_PROGRAMMING, BAR_CART_RECOMMENDATIONS = load_bar_cart_deep_dive(BASE_PATH)
 VENUE_RESEARCH_TABLES = load_venue_research_tables(BASE_PATH)
 
+# --- Google Sheets overlay: fetch live data if configured ---
+from data.sheets_loader import load_sheets_config, load_all_sheets
+
+_sheets_config = load_sheets_config()
+SHEETS_DATA = load_all_sheets(_sheets_config) if _sheets_config.get("spreadsheet_id") else {}
+
+# Override research tables with sheet data when available
+_VENUE_KEY_MAP = {
+    "competitors_sy": "Scotland Yard",
+    "competitors_bc": "Bar Cathedral",
+    "competitors_dolly": "Dolly's",
+    "competitors_osf": "Old Spaghetti Factory",
+    "competitors_eloise": "Eloise",
+    "competitors_barcart": "Bar Cart",
+}
+for _sk, _venue_name in _VENUE_KEY_MAP.items():
+    if _sk in SHEETS_DATA:
+        VENUE_RESEARCH_TABLES[_venue_name] = SHEETS_DATA[_sk]
+
 
 def _slugify(value: str) -> str:
     return "".join(ch.lower() if ch.isalnum() else "_" for ch in value).strip("_")
@@ -4032,6 +4051,58 @@ elif active_page and active_page in VENUES:
 """)
 
         st.info("**enRoute Best New (2025), Toronto Life Best New (2025), and blogTO** did not feature any concept-relevant restaurants in recent lists — those lists skewed toward newer openings in other cuisines.")
+
+st.sidebar.divider()
+
+# --- Data Source Admin ---
+with st.sidebar.expander("Data Sources"):
+    from data.sheets_loader import load_sheets_config, save_sheets_config, fetch_sheet_tab
+
+    _sheets_cfg = load_sheets_config()
+    _current_sid = _sheets_cfg.get("spreadsheet_id", "")
+
+    st.caption("Connect a Google Sheet to update competitor data without editing code.")
+    st.caption("The sheet must be shared as 'Anyone with the link can view.'")
+
+    _new_sid = st.text_input(
+        "Google Sheet ID",
+        value=_current_sid,
+        placeholder="e.g. 1XSC3nqb-48MhFO14RDYmwOrsc948w9SuS0IIObnddbI",
+        help="The long ID in the Google Sheets URL between /d/ and /edit",
+        key="sheets_admin_id",
+    )
+
+    if _new_sid != _current_sid:
+        if st.button("Save & Connect", type="primary", use_container_width=True):
+            _sheets_cfg["spreadsheet_id"] = _new_sid.strip()
+            save_sheets_config(_sheets_cfg)
+            st.cache_data.clear()
+            st.rerun()
+
+    if _current_sid:
+        st.success(f"Connected: `...{_current_sid[-8:]}`")
+        _tabs = _sheets_cfg.get("tabs", {})
+        _tab_status = []
+        for _key, _tcfg in _tabs.items():
+            _tab_name = _tcfg.get("tab", "")
+            _venue = _tcfg.get("venue", "")
+            _tab_status.append({"Tab": _tab_name, "Venue": _venue, "Key": _key})
+        if _tab_status:
+            st.dataframe(pd.DataFrame(_tab_status), use_container_width=True, hide_index=True, height=200)
+
+        if st.button("Test Connection", use_container_width=True):
+            _first_tab = next(iter(_tabs.values()), {}).get("tab", "Sheet1")
+            _test_df = fetch_sheet_tab(_current_sid, _first_tab)
+            if _test_df is not None:
+                st.success(f"Connected — '{_first_tab}' has {len(_test_df)} rows")
+            else:
+                st.error(f"Could not read tab '{_first_tab}'. Check the sheet is shared publicly.")
+
+        if st.button("Refresh Data Now", use_container_width=True):
+            st.cache_data.clear()
+            st.rerun()
+    else:
+        st.info("No sheet connected. Using built-in data.")
 
 st.sidebar.divider()
 st.sidebar.caption("Draft — April 2026")
