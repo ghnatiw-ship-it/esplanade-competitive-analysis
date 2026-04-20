@@ -33,6 +33,10 @@ from data.portfolio_data import (
     DOLLY_OFF_PEAK_KPIS,
     DOLLY_SOCIAL_AUDIT,
     DOLLY_SOCIAL_HANDLES,
+    DOLLY_MENU_ANALYSIS,
+    DOLLY_PRICING_STRATEGY,
+    DOLLY_LOCAL_SEARCH,
+    DOLLY_LISTICLE_TARGETS,
     ELOISE_AWARD_COMPETITION,
     ELOISE_DEMAND_AUDIT,
     ELOISE_DEMAND_SOURCES,
@@ -3812,6 +3816,35 @@ elif active_page and active_page in VENUES:
             hide_index=True,
             column_config={"URL": st.column_config.LinkColumn("URL")},
         )
+
+        st.divider()
+        st.markdown("---")
+        st.markdown("### Menu 2.0 Analysis")
+        st.caption("Equipment-driven menu with Scotland Yard segmentation check. Dinner service 5–9 PM, late-night pizza from 9:30 PM.")
+        _menu_cats = st.pills("Menu category", ["All"] + list(DOLLY_MENU_ANALYSIS["Category"].unique()), default="All", key="dolly_menu_cat")
+        if _menu_cats == "All":
+            show_table(DOLLY_MENU_ANALYSIS, max_height=800)
+        else:
+            show_table(DOLLY_MENU_ANALYSIS[DOLLY_MENU_ANALYSIS["Category"] == _menu_cats], max_height=600)
+
+        st.divider()
+        st.markdown("### Pricing Strategy")
+        st.caption("Recommended pricing based on competitive analysis across 6 venues.")
+        show_table(DOLLY_PRICING_STRATEGY, max_height=600)
+
+        st.divider()
+        st.markdown("### Local Search Audit")
+        st.caption("Keyword landscape and opportunities for pre-opening SEO.")
+        show_table(DOLLY_LOCAL_SEARCH, max_height=500)
+
+        st.divider()
+        st.markdown("### Listicle & Media Targets")
+        st.caption("Publications to pitch for inclusion — country bar roundups and bachelorette guides.")
+        _listicle_cats = st.pills("Category", ["All"] + list(DOLLY_LISTICLE_TARGETS["Category"].unique()), default="All", key="dolly_listicle_cat")
+        if _listicle_cats == "All":
+            show_table(DOLLY_LISTICLE_TARGETS, max_height=600)
+        else:
+            show_table(DOLLY_LISTICLE_TARGETS[DOLLY_LISTICLE_TARGETS["Category"] == _listicle_cats], max_height=500)
 
     elif venue_section == "Teardowns" and selected_venue in VENUE_TEARDOWNS:
         st.markdown("### Competitor Teardowns")
