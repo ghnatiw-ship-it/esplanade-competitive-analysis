@@ -1,14 +1,11 @@
 {
-  "spreadsheet_id": "",
+  "spreadsheet_id": "1e9TTveIOU0fVrTTyllFTGm3_tr4sC0MaMb0ba0KdxYo",
   "tabs": {
     "competitors_sy": {"tab": "SY Competitors", "venue": "Scotland Yard", "type": "competitors"},
     "competitors_bc": {"tab": "BC Competitors", "venue": "Bar Cathedral", "type": "competitors"},
     "competitors_dolly": {"tab": "Dolly Competitors", "venue": "Dolly's", "type": "competitors"},
     "competitors_osf": {"tab": "OSF Competitors", "venue": "Old Spaghetti Factory", "type": "competitors"},
     "competitors_eloise": {"tab": "Eloise Competitors", "venue": "Eloise", "type": "competitors"},
-    "competitors_barcart": {"tab": "Bar Cart Competitors", "venue": "Bar Cart", "type": "competitors"},
-    "social_all": {"tab": "Social Audit", "venue": "all", "type": "social"},
-    "pricing": {"tab": "Pricing", "venue": "all", "type": "pricing"},
-    "local_search": {"tab": "Local Search", "venue": "all", "type": "local_search"}
+    "competitors_barcart": {"tab": "Bar Cart Competitors", "venue": "Bar Cart", "type": "competitors"}
   }
 }
