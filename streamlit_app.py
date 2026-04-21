@@ -3268,6 +3268,7 @@ elif active_page and active_page in VENUES:
         venue_sections.append("Awards")
     if selected_venue == "Dolly's":
         venue_sections.append("Strategy")
+        venue_sections.append("Menu Planning")
     if selected_venue == "Old Spaghetti Factory":
         venue_sections.append("Menu")
     venue_section = st.segmented_control(
@@ -3837,21 +3838,6 @@ elif active_page and active_page in VENUES:
         )
 
         st.divider()
-        st.markdown("---")
-        st.markdown("### Menu 2.0 Analysis")
-        st.caption("Equipment-driven menu with Scotland Yard segmentation check. Dinner service 5–9 PM, late-night pizza from 9:30 PM.")
-        _menu_cats = st.pills("Menu category", ["All"] + list(DOLLY_MENU_ANALYSIS["Category"].unique()), default="All", key="dolly_menu_cat")
-        if _menu_cats == "All":
-            show_table(DOLLY_MENU_ANALYSIS, max_height=800)
-        else:
-            show_table(DOLLY_MENU_ANALYSIS[DOLLY_MENU_ANALYSIS["Category"] == _menu_cats], max_height=600)
-
-        st.divider()
-        st.markdown("### Pricing Strategy")
-        st.caption("Recommended pricing based on competitive analysis across 6 venues.")
-        show_table(DOLLY_PRICING_STRATEGY, max_height=600)
-
-        st.divider()
         st.markdown("### Local Search Audit")
         st.caption("Keyword landscape and opportunities for pre-opening SEO.")
         show_table(DOLLY_LOCAL_SEARCH, max_height=500)
@@ -3864,6 +3850,22 @@ elif active_page and active_page in VENUES:
             show_table(DOLLY_LISTICLE_TARGETS, max_height=600)
         else:
             show_table(DOLLY_LISTICLE_TARGETS[DOLLY_LISTICLE_TARGETS["Category"] == _listicle_cats], max_height=500)
+
+    elif venue_section == "Menu Planning" and selected_venue == "Dolly's":
+        st.markdown("### Dolly's — Menu Planning")
+        st.caption("Equipment-driven menu with Scotland Yard segmentation check. Dinner service 5–9 PM, late-night pizza window from 9:30 PM.")
+
+        st.markdown("#### Menu Items")
+        _menu_cats = st.pills("Category", ["All"] + list(DOLLY_MENU_ANALYSIS["Category"].unique()), default="All", key="dolly_menu_cat")
+        if _menu_cats == "All":
+            show_table(DOLLY_MENU_ANALYSIS, max_height=800)
+        else:
+            show_table(DOLLY_MENU_ANALYSIS[DOLLY_MENU_ANALYSIS["Category"] == _menu_cats], max_height=600)
+
+        st.divider()
+        st.markdown("#### Pricing Strategy")
+        st.caption("Recommended pricing based on competitive analysis across 6 venues (Rock 'N' Horse, Paris Texas, Badlands, Horseshoe, Whiskey Rose Calgary, Bub City Chicago).")
+        show_table(DOLLY_PRICING_STRATEGY, max_height=600)
 
     elif venue_section == "Teardowns" and selected_venue in VENUE_TEARDOWNS:
         st.markdown("### Competitor Teardowns")
