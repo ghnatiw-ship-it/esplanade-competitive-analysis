@@ -957,37 +957,38 @@ DOLLY_SECURITY_SOURCES = pd.DataFrame([
 ], columns=["Source", "URL"])
 
 DOLLY_MENU_ANALYSIS = pd.DataFrame([
-    ["Appetizers", "Queso & Chips", "Smoky beer cheese dip with roasted jalapeños, warm tortilla chips, pickled red onion", "$14", "Long wave", "No"],
-    ["Appetizers", "Tater Tot Poutine", "Crispy tater tots, cheese curds, country gravy, green onions. Supreme: +pulled pork, jalapeños, sour cream", "$15 / $19", "Deep Fry", "Low — SY uses fries, not tots"],
-    ["Appetizers", "Chicken Skewers", "Grilled chicken thigh skewers with honey-bourbon glaze, ranch dipping sauce", "$16", "Long wave", "No"],
-    ["Appetizers", "Smashed Cucumbers", "Chili-crisp smashed cucumbers with sesame, rice vinegar, toasted peanuts", "$12", "Cold", "No"],
-    ["Appetizers", "Fried Pickles or Zucchini", "Beer-battered dill pickle spears or zucchini sticks, chipotle ranch", "$13", "Deep Fry", "No"],
-    ["Appetizers", "Cornbread", "Cast-iron skillet cornbread with honey butter and flaky sea salt", "$10", "Bakery", "No"],
-    ["Salads", "Green Goddess", "Chopped romaine, avocado, cucumber, snap peas, sunflower seeds, green goddess dressing", "$16", "Cold", "No — SY has Caesar"],
-    ["Salads", "Tostada Salad", "Crispy tortilla bowl, grilled chicken, black beans, corn, pico, cotija, cilantro-lime crema", "$18", "Cold", "No"],
-    ["Handhelds", "Dolly's Smash Burger", "Double smash patty, American cheese, bread & butter pickles, special sauce, shredded lettuce, potato bun. With tater tots", "$21", "Long wave", "Low — SY is classic brioche/chuck style"],
-    ["Handhelds", "Blackened Fish Tacos", "Two flour tortillas, blackened mahi-mahi, mango slaw, pickled red onion, chipotle crema", "$19", "Long wave", "No"],
-    ["Handhelds", "Nashville Hot Chicken Sandwich", "Buttermilk-brined crispy fried chicken, Nashville hot sauce, dill pickles, coleslaw, brioche bun. With tater tots", "$22", "Deep Fry", "No — hero item for any country bar"],
-    ["Handhelds", "Roasted Vegetable Sandwich", "Grilled zucchini, roasted red pepper, caramelized onion, arugula, herbed goat cheese, sourdough. With side salad", "$18", "Long wave", "No"],
-    ["Handhelds", "Pulled Pork Sandwich", "12-hour sous vide pulled pork, Carolina mustard BBQ sauce, creamy coleslaw, brioche bun. With tater tots", "$20", "Sous vide", "No"],
-    ["Pizza", "BBQ Chicken", "Smoky BBQ sauce, roasted chicken, red onion, cilantro, smoked gouda", "$20 / $6 slice", "Pizza conveyor", "No — SY has zero pizza"],
-    ["Pizza", "Pepperoni", "Classic tomato sauce, mozzarella, cup-and-char pepperoni", "$18 / $5 slice", "Pizza conveyor", "No"],
-    ["Pizza", "Hawaiian", "Tomato sauce, mozzarella, smoked ham, caramelized pineapple, jalapeño", "$19 / $5 slice", "Pizza conveyor", "No"],
-    ["Pizza", "Margherita", "San Marzano tomato, fresh mozzarella, basil, olive oil", "$17 / $5 slice", "Pizza conveyor", "No"],
-    ["Pizza", "Vegetable", "Roasted red pepper, mushroom, red onion, arugula, goat cheese, balsamic drizzle", "$19 / $5 slice", "Pizza conveyor", "No"],
-    ["Mains", "10oz Ribeye Steak", "AAA Ontario ribeye, cowboy butter, choice of side", "$38", "Long wave", "No"],
-    ["Mains", "Bone-In Pork Chop", "12oz Berkshire pork chop, apple-bourbon glaze, BBQ carrots", "$28", "Long wave", "No"],
-    ["Mains", "Braised Short Ribs", "Beer-braised beef short ribs, root vegetable mash, pan jus, crispy shallots", "$32", "Long wave", "No"],
-    ["Mains", "Pan-Roasted Fish", "Market fish, lemon-herb butter, seasonal vegetables", "$28", "Long wave", "Low — SY is beer-battered F&C"],
-    ["Mains", "Stuffed Peppers", "Roasted bell peppers, spiced ground turkey, black beans, corn, rice, melted cheddar, sour cream, cilantro", "$22", "Long wave", "No"],
-    ["Sides", "Tater Tots", "Crispy seasoned tater tots with ranch", "$8", "Deep Fry", "No — SY uses hand-punched fries"],
-    ["Sides", "Coleslaw", "Creamy Southern-style coleslaw with apple cider vinegar", "$6", "Cold", "No"],
-    ["Sides", "BBQ Carrots", "Whole roasted carrots, bourbon-BBQ glaze, everything-bagel seasoning", "$9", "Long wave", "No"],
-    ["Sides", "Onion Rings", "Beer-battered thick-cut onion rings with jalapeño ranch", "$9", "Deep Fry", "Low — SY has rings at $12, Dolly's adds jalapeño ranch"],
-    ["Desserts", "Chocolate Cake", "Dense fudgy chocolate layer cake with bourbon caramel sauce", "$12", "Bakery", "No"],
-    ["Desserts", "Bananas Foster", "Flambéed bananas, brown sugar, butter, cinnamon, dark rum, over vanilla ice cream", "$14", "Long wave", "No — tableside theatre potential"],
-    ["Desserts", "Pie of the Day", "Rotating: pecan (permanent), apple-bourbon, cherry, key lime", "$10", "Bakery", "No"],
-    ["Desserts", "Ice Cream", "Two scoops — vanilla, chocolate, salted caramel, or bourbon pecan", "$8", "Cold", "No"],
+    # --- SHAREABLES ---
+    ["Shareables", "Maple Country Pork Belly Bites", "Crispy pork belly glazed with maple reduction, served with slaw and chili oil finish", "$17", "Deep Fry / Long wave", "No"],
+    ["Shareables", "Honky Tonk Hot Chicken Bites", "Buttermilk fried chicken bites tossed in Nashville-style hot oil with pickles", "$16", "Deep Fry", "No"],
+    ["Shareables", "Country Truffle Mac Bites", "Crispy fried mac & cheese croquettes with truffle aroma and creamy center", "$15", "Deep Fry", "No"],
+    ["Shareables", "Barnyard Street Corn Ribs", "Charred corn ribs topped with lime crema, cotija, and spices", "$14", "Long wave", "No"],
+    ["Shareables", "Classic Country Poutine", "Fries topped with cheese curds, rich gravy, and herbs", "$15", "Deep Fry", "Low — SY has Yard Poutine ($15) with hand-punched fries. Same concept, different brand"],
+    ["Shareables", "Tokyo Country Loaded Tots", "Crispy tots with miso gravy, sesame mayo, pickled ginger, and nori", "$16", "Deep Fry", "No — fusion twist differentiates clearly"],
+    ["Shareables", "Campfire Jalapeño Corn Dip", "Smoked cheddar, roasted corn, jalapeño dip served warm with chips", "$14", "Long wave", "No"],
+    ["Shareables", "Sweet Heat Whipped Feta Dip", "Whipped feta topped with honey chili crunch served with warm bread", "$14", "Cold / Bakery", "No"],
+    # --- PIZZAS ---
+    ["Pizzas", "Barn Fire Hot Honey Pepperoni", "Pepperoni pizza finished with hot honey drizzle for sweet heat balance", "$19 / $6 slice", "Pizza conveyor", "No — SY has zero pizza"],
+    ["Pizzas", "Smoked Rodeo Brisket BBQ", "Smoked brisket, BBQ sauce, pickled onions, and cheddar", "$21 / $6 slice", "Pizza conveyor", "No"],
+    ["Pizzas", "Nashville Rodeo Chicken", "Crispy Nashville chicken, pickles, ranch base, and hot oil drizzle", "$20 / $6 slice", "Pizza conveyor", "No"],
+    ["Pizzas", "Country Four Cheese Honey Drizzle", "Four cheese blend finished with light truffle honey drizzle", "$18 / $5 slice", "Pizza conveyor", "No"],
+    # --- BURGERS ---
+    ["Burgers", "Signature Barn Sticky Smash Burger", "Smashed patty with sticky onion glaze, cheddar, pickles, and tangy house sauce", "$21", "Long wave", "Low — SY has Yard Burger ($20) but classic style, not smash"],
+    ["Burgers", "K-Town Rodeo BBQ Burger", "Beef patty with Korean BBQ glaze, sesame slaw, and gochujang mayo", "$22", "Long wave", "No — fusion angle, no SY equivalent"],
+    ["Burgers", "Honky Tonk Classic Cheeseburger", "Simple cheeseburger with cheddar, pickles, ketchup, mustard, and house sauce", "$18", "Long wave", "Low — closest to SY Yard Burger but positioned as a value option"],
+    # --- FRIED CHICKEN SANDWICHES ---
+    ["Fried Chicken", "Nashville Country Hot Chicken Sandwich", "Crispy chicken thigh with Nashville oil, pickles, and creamy slaw", "$22", "Deep Fry", "No — hero item, no SY equivalent"],
+    ["Fried Chicken", "Honey Barn Crunch Chicken Sandwich", "Crispy chicken with hot honey glaze, pickles, and tangy sauce", "$21", "Deep Fry", "No"],
+    # --- HANDHELDS ---
+    ["Handhelds", "Smoked Barn Grilled Cheese", "Smoked brisket, melted cheddar blend, and BBQ sauce on toasted bread", "$18", "Long wave", "No"],
+    ["Handhelds", "Country Ranch Chicken Wrap", "Crispy chicken with ranch, lettuce, and pickles wrapped in tortilla", "$17", "Deep Fry", "Low — SY has Cajun Chicken Wrap ($18.50) but different flavour profile"],
+    # --- SIDES ---
+    ["Sides", "Barnyard Dirty Fries", "Fries topped with cheese curds, gravy, and herbs", "$10", "Deep Fry", "Low — SY has Yard Poutine ($15) and Fries ($12). Dolly's version is a side, not an appetizer"],
+    ["Sides", "Country Mac & Cheese", "Creamy baked mac and cheese", "$9", "Long wave", "No"],
+    ["Sides", "Homestead Slaw", "Tangy cabbage slaw for freshness", "$6", "Cold", "No"],
+    ["Sides", "Country Seasoned Fries", "Classic fries with house seasoning", "$8", "Deep Fry", "Low — SY has fries ($12). Dolly's at $8 is a value play"],
+    # --- DESSERTS ---
+    ["Desserts", "Grandma's Country Sticky Toffee Pudding", "Warm sponge cake with toffee sauce and vanilla ice cream", "$13", "Long wave / Bakery", "No — British classic with country rebrand, no SY equivalent"],
+    ["Desserts", "Southern Barn Banana Pudding", "Layered banana pudding with custard, wafers, and whipped cream", "$11", "Cold", "No — Southern classic, strong identity item"],
 ], columns=["Category", "Item", "Description", "Suggested Price", "Station", "Scotland Yard Overlap"])
 
 DOLLY_PRICING_STRATEGY = pd.DataFrame([
